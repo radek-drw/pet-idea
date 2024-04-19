@@ -1,0 +1,48 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 150px 0 100px 0;
+  // background-color: lightblue;
+  .left-dog {
+    position: relative;
+    // background-color: #d1d1d1;
+    padding-top: 70px;
+    align-self: flex-end;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 1px;
+      right: 0;
+      width: 200%;
+      height: 1px;
+      background-color: #d1d1d1;
+    }
+  }
+  .right-cat {
+    padding-top: 90px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 1px;
+      left: 0;
+      width: 200%;
+      height: 1px;
+      background-color: #d1d1d1;
+    }
+  }
+
+  .txt1 {
+    font-family: "Literata";
+    font-weight: 800;
+    font-size: 4rem;
+    text-align: center;
+  }
+  .txt2 {
+    font-family: "Literata";
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: 50px;
+    padding: 0 20px;
+  }
+}
