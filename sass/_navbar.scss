@@ -1,0 +1,88 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  ul.left {
+    display: flex;
+    justify-content: space-between;
+    // background-color: lightblue;
+    flex-grow: 1;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 1px;
+      z-index: -1;
+      right: 0;
+      width: 200%;
+      height: 1px;
+      background-color: #d1d1d1;
+    }
+    .products {
+      font-weight: 900;
+      border-bottom: 3px solid black;
+    }
+    .applaws-logo {
+      flex-basis: 60%;
+      // background-color: lightcoral;
+      text-align: end;
+      align-self: center;
+    }
+  }
+  div.middle-logo {
+    position: relative;
+    top: 45px;
+    width: 10%;
+    text-align: center;
+    // background-color: gray;
+  }
+  ul.right {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 1px;
+      z-index: -1;
+      left: 0;
+      width: 200%;
+      height: 1px;
+      background-color: #d1d1d1;
+    }
+    .katide-logo {
+      flex-basis: 60%;
+      // background-color: lightcoral;
+      align-self: center;
+    }
+    li.contact {
+      transition: all 0.25s;
+      &:hover {
+        transform: scale(1.2);
+      }
+      img.contact-img {
+        margin-right: 12px;
+      }
+    }
+    li.facebook {
+      a {
+        padding-left: 15px;
+        padding-right: 15px;
+        transition: all 0.25s;
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+    li.instagram {
+      a {
+        padding-left: 15px;
+        padding-right: 15px;
+        transition: all 0.25s;
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}
