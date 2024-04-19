@@ -55,9 +55,9 @@
       align-self: center;
     }
     li.contact {
-      transition: all 0.25s;
+      transition: 1.25s;
       &:hover {
-        transform: scale(1.2);
+        // font-size: 3rem;
       }
       img.contact-img {
         margin-right: 12px;
