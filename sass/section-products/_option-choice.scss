@@ -1,0 +1,52 @@
+.products-section {
+  position: relative;
+  padding: 100px 0;
+  .options {
+    position: absolute;
+    left: 50%;
+    top: -175px;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    .dog-option img {
+      margin-right: 14px;
+    }
+    .dog-option,
+    .cat-option,
+    .toys-option {
+      width: 200px;
+      height: 160px;
+      border: 1px solid #d1d1d1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      cursor: pointer;
+      img {
+        width: 35%;
+      }
+      span {
+        font-size: 1.6rem;
+        font-family: "Literata";
+        font-weight: 800;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+//  Active option
+.active {
+  background-color: #000;
+  color: #fff;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    border: solid 20px transparent;
+    border-left-color: #000;
+  }
+}
