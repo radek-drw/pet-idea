@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -24,10 +25,13 @@ a {
   display: block;
 }
 
+button {
+  cursor: pointer;
+}
+
 .container {
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
-  overflow: hidden;
 }
 
 .navbar {
@@ -135,4 +139,186 @@ a {
 .navbar ul.right li.instagram a:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 150px 0 100px 0;
+}
+.header .left-dog {
+  position: relative;
+  padding-top: 70px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+.header .left-dog::after {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  right: 0;
+  width: 200%;
+  height: 1px;
+  background-color: #d1d1d1;
+}
+.header .right-cat {
+  padding-top: 90px;
+  position: relative;
+}
+.header .right-cat::after {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  width: 200%;
+  height: 1px;
+  background-color: #d1d1d1;
+}
+.header .txt1 {
+  font-family: "Literata";
+  font-weight: 800;
+  font-size: 4rem;
+  text-align: center;
+}
+.header .txt2 {
+  font-family: "Literata";
+  font-size: 1.4rem;
+  text-align: center;
+  margin-top: 50px;
+  padding: 0 20px;
+}
+
+.products-section {
+  position: relative;
+  padding: 100px 0;
+}
+.products-section .options {
+  position: absolute;
+  left: 50%;
+  top: -175px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 50%;
+}
+.products-section .options .dog-option img {
+  margin-right: 14px;
+}
+.products-section .options .dog-option,
+.products-section .options .cat-option,
+.products-section .options .toys-option {
+  width: 200px;
+  height: 160px;
+  border: 1px solid #d1d1d1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  cursor: pointer;
+}
+.products-section .options .dog-option img,
+.products-section .options .cat-option img,
+.products-section .options .toys-option img {
+  width: 35%;
+}
+.products-section .options .dog-option span,
+.products-section .options .cat-option span,
+.products-section .options .toys-option span {
+  font-size: 1.6rem;
+  font-family: "Literata";
+  font-weight: 800;
+  margin-top: 10px;
+}
+
+.active {
+  background-color: #000;
+  color: #fff;
+  position: relative;
+}
+.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  border: solid 20px transparent;
+  border-left-color: #000;
+}
+
+.food-products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.food-products .food-choice {
+  -ms-flex-preferred-size: 36%;
+      flex-basis: 36%;
+}
+.food-products .food-choice .food-option {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.food-products .food-choice .food-option .wet,
+.food-products .food-choice .food-option .dry {
+  -ms-flex-preferred-size: 47%;
+      flex-basis: 47%;
+  font-family: "Lato";
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  border: 1px solid #d1d1d1;
+  padding: 14px 0;
+  background-color: transparent;
+}
+.food-products .food-choice .food-option .active-food-option {
+  background-color: #000;
+  color: #fff;
+}
+.food-products .food-choice .gallery-arrows {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 20px;
+}
+.food-products .food-choice .gallery-arrows .arrow-left,
+.food-products .food-choice .gallery-arrows .arrow-right {
+  padding: 15px;
+  font-size: 2rem;
+  border: 1px solid #d1d1d1;
+}
+.food-products .food-choice .gallery-arrows .active-arrow {
+  border-color: #000;
+}
+.food-products .food-choice .section-applaws-logo img {
+  margin-top: 40px;
+  width: 35%;
+}
+.food-products .products-gallery {
+  background-color: lightblue;
+  width: 100%;
+  font-size: 4rem;
 }/*# sourceMappingURL=style.css.map */
