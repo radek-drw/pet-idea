@@ -1,0 +1,49 @@
+.food-products {
+  display: flex;
+  .food-choice {
+    flex-basis: 36%;
+    .food-option {
+      width: 60%;
+      display: flex;
+      justify-content: space-between;
+      .wet,
+      .dry {
+        flex-basis: 47%;
+        font-family: "Lato";
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        border: 1px solid #d1d1d1;
+        padding: 14px 0;
+        background-color: transparent;
+      }
+      .active-food-option {
+        background-color: #000;
+        color: #fff;
+      }
+    }
+    .gallery-arrows {
+      width: 30%;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      .arrow-left,
+      .arrow-right {
+        padding: 15px;
+        font-size: 2rem;
+        border: 1px solid #d1d1d1;
+      }
+      .active-arrow {
+        border-color: #000;
+      }
+    }
+    .section-applaws-logo img {
+      margin-top: 40px;
+      width: 35%;
+    }
+  }
+  .products-gallery {
+    background-color: lightblue;
+    width: 100%;
+    font-size: 4rem;
+  }
+}
