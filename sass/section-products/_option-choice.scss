@@ -41,6 +41,10 @@
   background-color: #000;
   color: #fff;
   position: relative;
+  border: none !important;
+  img {
+    filter: invert(100%);
+  }
   &::after {
     content: "";
     position: absolute;
