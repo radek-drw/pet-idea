@@ -109,16 +109,22 @@ button {
   -ms-flex-item-align: center;
       align-self: center;
 }
-.navbar ul.right li.contact {
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-}
-.navbar ul.right li.contact:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-}
 .navbar ul.right li.contact img.contact-img {
   margin-right: 12px;
+}
+.navbar ul.right li.contact a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+.navbar ul.right li.contact a:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 .navbar ul.right li.facebook a {
   padding-left: 15px;
@@ -308,17 +314,32 @@ button {
 .food-products .food-choice .gallery-arrows .arrow-right {
   padding: 15px;
   font-size: 2rem;
+  color: #d1d1d1;
   border: 1px solid #d1d1d1;
 }
 .food-products .food-choice .gallery-arrows .active-arrow {
   border-color: #000;
+  color: #000;
 }
 .food-products .food-choice .section-applaws-logo img {
   margin-top: 40px;
   width: 35%;
 }
-.food-products .products-gallery {
-  background-color: lightblue;
-  width: 100%;
-  font-size: 4rem;
+.food-products .products-gallery .cat-wet {
+  height: 700px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.food-products .products-gallery * {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
 }/*# sourceMappingURL=style.css.map */

@@ -30,10 +30,12 @@
       .arrow-right {
         padding: 15px;
         font-size: 2rem;
+        color: #d1d1d1;
         border: 1px solid #d1d1d1;
       }
       .active-arrow {
         border-color: #000;
+        color: #000;
       }
     }
     .section-applaws-logo img {
@@ -41,9 +43,19 @@
       width: 35%;
     }
   }
+  // GALLERY
   .products-gallery {
-    background-color: lightblue;
-    width: 100%;
-    font-size: 4rem;
+    // background-color: lightblue;
+
+    .cat-wet {
+      height: 700px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+    }
+    & * {
+      flex-basis: 30%;
+    }
   }
 }
