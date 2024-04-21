@@ -19,7 +19,7 @@
         background-color: transparent;
         transition: 0.25s;
         &:not(.active-food-option):hover {
-          box-shadow: 0 0 5px 3px #d1d1d1;
+          border-color: #000;
         }
       }
       .active-food-option {
@@ -40,7 +40,7 @@
         border: 1px solid #000;
         transition: 0.25s;
         &:not(.active-food-option):hover {
-          background-color: #eee;
+          border-color: #000;
         }
         &:disabled {
           border: 1px solid #d1d1d1;

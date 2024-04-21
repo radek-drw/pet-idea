@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   padding: 150px 0 100px 0;
-  // background-color: lightblue;
+  // background-color: lightgoldenrodyellow;
   .left-dog {
     position: relative;
     // background-color: #d1d1d1;
@@ -17,6 +17,31 @@
       height: 1px;
       background-color: #d1d1d1;
     }
+    img {
+      width: 300px;
+      height: 306px;
+    }
+  }
+  .main-txt {
+    // background-color: lightblue;
+    text-align: center;
+    .txt1 {
+      font-family: "Literata";
+      font-weight: 800;
+      font-size: 4rem;
+      text-align: center;
+      width: 647px;
+    }
+    .txt2 {
+      font-family: "Literata";
+      font-size: 1.4rem;
+      text-align: center;
+      margin-top: 50px;
+      // padding: 0 20px;
+      margin: 25px auto 0 auto;
+      width: 475px;
+      // background-color: lightcoral;
+    }
   }
   .right-cat {
     padding-top: 90px;
@@ -30,19 +55,9 @@
       height: 1px;
       background-color: #d1d1d1;
     }
-  }
-
-  .txt1 {
-    font-family: "Literata";
-    font-weight: 800;
-    font-size: 4rem;
-    text-align: center;
-  }
-  .txt2 {
-    font-family: "Literata";
-    font-size: 1.4rem;
-    text-align: center;
-    margin-top: 50px;
-    padding: 0 20px;
+    img {
+      width: 288px;
+      height: 286px;
+    }
   }
 }

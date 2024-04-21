@@ -1,0 +1,111 @@
+.contact-section {
+  display: flex;
+  padding: 100px 0 0 0;
+  justify-content: space-between;
+  // background-color: lightblue;
+  align-items: center;
+  .contact-info {
+    flex-basis: 290px;
+    // background-color: lightcoral;
+    h2 {
+      font-family: "Literata";
+      font-weight: 800;
+      font-size: 4rem;
+    }
+    p.description {
+      font-family: "Lato";
+      font-size: 1.4rem;
+      padding: 40px 0;
+      line-height: 1.5;
+    }
+    .contact-details {
+      display: flex;
+      justify-content: space-between;
+      a {
+        padding: 0;
+        text-transform: 0;
+        font-family: "Lato";
+        font-size: 1.4rem;
+        text-transform: lowercase;
+        // background-color: lightcoral;
+        img {
+          margin-right: 10px;
+        }
+      }
+      p.phone {
+        // background-color: lightblue;
+        display: flex;
+        font-size: 1.4rem;
+        font-family: "Lato";
+        img {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  // Contact form
+  .contact-form {
+    flex-basis: 60%;
+    padding-top: 30px;
+    .name-and-email {
+      display: flex;
+      justify-content: space-between;
+      // padding-bottom: 10px;
+      & > div {
+        display: flex;
+        flex-direction: column;
+        .name-label,
+        .email-label {
+          font-family: "Lato";
+          font-size: 1.4rem;
+          margin-bottom: 10px;
+        }
+      }
+      .name-input,
+      .email-input {
+        border: none;
+        border-bottom: 1px solid #d1d1d1;
+        &:focus {
+          outline: none;
+        }
+      }
+      .name-input {
+        width: 190px;
+      }
+      .email-input {
+        width: 380px;
+      }
+    }
+    .message-box {
+      margin-top: 60px;
+      .message-label {
+        font-family: "Lato";
+        font-size: 1.4rem;
+        display: block;
+        margin-bottom: 10px;
+      }
+      .message-input {
+        border: none;
+        border-bottom: 1px solid #d1d1d1;
+        width: 100%;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    .submit-button {
+      margin-left: calc(100% - 113px);
+      margin-top: 50px;
+      background-color: #000;
+      color: #fff;
+      width: 113px;
+      height: 44px;
+      border: none;
+      font-family: "Lato";
+      font-size: 1.2rem;
+      img {
+        margin-left: 10px;
+      }
+    }
+  }
+}

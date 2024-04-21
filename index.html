@@ -52,7 +52,7 @@
     <!-- HEADER -->
     <header class="header">
       <div class="left-dog">
-        <img src="src/dog.svg" class="dog-img" alt="Dog">
+        <img src="src/dog.jpg" class="dog-img" alt="Dog">
       </div>
       <div class="main-txt">
         <h1 class="txt1">Szczęśliwy pupil to nasza misja
@@ -61,7 +61,7 @@
           i zadowolenie Twojego pupila.</p>
       </div>
       <div class="right-cat">
-        <img src="src/cat.svg" class="cat-img" alt="Cat">
+        <img src="src/cat.jpg" class="cat-img" alt="Cat">
       </div>
     </header>
 
@@ -252,6 +252,54 @@
         </article>
       </div>
     </section>
+    <!-- SECTION CONTACT FORM -->
+    <section class="contact-section">
+      <div class="contact-info">
+        <h2>Bądźmy <br> w kontakcie</h2>
+        <p class="description">Pytaj o co chcesz, chętnie odpowiemy <br>
+          na Twoje pytania.</p>
+        <div class="contact-details">
+          <a href="mailto:info@petidea.pet" class="email"><img src="src/envelope.svg" alt="Email">info@petidea.pet</a>
+          <p class="phone"><img src="src/phone.svg" alt="Telefon">507 185 138</p>
+        </div>
+      </div>
+      <form class="contact-form" action="#" method="post">
+        <div class="name-and-email">
+
+          <div>
+            <label for="name" class="name-label">Jak masz na imię?</label>
+            <input type="text" id="name" name="name" class="name-input" required>
+          </div>
+          <div>
+            <label for="email" class="email-label">Tutaj podaj maila</label>
+            <input type="email" id="email" name="email" class="email-input" required>
+          </div>
+
+        </div>
+        <div class="message-box">
+          <label for="message" class="message-label">Napisz wiadomość</label>
+          <input type="text" id="message" name="message" class="message-input" required>
+        </div>
+
+
+        <button type="submit" class="submit-button">Wyślij
+          <img src="src/send-form-arrow.svg" alt="Wyślij">
+        </button>
+      </form>
+
+    </section>
+
+    <footer class="footer">
+      <div class="content">
+        <img src="src/facebook.svg" alt="Facebook">
+        <img src="src/instagram.svg" alt="Instagram">
+        <div class="copyright">
+          <p>&copy;</p>
+          <p>2024</p>
+          <p>Petidea</p>
+        </div>
+      </div>
+    </footer>
   </div>
 
   <script src="js/main.js"></script>

@@ -26,7 +26,7 @@
       transition: 0.25s;
       cursor: pointer;
       &:not(.active):hover {
-        box-shadow: 0 0 6px 4px #d1d1d1;
+        border-color: #000;
       }
       img {
         width: 35%;

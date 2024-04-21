@@ -191,6 +191,28 @@ button {
   height: 1px;
   background-color: #d1d1d1;
 }
+.header .left-dog img {
+  width: 300px;
+  height: 306px;
+}
+.header .main-txt {
+  text-align: center;
+}
+.header .main-txt .txt1 {
+  font-family: "Literata";
+  font-weight: 800;
+  font-size: 4rem;
+  text-align: center;
+  width: 647px;
+}
+.header .main-txt .txt2 {
+  font-family: "Literata";
+  font-size: 1.4rem;
+  text-align: center;
+  margin-top: 50px;
+  margin: 25px auto 0 auto;
+  width: 475px;
+}
 .header .right-cat {
   padding-top: 90px;
   position: relative;
@@ -204,18 +226,9 @@ button {
   height: 1px;
   background-color: #d1d1d1;
 }
-.header .txt1 {
-  font-family: "Literata";
-  font-weight: 800;
-  font-size: 4rem;
-  text-align: center;
-}
-.header .txt2 {
-  font-family: "Literata";
-  font-size: 1.4rem;
-  text-align: center;
-  margin-top: 50px;
-  padding: 0 20px;
+.header .right-cat img {
+  width: 288px;
+  height: 286px;
 }
 
 .products-section {
@@ -264,8 +277,7 @@ button {
 .products-section .options .dog-option:not(.active):hover,
 .products-section .options .cat-option:not(.active):hover,
 .products-section .options .toys-option:not(.active):hover {
-  -webkit-box-shadow: 0 0 6px 4px #d1d1d1;
-          box-shadow: 0 0 6px 4px #d1d1d1;
+  border-color: #000;
 }
 .products-section .options .dog-option img,
 .products-section .options .cat-option img,
@@ -336,8 +348,7 @@ button {
 }
 .food-products .food-choice .food-option .wet:not(.active-food-option):hover,
 .food-products .food-choice .food-option .dry:not(.active-food-option):hover {
-  -webkit-box-shadow: 0 0 5px 3px #d1d1d1;
-          box-shadow: 0 0 5px 3px #d1d1d1;
+  border-color: #000;
 }
 .food-products .food-choice .food-option .active-food-option {
   background-color: #000;
@@ -364,7 +375,7 @@ button {
 }
 .food-products .food-choice .gallery-arrows .arrow-left:not(.active-food-option):hover,
 .food-products .food-choice .gallery-arrows .arrow-right:not(.active-food-option):hover {
-  background-color: #eee;
+  border-color: #000;
 }
 .food-products .food-choice .gallery-arrows .arrow-left:disabled,
 .food-products .food-choice .gallery-arrows .arrow-right:disabled {
@@ -488,4 +499,134 @@ section.about .columns .right-column .fish-img {
 section.about .columns .left-column .fish-img,
 section.about .columns .right-column .fish-img {
   margin-bottom: 60px;
+}
+
+.contact-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 100px 0 0 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.contact-section .contact-info {
+  -ms-flex-preferred-size: 290px;
+      flex-basis: 290px;
+}
+.contact-section .contact-info h2 {
+  font-family: "Literata";
+  font-weight: 800;
+  font-size: 4rem;
+}
+.contact-section .contact-info p.description {
+  font-family: "Lato";
+  font-size: 1.4rem;
+  padding: 40px 0;
+  line-height: 1.5;
+}
+.contact-section .contact-info .contact-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.contact-section .contact-info .contact-details a {
+  padding: 0;
+  text-transform: 0;
+  font-family: "Lato";
+  font-size: 1.4rem;
+  text-transform: lowercase;
+}
+.contact-section .contact-info .contact-details a img {
+  margin-right: 10px;
+}
+.contact-section .contact-info .contact-details p.phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.4rem;
+  font-family: "Lato";
+}
+.contact-section .contact-info .contact-details p.phone img {
+  margin-right: 10px;
+}
+.contact-section .contact-form {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  padding-top: 30px;
+}
+.contact-section .contact-form .name-and-email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.contact-section .contact-form .name-and-email > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.contact-section .contact-form .name-and-email > div .name-label,
+.contact-section .contact-form .name-and-email > div .email-label {
+  font-family: "Lato";
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+.contact-section .contact-form .name-and-email .name-input,
+.contact-section .contact-form .name-and-email .email-input {
+  border: none;
+  border-bottom: 1px solid #d1d1d1;
+}
+.contact-section .contact-form .name-and-email .name-input:focus,
+.contact-section .contact-form .name-and-email .email-input:focus {
+  outline: none;
+}
+.contact-section .contact-form .name-and-email .name-input {
+  width: 190px;
+}
+.contact-section .contact-form .name-and-email .email-input {
+  width: 380px;
+}
+.contact-section .contact-form .message-box {
+  margin-top: 60px;
+}
+.contact-section .contact-form .message-box .message-label {
+  font-family: "Lato";
+  font-size: 1.4rem;
+  display: block;
+  margin-bottom: 10px;
+}
+.contact-section .contact-form .message-box .message-input {
+  border: none;
+  border-bottom: 1px solid #d1d1d1;
+  width: 100%;
+}
+.contact-section .contact-form .message-box .message-input:focus {
+  outline: none;
+}
+.contact-section .contact-form .submit-button {
+  margin-left: calc(100% - 113px);
+  margin-top: 50px;
+  background-color: #000;
+  color: #fff;
+  width: 113px;
+  height: 44px;
+  border: none;
+  font-family: "Lato";
+  font-size: 1.2rem;
+}
+.contact-section .contact-form .submit-button img {
+  margin-left: 10px;
 }/*# sourceMappingURL=style.css.map */
