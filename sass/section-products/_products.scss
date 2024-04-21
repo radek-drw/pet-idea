@@ -17,6 +17,10 @@
         border: 1px solid #d1d1d1;
         padding: 14px 0;
         background-color: transparent;
+        transition: 0.25s;
+        &:not(.active-food-option):hover {
+          box-shadow: 0 0 5px 3px #d1d1d1;
+        }
       }
       .active-food-option {
         background-color: #000;
@@ -32,6 +36,18 @@
       .arrow-right {
         padding: 15px;
         font-size: 2rem;
+        background-color: #fff;
+        border: 1px solid #000;
+        transition: 0.25s;
+        &:not(.active-food-option):hover {
+          background-color: #eee;
+        }
+        &:disabled {
+          border: 1px solid #d1d1d1;
+        }
+        &:disabled:hover {
+          background-color: transparent;
+        }
       }
     }
     .section-applaws-logo img {

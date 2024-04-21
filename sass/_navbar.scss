@@ -1,6 +1,19 @@
 .navbar {
+  height: 97px;
+  background-color: white;
+  z-index: 1;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.navbar-content {
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
+  background-color: #fff;
+  z-index: 10;
   ul.left {
     display: flex;
     justify-content: space-between;
@@ -12,7 +25,7 @@
       bottom: 1px;
       z-index: -1;
       right: 0;
-      width: 200%;
+      width: 50vw;
       height: 1px;
       background-color: #d1d1d1;
     }
@@ -29,10 +42,15 @@
   }
   div.middle-logo {
     position: relative;
-    top: 45px;
+    top: 35px;
     width: 10%;
     text-align: center;
-    // background-color: gray;
+    transition: ease-out 0.35s;
+    img {
+      transform-origin: top center;
+      transform: scale(1.2);
+      transition: ease-out 0.35s;
+    }
   }
   ul.right {
     flex-grow: 1;
@@ -45,7 +63,7 @@
       bottom: 1px;
       z-index: -1;
       left: 0;
-      width: 200%;
+      width: 50vw;
       height: 1px;
       background-color: #d1d1d1;
     }
@@ -66,16 +84,7 @@
         }
       }
     }
-    li.facebook {
-      a {
-        padding-left: 15px;
-        padding-right: 15px;
-        transition: all 0.25s;
-        &:hover {
-          transform: scale(1.2);
-        }
-      }
-    }
+    li.facebook,
     li.instagram {
       a {
         padding-left: 15px;

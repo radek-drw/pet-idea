@@ -22,7 +22,11 @@
       align-items: center;
       justify-content: center;
       flex-direction: column;
+      transition: 0.25s;
       cursor: pointer;
+      &:not(.active):hover {
+        box-shadow: 0 0 6px 4px #d1d1d1;
+      }
       img {
         width: 35%;
       }

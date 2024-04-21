@@ -11,6 +11,10 @@ html {
   font-size: 10px;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 ul {
   list-style: none;
 }
@@ -35,14 +39,28 @@ button {
 }
 
 .navbar {
+  height: 97px;
+  background-color: white;
+  z-index: 1;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.navbar-content {
+  position: sticky;
+  top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background-color: #fff;
+  z-index: 10;
 }
-.navbar ul.left {
+.navbar-content ul.left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -54,34 +72,44 @@ button {
           flex-grow: 1;
   position: relative;
 }
-.navbar ul.left::after {
+.navbar-content ul.left::after {
   content: "";
   position: absolute;
   bottom: 1px;
   z-index: -1;
   right: 0;
-  width: 200%;
+  width: 50vw;
   height: 1px;
   background-color: #d1d1d1;
 }
-.navbar ul.left .products {
+.navbar-content ul.left .products {
   font-weight: 900;
   border-bottom: 3px solid black;
 }
-.navbar ul.left .applaws-logo {
+.navbar-content ul.left .applaws-logo {
   -ms-flex-preferred-size: 60%;
       flex-basis: 60%;
   text-align: end;
   -ms-flex-item-align: center;
       align-self: center;
 }
-.navbar div.middle-logo {
+.navbar-content div.middle-logo {
   position: relative;
-  top: 45px;
+  top: 35px;
   width: 10%;
   text-align: center;
+  -webkit-transition: ease-out 0.35s;
+  transition: ease-out 0.35s;
 }
-.navbar ul.right {
+.navbar-content div.middle-logo img {
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: ease-out 0.35s;
+  transition: ease-out 0.35s;
+}
+.navbar-content ul.right {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -93,26 +121,26 @@ button {
           justify-content: space-between;
   position: relative;
 }
-.navbar ul.right::after {
+.navbar-content ul.right::after {
   content: "";
   position: absolute;
   bottom: 1px;
   z-index: -1;
   left: 0;
-  width: 200%;
+  width: 50vw;
   height: 1px;
   background-color: #d1d1d1;
 }
-.navbar ul.right .katide-logo {
+.navbar-content ul.right .katide-logo {
   -ms-flex-preferred-size: 60%;
       flex-basis: 60%;
   -ms-flex-item-align: center;
       align-self: center;
 }
-.navbar ul.right li.contact img.contact-img {
+.navbar-content ul.right li.contact img.contact-img {
   margin-right: 12px;
 }
-.navbar ul.right li.contact a {
+.navbar-content ul.right li.contact a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -122,27 +150,19 @@ button {
   -webkit-transition: 0.25s;
   transition: 0.25s;
 }
-.navbar ul.right li.contact a:hover {
+.navbar-content ul.right li.contact a:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
-.navbar ul.right li.facebook a {
+.navbar-content ul.right li.facebook a,
+.navbar-content ul.right li.instagram a {
   padding-left: 15px;
   padding-right: 15px;
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
 }
-.navbar ul.right li.facebook a:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-}
-.navbar ul.right li.instagram a {
-  padding-left: 15px;
-  padding-right: 15px;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-}
-.navbar ul.right li.instagram a:hover {
+.navbar-content ul.right li.facebook a:hover,
+.navbar-content ul.right li.instagram a:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
@@ -167,7 +187,7 @@ button {
   position: absolute;
   bottom: 1px;
   right: 0;
-  width: 200%;
+  width: 50vw;
   height: 1px;
   background-color: #d1d1d1;
 }
@@ -180,7 +200,7 @@ button {
   position: absolute;
   bottom: 1px;
   left: 0;
-  width: 200%;
+  width: 50vw;
   height: 1px;
   background-color: #d1d1d1;
 }
@@ -237,7 +257,15 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
   cursor: pointer;
+}
+.products-section .options .dog-option:not(.active):hover,
+.products-section .options .cat-option:not(.active):hover,
+.products-section .options .toys-option:not(.active):hover {
+  -webkit-box-shadow: 0 0 6px 4px #d1d1d1;
+          box-shadow: 0 0 6px 4px #d1d1d1;
 }
 .products-section .options .dog-option img,
 .products-section .options .cat-option img,
@@ -303,6 +331,13 @@ button {
   border: 1px solid #d1d1d1;
   padding: 14px 0;
   background-color: transparent;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+.food-products .food-choice .food-option .wet:not(.active-food-option):hover,
+.food-products .food-choice .food-option .dry:not(.active-food-option):hover {
+  -webkit-box-shadow: 0 0 5px 3px #d1d1d1;
+          box-shadow: 0 0 5px 3px #d1d1d1;
 }
 .food-products .food-choice .food-option .active-food-option {
   background-color: #000;
@@ -322,6 +357,22 @@ button {
 .food-products .food-choice .gallery-arrows .arrow-right {
   padding: 15px;
   font-size: 2rem;
+  background-color: #fff;
+  border: 1px solid #000;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+.food-products .food-choice .gallery-arrows .arrow-left:not(.active-food-option):hover,
+.food-products .food-choice .gallery-arrows .arrow-right:not(.active-food-option):hover {
+  background-color: #eee;
+}
+.food-products .food-choice .gallery-arrows .arrow-left:disabled,
+.food-products .food-choice .gallery-arrows .arrow-right:disabled {
+  border: 1px solid #d1d1d1;
+}
+.food-products .food-choice .gallery-arrows .arrow-left:disabled:hover,
+.food-products .food-choice .gallery-arrows .arrow-right:disabled:hover {
+  background-color: transparent;
 }
 .food-products .food-choice .section-applaws-logo img {
   margin-top: 40px;
