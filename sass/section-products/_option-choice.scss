@@ -9,15 +9,15 @@
     transform: translateX(-50%);
     display: flex;
     justify-content: space-around;
-    width: 50%;
+    width: 540px;
     .dog-option img {
       margin-right: 14px;
     }
     .dog-option,
     .cat-option,
     .toys-option {
-      width: 200px;
-      height: 160px;
+      width: 160px;
+      height: 140px;
       border: 1px solid #d1d1d1;
       display: flex;
       align-items: center;

@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 html {
   font-size: 10px;
@@ -31,5 +32,6 @@ button {
 .container {
   max-width: 1440px;
   margin: 0 auto;
+  // position: relative;
   // overflow: visible;
 }

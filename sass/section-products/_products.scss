@@ -28,25 +28,31 @@
       }
     }
     .gallery-arrows {
-      width: 40%;
+      width: 100px;
       display: flex;
       justify-content: space-between;
+      align-items: center;
       margin-top: 20px;
-      .arrow-left,
-      .arrow-right {
-        padding: 15px;
-        font-size: 2rem;
-        background-color: #fff;
-        border: 1px solid #000;
-        transition: 0.25s;
-        &:not(.active-food-option):hover {
-          border-color: #000;
-        }
-        &:disabled {
-          border: 1px solid #d1d1d1;
-        }
-        &:disabled:hover {
-          background-color: transparent;
+      // height: 10px;
+      button {
+        border: none;
+        background-color: transparent;
+        .arrow-left,
+        .arrow-right {
+          // padding: 15px;
+          // font-size: 2rem;
+          // background-color: #fff;
+          // border: 1px solid #000;
+          transition: 0.25s;
+          // &:not(.active-food-option):hover {
+          //   border-color: #000;
+          // }
+          &:disabled {
+            border: 1px solid #d1d1d1;
+          }
+          // &:disabled:hover {
+          //   background-color: transparent;
+          // }
         }
       }
     }
@@ -70,12 +76,4 @@
       flex-basis: 30%;
     }
   }
-}
-
-.dog-wet img {
-  background-color: #d1d1d1;
-  border: 3px solid red;
-}
-.dog-dry img {
-  background-color: #818181;
 }

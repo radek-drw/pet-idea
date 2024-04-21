@@ -61,17 +61,20 @@ function displayImages() {
 
   prevButton.disabled = index === 0;
   nextButton.disabled = index + 6 >= images.length;
-
   if (prevButton.disabled) {
     prevButton.style.cursor = "not-allowed";
+    prevButton.src = "./src/disabled-arrow-left.svg";
   } else {
     prevButton.style.cursor = "pointer";
+    prevButton.src = "./src/arrow-left.svg";
   }
 
   if (nextButton.disabled) {
     nextButton.style.cursor = "not-allowed";
+    nextButton.src = "./src/disabled-arrow-right.svg";
   } else {
     nextButton.style.cursor = "pointer";
+    nextButton.src = "./src/arrow-right.svg";
   }
 }
 
@@ -100,7 +103,8 @@ prevButton.addEventListener("click", function () {
 
 const wetButton = document.querySelector(".wet");
 const dryButton = document.querySelector(".dry");
-const toysButton = document.querySelector(".toys-option"); // przycisk do zmiany na kategorię 'toys'
+
+const logoLeftColumn = document.querySelector(".section-applaws-logo img");
 
 wetButton.addEventListener("click", function () {
   if (currentCategory !== "toys") {
@@ -122,32 +126,26 @@ dryButton.addEventListener("click", function () {
   }
 });
 
-toysButton.addEventListener("click", function () {
-  currentCategory = "toys";
-  index = 0;
-  displayImages();
-  toysButton.classList.add("active"); // dodaj klasę 'active' do 'toysButton'
-  catButton.classList.remove("active");
-  dogButton.classList.remove("active");
-  wetButton.style.display = "none"; // ukryj przycisk 'wet'
-  dryButton.style.display = "none"; // ukryj przycisk 'dry'
-});
-
 const catButton = document.querySelector(".cat-option");
 const dogButton = document.querySelector(".dog-option");
+const toysButton = document.querySelector(".toys-option");
 
 catButton.addEventListener("click", function () {
+  logoLeftColumn.src = "./src/applaws-logo.svg";
+  logoLeftColumn.alt = "Applaws";
   currentCategory = "cat";
   index = 0;
   displayImages();
   catButton.classList.add("active");
   dogButton.classList.remove("active");
-  toysButton.classList.remove("active"); // usuń klasę 'active' z 'toysButton'
-  wetButton.style.display = "block"; // pokaż przycisk 'wet'
-  dryButton.style.display = "block"; // pokaż przycisk 'dry'
+  toysButton.classList.remove("active");
+  wetButton.style.display = "block";
+  dryButton.style.display = "block";
 });
 
 dogButton.addEventListener("click", function () {
+  logoLeftColumn.src = "./src/applaws-logo.svg";
+  logoLeftColumn.alt = "applaws";
   currentCategory = "dog";
   index = 0;
   displayImages();
@@ -156,6 +154,19 @@ dogButton.addEventListener("click", function () {
   toysButton.classList.remove("active"); // usuń klasę 'active' z 'toysButton'
   wetButton.style.display = "block"; // pokaż przycisk 'wet'
   dryButton.style.display = "block"; // pokaż przycisk 'dry'
+});
+
+toysButton.addEventListener("click", function () {
+  logoLeftColumn.src = "./src/katido-logo.svg";
+  logoLeftColumn.alt = "Katido";
+  currentCategory = "toys";
+  index = 0;
+  displayImages();
+  toysButton.classList.add("active"); // dodaj klasę 'active' do 'toysButton'
+  catButton.classList.remove("active");
+  dogButton.classList.remove("active");
+  wetButton.style.display = "none"; // ukryj przycisk 'wet'
+  dryButton.style.display = "none"; // ukryj przycisk 'dry'
 });
 
 // ================
@@ -174,3 +185,46 @@ window.addEventListener("scroll", function () {
     logoDiv.style.top = "35px";
   }
 });
+
+// ============== scroll to contact
+
+const sections = document.querySelectorAll("#products, #about, #contact");
+const navLinks = document.querySelectorAll(".products, .about, .contact-btn");
+
+let currentSection = "products";
+window.addEventListener("scroll", () => {
+  sections.forEach((section) => {
+    if (window.scrollY >= section.offsetTop - 400) {
+      currentSection = section.id;
+    }
+  });
+  navLinks.forEach((navLink) => {
+    if (navLink.href.includes(currentSection)) {
+      document
+        .querySelector(".active-navbar-option")
+        .classList.remove("active-navbar-option");
+      navLink.classList.add("active-navbar-option");
+    }
+  });
+});
+
+const header = document.querySelector(".header");
+const navbar = document.querySelector(".navbar-content");
+console.log(header.offsetHeight + navbar.offsetHeight);
+// window.addEventListener("scroll", () => {
+//   sections.forEach((sec) => {
+//     let top = window.scrollY;
+//     let offset = sec.offsetTop - 400;
+//     let height = sec.offsetHeight;
+//     let id = sec.getAttribute("id");
+
+//     if (top >= offset && top < offset + height) {
+//       navLinks.forEach((links) => {
+//         links.classList.remove("active-navbar-option");
+//         document
+//           .querySelector("nav a[href*=" + id + "]")
+//           .classList.add("active-navbar-option");
+//       });
+//     }
+//   });
+// });

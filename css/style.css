@@ -5,6 +5,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -57,8 +58,17 @@ button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: #fff;
   z-index: 10;
+}
+.navbar-content::after {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  margin-left: -50vw;
+  width: 150vw;
+  background-color: #d1d1d1;
+  height: 1px;
+  z-index: -1;
 }
 .navbar-content ul.left {
   display: -webkit-box;
@@ -70,21 +80,6 @@ button {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  position: relative;
-}
-.navbar-content ul.left::after {
-  content: "";
-  position: absolute;
-  bottom: 1px;
-  z-index: -1;
-  right: 0;
-  width: 50vw;
-  height: 1px;
-  background-color: #d1d1d1;
-}
-.navbar-content ul.left .products {
-  font-weight: 900;
-  border-bottom: 3px solid black;
 }
 .navbar-content ul.left .applaws-logo {
   -ms-flex-preferred-size: 60%;
@@ -100,6 +95,9 @@ button {
   text-align: center;
   -webkit-transition: ease-out 0.35s;
   transition: ease-out 0.35s;
+  background-color: #fff;
+  z-index: 20;
+  height: 85px;
 }
 .navbar-content div.middle-logo img {
   -webkit-transform-origin: top center;
@@ -119,17 +117,6 @@ button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  position: relative;
-}
-.navbar-content ul.right::after {
-  content: "";
-  position: absolute;
-  bottom: 1px;
-  z-index: -1;
-  left: 0;
-  width: 50vw;
-  height: 1px;
-  background-color: #d1d1d1;
 }
 .navbar-content ul.right .katide-logo {
   -ms-flex-preferred-size: 60%;
@@ -147,24 +134,16 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
-}
-.navbar-content ul.right li.contact a:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
 }
 .navbar-content ul.right li.facebook a,
 .navbar-content ul.right li.instagram a {
   padding-left: 15px;
   padding-right: 15px;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
 }
-.navbar-content ul.right li.facebook a:hover,
-.navbar-content ul.right li.instagram a:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+
+.active-navbar-option {
+  border-bottom: 3px solid black;
+  font-weight: 900;
 }
 
 .header {
@@ -203,7 +182,6 @@ button {
   font-weight: 800;
   font-size: 4rem;
   text-align: center;
-  width: 647px;
 }
 .header .main-txt .txt2 {
   font-family: "Literata";
@@ -211,7 +189,6 @@ button {
   text-align: center;
   margin-top: 50px;
   margin: 25px auto 0 auto;
-  width: 475px;
 }
 .header .right-cat {
   padding-top: 90px;
@@ -246,7 +223,7 @@ button {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 50%;
+  width: 540px;
 }
 .products-section .options .dog-option img {
   margin-right: 14px;
@@ -254,8 +231,8 @@ button {
 .products-section .options .dog-option,
 .products-section .options .cat-option,
 .products-section .options .toys-option {
-  width: 200px;
-  height: 160px;
+  width: 160px;
+  height: 140px;
   border: 1px solid #d1d1d1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -355,35 +332,30 @@ button {
   color: #fff;
 }
 .food-products .food-choice .gallery-arrows {
-  width: 40%;
+  width: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 20px;
 }
-.food-products .food-choice .gallery-arrows .arrow-left,
-.food-products .food-choice .gallery-arrows .arrow-right {
-  padding: 15px;
-  font-size: 2rem;
-  background-color: #fff;
-  border: 1px solid #000;
+.food-products .food-choice .gallery-arrows button {
+  border: none;
+  background-color: transparent;
+}
+.food-products .food-choice .gallery-arrows button .arrow-left,
+.food-products .food-choice .gallery-arrows button .arrow-right {
   -webkit-transition: 0.25s;
   transition: 0.25s;
 }
-.food-products .food-choice .gallery-arrows .arrow-left:not(.active-food-option):hover,
-.food-products .food-choice .gallery-arrows .arrow-right:not(.active-food-option):hover {
-  border-color: #000;
-}
-.food-products .food-choice .gallery-arrows .arrow-left:disabled,
-.food-products .food-choice .gallery-arrows .arrow-right:disabled {
+.food-products .food-choice .gallery-arrows button .arrow-left:disabled,
+.food-products .food-choice .gallery-arrows button .arrow-right:disabled {
   border: 1px solid #d1d1d1;
-}
-.food-products .food-choice .gallery-arrows .arrow-left:disabled:hover,
-.food-products .food-choice .gallery-arrows .arrow-right:disabled:hover {
-  background-color: transparent;
 }
 .food-products .food-choice .section-applaws-logo img {
   margin-top: 40px;
@@ -412,19 +384,10 @@ button {
       flex-basis: 30%;
 }
 
-.dog-wet img {
-  background-color: #d1d1d1;
-  border: 3px solid red;
-}
-
-.dog-dry img {
-  background-color: #818181;
-}
-
 section.about {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 80px 0 100px 0;
+  padding: 110px 0 100px 0;
   position: relative;
 }
 section.about::before {
@@ -446,7 +409,7 @@ section.about::after {
   background-color: #d1d1d1;
 }
 section.about .middle-column {
-  max-width: 50%;
+  max-width: 55%;
   margin: 0 auto;
   text-align: center;
   margin-bottom: 80px;
@@ -629,4 +592,34 @@ section.about .columns .right-column .fish-img {
 }
 .contact-section .contact-form .submit-button img {
   margin-left: 10px;
+}
+
+.footer {
+  padding: 60px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.footer .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer .content a.facebook-footer,
+.footer .content a.instagram-footer {
+  padding: 10px;
+}
+.footer .content a.instagram-footer {
+  margin: 0 20px;
+}
+.footer .content p {
+  font-family: "Lato";
+  font-size: 1.4rem;
+  margin-left: 60px;
 }/*# sourceMappingURL=style.css.map */

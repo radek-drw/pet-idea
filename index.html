@@ -17,8 +17,8 @@
     <!-- NAV -->
     <nav class="navbar-content">
       <ul class="left">
-        <li><a href="#" class="products">produkty</a></li>
-        <li><a href="#" class="about">o nas</a></li>
+        <li><a href="#products" class="products active-navbar-option">produkty</a></li>
+        <li><a href="#about" class="about">o nas</a></li>
         <div class="applaws-logo">
           <img src="src/applaws-logo.svg" class="applaws-img" alt="Applaws">
         </div>
@@ -28,10 +28,10 @@
       </div>
       <ul class="right">
         <div class="katide-logo">
-          <img src="src/katide-logo.svg" class="katide-img" alt="Katide">
+          <img src="src/katido-logo.svg" class="katide-img" alt="Katide">
         </div>
         <li class="contact">
-          <a href="#">
+          <a href="#contact" class="contact-btn">
             <img src="src/envelope.svg" class="contact-img" alt="Contact">
             <span class="contact-txt">kontakt</span>
           </a>
@@ -55,9 +55,9 @@
         <img src="src/dog.jpg" class="dog-img" alt="Dog">
       </div>
       <div class="main-txt">
-        <h1 class="txt1">Szczęśliwy pupil to nasza misja
+        <h1 class="txt1">Szczęśliwy pupil to nasza misja <br>
           a twój spokój.</h1>
-        <p class="txt2">Oferujemy wysokiej jakości produkty dla kotów i psów, zapewniające zdrowie
+        <p class="txt2">Oferujemy wysokiej jakości produkty dla kotów i psów, zapewniające zdrowie <br>
           i zadowolenie Twojego pupila.</p>
       </div>
       <div class="right-cat">
@@ -66,7 +66,7 @@
     </header>
 
     <!-- SECTION PRODUCTS -->
-    <section class="products-section">
+    <section class="products-section" id="products">
       <div class="options">
         <div class="cat-option active">
           <img src="src/cat-anime1.svg" alt="Wybierz kot">
@@ -89,11 +89,11 @@
             <button class="dry">sucha</button>
           </div>
           <div class="gallery-arrows">
-            <button class="arrow-left">
-              <i class="fa-solid fa-arrow-left"></i>
+            <button>
+              <img class="arrow-left" src="src/arrow-left.svg" alt="">
             </button>
-            <button class="arrow-right">
-              <i class="fa-solid fa-arrow-right"></i>
+            <button>
+              <img class="arrow-right" src="src/arrow-right.svg" alt="">
             </button>
           </div>
           <div class="section-applaws-logo">
@@ -207,10 +207,10 @@
     </section>
 
     <!-- SECTION ABOUT -->
-    <section class="about">
+    <section class="about" id="about">
       <div class="middle-column">
         <h1>Nasza filozofia</h1>
-        <p>Jesteśmy miłośnikami zwierząt, a wasze pupile są integralną częścią naszego życi
+        <p>Jesteśmy miłośnikami zwierząt, a wasze pupile są integralną częścią naszego życia <br>
           i inspirują nas do tworzenia jeszcze lepszych rozwiązań.</p>
       </div>
       <div class="columns">
@@ -230,10 +230,10 @@
             specjalistą, który wytwarza, naszym zdaniem, najlepszą naturalną
             karmę dla kotów i psów na świecie.
           </p>
-          <img src="src/cat&dog-play.svg" class="animal-img" alt="Pies i kot">
+          <img src="src/cat&dog.jpg" class="animal-img" alt="Pies i kot">
         </article>
         <article class="right-column">
-          <img src="src/fish.svg" class="fish-img" alt="Ryba">
+          <img src="src/fish.jpg" class="fish-img" alt="Ryba">
           <p class="upper-txt">
             Wszystkie ryby stosowane w naszych przepisach pochodzą z mórz,
             a ich połowy odbywają się przy użyciu metod przyjaznych delfinom. Wybieramy
@@ -253,7 +253,7 @@
       </div>
     </section>
     <!-- SECTION CONTACT FORM -->
-    <section class="contact-section">
+    <section class="contact-section" id="contact">
       <div class="contact-info">
         <h2>Bądźmy <br> w kontakcie</h2>
         <p class="description">Pytaj o co chcesz, chętnie odpowiemy <br>
@@ -291,13 +291,13 @@
 
     <footer class="footer">
       <div class="content">
-        <img src="src/facebook.svg" alt="Facebook">
-        <img src="src/instagram.svg" alt="Instagram">
-        <div class="copyright">
-          <p>&copy;</p>
-          <p>2024</p>
-          <p>Petidea</p>
-        </div>
+        <a href="#" class="facebook-footer">
+          <img src="src/facebook.svg" alt="Facebook">
+        </a>
+        <a href="#" class="instagram-footer">
+          <img src="src/instagram.svg" alt="Instagram">
+        </a>
+        <p>&copy; 2024 Petidea</p>
       </div>
     </footer>
   </div>

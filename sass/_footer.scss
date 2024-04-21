@@ -1,0 +1,22 @@
+.footer {
+  padding: 60px 0;
+  display: flex;
+  justify-content: flex-end;
+  .content {
+    display: flex;
+    align-items: center;
+    // background-color: lightblue;
+    a.facebook-footer,
+    a.instagram-footer {
+      padding: 10px;
+    }
+    a.instagram-footer {
+      margin: 0 20px;
+    }
+    p {
+      font-family: "Lato";
+      font-size: 1.4rem;
+      margin-left: 60px;
+    }
+  }
+}
