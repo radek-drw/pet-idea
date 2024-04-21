@@ -416,10 +416,19 @@ section.about {
   padding: 80px 0 100px 0;
   position: relative;
 }
-section.about::after {
+section.about::before {
   content: "";
   position: absolute;
   top: 0;
+  left: -50vw;
+  width: 150vw;
+  height: 1px;
+  background-color: #d1d1d1;
+}
+section.about::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
   left: -50vw;
   width: 150vw;
   height: 1px;
