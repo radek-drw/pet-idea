@@ -220,7 +220,7 @@ button {
 
 .products-section {
   position: relative;
-  padding: 100px 0;
+  padding: 100px 0 50px 0;
 }
 .products-section .options {
   position: absolute;
@@ -408,4 +408,75 @@ button {
 
 .dog-dry img {
   background-color: #818181;
+}
+
+section.about {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 80px 0 100px 0;
+  position: relative;
+}
+section.about::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50vw;
+  width: 150vw;
+  height: 1px;
+  background-color: #d1d1d1;
+}
+section.about .middle-column {
+  max-width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 80px;
+}
+section.about .middle-column h1 {
+  font-family: "Literata";
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+section.about .middle-column p {
+  font-family: "Lato";
+  font-size: 1.4rem;
+}
+section.about .columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+section.about .columns .left-column,
+section.about .columns .right-column {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+section.about .columns .left-column p.upper-txt,
+section.about .columns .left-column p.lower-txt,
+section.about .columns .right-column p.upper-txt,
+section.about .columns .right-column p.lower-txt {
+  padding: 0 50px 0 75px;
+  font-family: "Lato";
+  font-size: 1rem;
+  line-height: 2;
+}
+section.about .columns .left-column p.upper-txt,
+section.about .columns .right-column p.upper-txt {
+  margin-bottom: 25px;
+}
+section.about .columns .left-column .animal-img,
+section.about .columns .left-column .fish-img,
+section.about .columns .right-column .animal-img,
+section.about .columns .right-column .fish-img {
+  position: relative;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+section.about .columns .left-column .fish-img,
+section.about .columns .right-column .fish-img {
+  margin-bottom: 60px;
 }/*# sourceMappingURL=style.css.map */

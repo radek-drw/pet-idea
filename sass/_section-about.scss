@@ -1,0 +1,62 @@
+section.about {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 80px 0 100px 0;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50vw;
+    width: 150vw;
+    height: 1px;
+    background-color: #d1d1d1;
+  }
+  .middle-column {
+    max-width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 80px;
+    h1 {
+      font-family: "Literata";
+      font-size: 4rem;
+      font-weight: 800;
+      margin-bottom: 25px;
+    }
+    p {
+      font-family: "Lato";
+      font-size: 1.4rem;
+    }
+  }
+  .columns {
+    display: flex;
+    justify-content: space-around;
+    .left-column,
+    .right-column {
+      flex-basis: 50%;
+      // border: 1px solid red;
+      p.upper-txt,
+      p.lower-txt {
+        padding: 0 50px 0 75px;
+        font-family: "Lato";
+        font-size: 1rem;
+        line-height: 2;
+        // border: 1px solid black;
+      }
+      p.upper-txt {
+        margin-bottom: 25px;
+      }
+      .animal-img,
+      .fish-img {
+        // border: 1px solid black;
+        position: relative;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .fish-img {
+        margin-bottom: 60px;
+      }
+    }
+  }
+}
