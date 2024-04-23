@@ -89,11 +89,11 @@
             <button class="dry">sucha</button>
           </div>
           <div class="gallery-arrows">
-            <button>
-              <img class="arrow-left" src="src/arrow-left.svg" alt="">
+            <button class="arrow-left-btn">
+              <img class="arrow-left-img" src="src/arrow-left.svg" alt="">
             </button>
-            <button>
-              <img class="arrow-right" src="src/arrow-right.svg" alt="">
+            <button class="arrow-right-btn">
+              <img class="arrow-right-img" src="src/arrow-right.svg" alt="">
             </button>
           </div>
           <div class="section-applaws-logo">
@@ -263,22 +263,19 @@
           <p class="phone"><img src="src/phone.svg" alt="Telefon">507 185 138</p>
         </div>
       </div>
-      <form class="contact-form" action="#" method="post">
+      <form class="contact-form" id="myForm" action="#" method="post">
         <div class="name-and-email">
 
           <div>
-            <label for="name" class="name-label">Jak masz na imię?</label>
-            <input type="text" id="name" name="name" class="name-input" required>
+            <input type="text" id="name" name="name" class="name-input" placeholder="Jak masz na imię?">
           </div>
           <div>
-            <label for="email" class="email-label">Tutaj podaj maila</label>
-            <input type="email" id="email" name="email" class="email-input" required>
+            <input type="email" id="email" name="email" class="email-input" placeholder="Tutaj podaj maila">
           </div>
 
         </div>
         <div class="message-box">
-          <label for="message" class="message-label">Napisz wiadomość</label>
-          <input type="text" id="message" name="message" class="message-input" required>
+          <input type="text" id="message" name="message" class="message-input" placeholder="Napisz wiadomość">
         </div>
 
 

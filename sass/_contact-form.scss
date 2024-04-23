@@ -45,8 +45,26 @@
   }
   // Contact form
   .contact-form {
-    flex-basis: 60%;
+    flex-basis: 58%;
+    // background-color: lightblue;
     padding-top: 30px;
+    .name-input,
+    .email-input,
+    .message-input {
+      border: none;
+      border-bottom: 1px solid #d1d1d1;
+      font-family: "Lato";
+      font-size: 1.4rem;
+      padding-bottom: 15px;
+      &:focus {
+        outline: none;
+      }
+      &::placeholder {
+        font-family: "Lato";
+        font-size: 1.4rem;
+        color: #000;
+      }
+    }
     .name-and-email {
       display: flex;
       justify-content: space-between;
@@ -65,15 +83,23 @@
       .email-input {
         border: none;
         border-bottom: 1px solid #d1d1d1;
+        font-family: "Lato";
+        font-size: 1.4rem;
+        padding-bottom: 15px;
         &:focus {
           outline: none;
+        }
+        &::placeholder {
+          font-family: "Lato";
+          font-size: 1.4rem;
+          color: #000;
         }
       }
       .name-input {
         width: 190px;
       }
       .email-input {
-        width: 380px;
+        width: 500px;
       }
     }
     .message-box {

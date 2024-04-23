@@ -97,7 +97,7 @@ button {
   transition: ease-out 0.35s;
   background-color: #fff;
   z-index: 20;
-  height: 85px;
+  height: 83px;
 }
 .navbar-content div.middle-logo img {
   -webkit-transform-origin: top center;
@@ -108,9 +108,8 @@ button {
   transition: ease-out 0.35s;
 }
 .navbar-content ul.right {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-preferred-size: 44.5%;
+      flex-basis: 44.5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -345,21 +344,22 @@ button {
   margin-top: 20px;
 }
 .food-products .food-choice .gallery-arrows button {
-  border: none;
   background-color: transparent;
-}
-.food-products .food-choice .gallery-arrows button .arrow-left,
-.food-products .food-choice .gallery-arrows button .arrow-right {
+  width: 44px;
+  height: 44px;
+  border: 1px solid #d1d1d1;
   -webkit-transition: 0.25s;
   transition: 0.25s;
 }
-.food-products .food-choice .gallery-arrows button .arrow-left:disabled,
-.food-products .food-choice .gallery-arrows button .arrow-right:disabled {
+.food-products .food-choice .gallery-arrows button:hover {
+  border-color: #000;
+}
+.food-products .food-choice .gallery-arrows button:disabled {
   border: 1px solid #d1d1d1;
 }
 .food-products .food-choice .section-applaws-logo img {
   margin-top: 40px;
-  width: 35%;
+  width: 43%;
 }
 .food-products .products-gallery {
   -ms-flex-preferred-size: 74%;
@@ -442,7 +442,7 @@ section.about .columns .right-column p.upper-txt,
 section.about .columns .right-column p.lower-txt {
   padding: 0 50px 0 75px;
   font-family: "Lato";
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 2;
 }
 section.about .columns .left-column p.upper-txt,
@@ -520,9 +520,50 @@ section.about .columns .right-column .fish-img {
   margin-right: 10px;
 }
 .contact-section .contact-form {
-  -ms-flex-preferred-size: 60%;
-      flex-basis: 60%;
+  -ms-flex-preferred-size: 58%;
+      flex-basis: 58%;
   padding-top: 30px;
+}
+.contact-section .contact-form .name-input,
+.contact-section .contact-form .email-input,
+.contact-section .contact-form .message-input {
+  border: none;
+  border-bottom: 1px solid #d1d1d1;
+  font-family: "Lato";
+  font-size: 1.4rem;
+  padding-bottom: 15px;
+}
+.contact-section .contact-form .name-input:focus,
+.contact-section .contact-form .email-input:focus,
+.contact-section .contact-form .message-input:focus {
+  outline: none;
+}
+.contact-section .contact-form .name-input::-webkit-input-placeholder, .contact-section .contact-form .email-input::-webkit-input-placeholder, .contact-section .contact-form .message-input::-webkit-input-placeholder {
+  font-family: "Lato";
+  font-size: 1.4rem;
+  color: #000;
+}
+.contact-section .contact-form .name-input::-moz-placeholder, .contact-section .contact-form .email-input::-moz-placeholder, .contact-section .contact-form .message-input::-moz-placeholder {
+  font-family: "Lato";
+  font-size: 1.4rem;
+  color: #000;
+}
+.contact-section .contact-form .name-input:-ms-input-placeholder, .contact-section .contact-form .email-input:-ms-input-placeholder, .contact-section .contact-form .message-input:-ms-input-placeholder {
+  font-family: "Lato";
+  font-size: 1.4rem;
+  color: #000;
+}
+.contact-section .contact-form .name-input::-ms-input-placeholder, .contact-section .contact-form .email-input::-ms-input-placeholder, .contact-section .contact-form .message-input::-ms-input-placeholder {
+  font-family: "Lato";
+  font-size: 1.4rem;
+  color: #000;
+}
+.contact-section .contact-form .name-input::placeholder,
+.contact-section .contact-form .email-input::placeholder,
+.contact-section .contact-form .message-input::placeholder {
+  font-family: "Lato";
+  font-size: 1.4rem;
+  color: #000;
 }
 .contact-section .contact-form .name-and-email {
   display: -webkit-box;
@@ -551,16 +592,45 @@ section.about .columns .right-column .fish-img {
 .contact-section .contact-form .name-and-email .email-input {
   border: none;
   border-bottom: 1px solid #d1d1d1;
+  font-family: "Lato";
+  font-size: 1.4rem;
+  padding-bottom: 15px;
 }
 .contact-section .contact-form .name-and-email .name-input:focus,
 .contact-section .contact-form .name-and-email .email-input:focus {
   outline: none;
 }
+.contact-section .contact-form .name-and-email .name-input::-webkit-input-placeholder, .contact-section .contact-form .name-and-email .email-input::-webkit-input-placeholder {
+  font-family: "Lato";
+  font-size: 1.4rem;
+  color: #000;
+}
+.contact-section .contact-form .name-and-email .name-input::-moz-placeholder, .contact-section .contact-form .name-and-email .email-input::-moz-placeholder {
+  font-family: "Lato";
+  font-size: 1.4rem;
+  color: #000;
+}
+.contact-section .contact-form .name-and-email .name-input:-ms-input-placeholder, .contact-section .contact-form .name-and-email .email-input:-ms-input-placeholder {
+  font-family: "Lato";
+  font-size: 1.4rem;
+  color: #000;
+}
+.contact-section .contact-form .name-and-email .name-input::-ms-input-placeholder, .contact-section .contact-form .name-and-email .email-input::-ms-input-placeholder {
+  font-family: "Lato";
+  font-size: 1.4rem;
+  color: #000;
+}
+.contact-section .contact-form .name-and-email .name-input::placeholder,
+.contact-section .contact-form .name-and-email .email-input::placeholder {
+  font-family: "Lato";
+  font-size: 1.4rem;
+  color: #000;
+}
 .contact-section .contact-form .name-and-email .name-input {
   width: 190px;
 }
 .contact-section .contact-form .name-and-email .email-input {
-  width: 380px;
+  width: 500px;
 }
 .contact-section .contact-form .message-box {
   margin-top: 60px;

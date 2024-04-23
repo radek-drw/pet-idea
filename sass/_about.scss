@@ -44,14 +44,12 @@ section.about {
     .left-column,
     .right-column {
       flex-basis: 50%;
-      // border: 1px solid red;
       p.upper-txt,
       p.lower-txt {
         padding: 0 50px 0 75px;
         font-family: "Lato";
-        font-size: 1rem;
+        font-size: 1.1rem;
         line-height: 2;
-        // border: 1px solid black;
       }
       p.upper-txt {
         margin-bottom: 25px;

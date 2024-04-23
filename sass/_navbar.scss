@@ -41,7 +41,8 @@
     transition: ease-out 0.35s;
     background-color: #fff;
     z-index: 20;
-    height: 85px;
+    height: 83px;
+    // background-color: lightblue;
     img {
       transform-origin: top center;
       transform: scale(1.2);
@@ -49,7 +50,7 @@
     }
   }
   ul.right {
-    flex-grow: 1;
+    flex-basis: 44.5%;
     display: flex;
     justify-content: space-between;
     .katide-logo {
