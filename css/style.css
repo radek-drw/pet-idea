@@ -380,6 +380,7 @@ button {
   padding-right: 100px;
 }
 .food-products .products-gallery .cat-wet .cat-wet-container {
+  position: relative;
   width: 255px;
   height: 210px;
   border-left: 2px solid #dfaa40;
@@ -399,7 +400,9 @@ button {
   margin-left: 10px;
 }
 .food-products .products-gallery .cat-wet .cat-wet-container .description {
-  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   padding-left: 20px;
 }
 .food-products .products-gallery .cat-wet .cat-wet-container .description .title {
@@ -414,11 +417,38 @@ button {
   font-weight: 400;
   font-family: "Lato";
 }
+.food-products .products-gallery .cat-wet .cat-wet-katido-container {
+  position: relative;
+  width: 255px;
+  height: 210px;
+  border-left: 2px solid #4fb6b1;
+}
+.food-products .products-gallery .cat-wet .cat-wet-katido-container img {
+  margin-left: 10px;
+}
+.food-products .products-gallery .cat-wet .cat-wet-katido-container .description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-left: 20px;
+}
+.food-products .products-gallery .cat-wet .cat-wet-katido-container .description .title {
+  display: block;
+  font-size: 1rem;
+  font-weight: 900;
+  font-family: "Lato";
+}
+.food-products .products-gallery .cat-wet .cat-wet-katido-container .description .ingridients {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Lato";
+}
 .food-products .products-gallery .cat-wet .cat-dry-container {
+  position: relative;
   width: 255px;
   height: 210px;
   border-left: 2px solid #cc6330;
-  position: relative;
 }
 .food-products .products-gallery .cat-wet .cat-dry-container .product-code {
   border: 2px solid #cc6330;
@@ -443,6 +473,7 @@ button {
 .food-products .products-gallery .cat-wet .cat-dry-container .description {
   position: absolute;
   bottom: 0;
+  left: 0;
   padding-left: 20px;
 }
 .food-products .products-gallery .cat-wet .cat-dry-container .description .title {
@@ -452,6 +483,46 @@ button {
   font-family: "Lato";
 }
 .food-products .products-gallery .cat-wet .cat-dry-container .description .ingridients {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Lato";
+}
+.food-products .products-gallery .cat-wet .cat-dry-treats-container {
+  position: relative;
+  width: 255px;
+  height: 210px;
+  border-left: 2px solid #71517b;
+}
+.food-products .products-gallery .cat-wet .cat-dry-treats-container .product-code {
+  border: 2px solid #71517b;
+  color: #71517b;
+  border-left: none;
+  width: 95px;
+  line-height: 34px;
+  text-align: center;
+  display: block;
+  font-family: "Lato";
+  font-size: 1rem;
+}
+.food-products .products-gallery .cat-wet .cat-dry-treats-container img {
+  position: absolute;
+  left: 49%;
+  top: 5%;
+}
+.food-products .products-gallery .cat-wet .cat-dry-treats-container .description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-left: 20px;
+}
+.food-products .products-gallery .cat-wet .cat-dry-treats-container .description .title {
+  display: block;
+  font-size: 1rem;
+  font-weight: 900;
+  font-family: "Lato";
+}
+.food-products .products-gallery .cat-wet .cat-dry-treats-container .description .ingridients {
   display: block;
   font-size: 1rem;
   font-weight: 400;

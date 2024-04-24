@@ -55,6 +55,8 @@
   // GALLERY
   $cat-wet-color: #dfaa40;
   $cat-dry-color: #cc6330;
+  $cat-wet-katido-color: #4fb6b1;
+  $cat-dry-treats-color: #71517b;
   $padding-description: 20px;
 
   .products-gallery {
@@ -81,8 +83,24 @@
           margin-left: 10px;
         }
         .description {
-          display: block;
-          padding-left: $padding-description;
+          @include description;
+          .title {
+            @include product-title;
+          }
+          .ingridients {
+            @include product-ingridients;
+          }
+        }
+      }
+      // CAT WET KATIDO
+      .cat-wet-katido-container {
+        @include product-container;
+        border-left: 2px solid $cat-wet-katido-color;
+        img {
+          margin-left: 10px;
+        }
+        .description {
+          @include description;
           .title {
             @include product-title;
           }
@@ -95,7 +113,6 @@
       .cat-dry-container {
         @include product-container;
         border-left: 2px solid $cat-dry-color;
-        position: relative;
         .product-code {
           border: 2px solid $cat-dry-color;
           color: $cat-dry-color;
@@ -111,9 +128,31 @@
           top: 5%;
         }
         .description {
+          @include description;
+          .title {
+            @include product-title;
+          }
+          .ingridients {
+            @include product-ingridients;
+          }
+        }
+      }
+      // CAT DRY TREATS
+      .cat-dry-treats-container {
+        @include product-container;
+        border-left: 2px solid $cat-dry-treats-color;
+        .product-code {
+          border: 2px solid $cat-dry-treats-color;
+          color: $cat-dry-treats-color;
+          @include product-code;
+        }
+        img {
           position: absolute;
-          bottom: 0;
-          padding-left: $padding-description;
+          left: 49%;
+          top: 5%;
+        }
+        .description {
+          @include description;
           .title {
             @include product-title;
           }

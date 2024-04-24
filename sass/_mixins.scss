@@ -1,4 +1,5 @@
 @mixin product-container {
+  position: relative;
   width: 255px;
   height: 210px;
 }
@@ -10,6 +11,12 @@
   display: block;
   font-family: "Lato";
   font-size: 1rem;
+}
+@mixin description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-left: 20px;
 }
 @mixin product-title {
   display: block;
