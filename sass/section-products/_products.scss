@@ -53,18 +53,75 @@
     }
   }
   // GALLERY
+  $cat-wet-color: #dfaa40;
+  $cat-dry-color: #cc6330;
+  $padding-description: 20px;
+
   .products-gallery {
+    flex-basis: 68%;
     // background-color: lightblue;
-    flex-basis: 74%;
     .cat-wet {
-      height: 700px;
+      height: 500px;
       display: flex;
       justify-content: space-between;
-      align-items: baseline;
       flex-wrap: wrap;
-    }
-    & * {
-      flex-basis: 30%;
+      align-content: space-between;
+      padding-right: 100px;
+      // CAT WET
+      .cat-wet-container {
+        @include product-container;
+        // background-color: lightblue;
+        border-left: 2px solid $cat-wet-color;
+        .product-code {
+          border: 2px solid $cat-wet-color;
+          color: $cat-wet-color;
+          @include product-code;
+        }
+        img {
+          margin-left: 10px;
+        }
+        .description {
+          display: block;
+          padding-left: $padding-description;
+          .title {
+            @include product-title;
+          }
+          .ingridients {
+            @include product-ingridients;
+          }
+        }
+      }
+      // CAT DRY
+      .cat-dry-container {
+        @include product-container;
+        border-left: 2px solid $cat-dry-color;
+        position: relative;
+        .product-code {
+          border: 2px solid $cat-dry-color;
+          color: $cat-dry-color;
+          @include product-code;
+          &:nth-child(2) {
+            border-top: none;
+            border-bottom: none;
+          }
+        }
+        img {
+          position: absolute;
+          left: 49%;
+          top: 5%;
+        }
+        .description {
+          position: absolute;
+          bottom: 0;
+          padding-left: $padding-description;
+          .title {
+            @include product-title;
+          }
+          .ingridients {
+            @include product-ingridients;
+          }
+        }
+      }
     }
   }
 }

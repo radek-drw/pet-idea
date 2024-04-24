@@ -1,14 +1,14 @@
 let index = 0;
 const categories = {
   cat: {
-    wet: document.querySelectorAll(".cat-wet img"),
-    dry: document.querySelectorAll(".cat-dry img"),
+    wet: document.querySelectorAll(".cat-wet div"),
+    dry: document.querySelectorAll(".cat-dry div"),
   },
   dog: {
     wet: document.querySelectorAll(".dog-wet img"),
     dry: document.querySelectorAll(".dog-dry img"),
   },
-  toys: document.querySelectorAll(".toys img"), // dodaj kategorię 'toys'
+  toys: document.querySelectorAll(".toys img"),
 };
 let currentCategory = "cat";
 let currentSubcategory = "wet";
@@ -63,18 +63,14 @@ function displayImages() {
   nextButton.disabled = index + 6 >= images.length;
   if (prevButton.disabled) {
     prevButton.style.cursor = "not-allowed";
-    // prevButton.src = "./src/arrow-disabled-left.svg";
   } else {
     prevButton.style.cursor = "pointer";
-    // prevButton.src = "./src/arrow-left.svg";
   }
 
   if (nextButton.disabled) {
     nextButton.style.cursor = "not-allowed";
-    // nextButton.src = "./src/arrow-disabled-right.svg";
   } else {
     nextButton.style.cursor = "pointer";
-    // nextButton.src = "./src/arrow-right.svg";
   }
 }
 
@@ -151,9 +147,9 @@ dogButton.addEventListener("click", function () {
   displayImages();
   dogButton.classList.add("active");
   catButton.classList.remove("active");
-  toysButton.classList.remove("active"); // usuń klasę 'active' z 'toysButton'
-  wetButton.style.display = "block"; // pokaż przycisk 'wet'
-  dryButton.style.display = "block"; // pokaż przycisk 'dry'
+  toysButton.classList.remove("active");
+  wetButton.style.display = "block";
+  dryButton.style.display = "block";
 });
 
 toysButton.addEventListener("click", function () {
@@ -162,14 +158,14 @@ toysButton.addEventListener("click", function () {
   currentCategory = "toys";
   index = 0;
   displayImages();
-  toysButton.classList.add("active"); // dodaj klasę 'active' do 'toysButton'
+  toysButton.classList.add("active");
   catButton.classList.remove("active");
   dogButton.classList.remove("active");
-  wetButton.style.display = "none"; // ukryj przycisk 'wet'
-  dryButton.style.display = "none"; // ukryj przycisk 'dry'
+  wetButton.style.display = "none";
+  dryButton.style.display = "none";
 });
 
-// ================
+// ================ scroll navbar logo
 
 window.addEventListener("scroll", function () {
   const logo = document.querySelector(".petidea-img");
@@ -229,25 +225,69 @@ window.addEventListener("scroll", () => {
 // ============ form validation
 document.getElementById("myForm").addEventListener("submit", function (event) {
   event.preventDefault();
-  console.log("dziala");
 
-  var name = document.getElementById("name").value;
-  var email = document.getElementById("email").value;
-  var message = document.getElementById("message").value;
+  const fields = [
+    { id: "name", errorClass: "error-name", inputClass: "name-input" },
 
-  if (name === "" || email === "" || message === "") {
-    alert("Wszystkie pola są wymagane!");
+    {
+      id: "email",
+      errorClass: "error-email",
+      inputClass: "email-input",
+      pattern: /^[^ ]+@[^ ]+\.[a-z]{2,3}$/,
+    },
+
+    { id: "message", errorClass: "error-message", inputClass: "message-input" },
+  ];
+
+  let formIsValid = true;
+
+  fields.forEach((field) => {
+    const value = document.getElementById(field.id).value;
+
+    const inputElement = document.querySelector(`.${field.inputClass}`);
+
+    const errorElement = document.querySelector(`.${field.errorClass}`);
+
+    if (value === "" || (field.pattern && !field.pattern.test(value))) {
+      inputElement.style.borderColor = "#ff0000";
+
+      inputElement.style.backgroundColor = "#ffeeee";
+
+      errorElement.style.display = "block";
+
+      formIsValid = false;
+    } else {
+      inputElement.style.borderColor = "#d1d1d1";
+
+      inputElement.style.backgroundColor = "transparent";
+
+      errorElement.style.display = "none";
+    }
+  });
+
+  if (formIsValid) {
+    // Clear the input fields
+
+    fields.forEach((field) => {
+      const inputElement = document.querySelector(`.${field.inputClass}`);
+
+      inputElement.value = "";
+    });
+
+    // Display the success message
+
+    const successMessage = document.querySelector(".success-message");
+
+    successMessage.style.display = "block";
+
+    // Hide the success message after 3 seconds
+
+    setTimeout(function () {
+      successMessage.style.display = "none";
+    }, 3000);
+  } else {
     return false;
   }
-
-  var emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-  if (!email.match(emailPattern)) {
-    alert("Podaj prawidłowy adres e-mail!");
-    return false;
-  }
-
-  alert("Formularz został pomyślnie wysłany!");
-  return true;
 });
 
 // ============= placeholder in contact form

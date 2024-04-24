@@ -2,7 +2,7 @@
   display: flex;
   padding: 100px 0 0 0;
   justify-content: space-between;
-  // background-color: lightblue;
+  // background-color: lightcoral;
   align-items: center;
   .contact-info {
     flex-basis: 290px;
@@ -47,7 +47,17 @@
   .contact-form {
     flex-basis: 58%;
     // background-color: lightblue;
-    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    // height: 280px;
+    align-self: stretch;
+    position: relative;
+    padding-top: 35px;
+    .name-and-email {
+      display: flex;
+      justify-content: space-between;
+    }
+    // padding-top: 30px;
     .name-input,
     .email-input,
     .message-input {
@@ -55,7 +65,8 @@
       border-bottom: 1px solid #d1d1d1;
       font-family: "Lato";
       font-size: 1.4rem;
-      padding-bottom: 15px;
+      // padding-bottom: 15px;
+      height: 40px;
       &:focus {
         outline: none;
       }
@@ -65,63 +76,39 @@
         color: #000;
       }
     }
-    .name-and-email {
-      display: flex;
-      justify-content: space-between;
-      // padding-bottom: 10px;
-      & > div {
-        display: flex;
-        flex-direction: column;
-        .name-label,
-        .email-label {
-          font-family: "Lato";
-          font-size: 1.4rem;
-          margin-bottom: 10px;
-        }
-      }
-      .name-input,
-      .email-input {
-        border: none;
-        border-bottom: 1px solid #d1d1d1;
-        font-family: "Lato";
-        font-size: 1.4rem;
-        padding-bottom: 15px;
-        &:focus {
-          outline: none;
-        }
-        &::placeholder {
-          font-family: "Lato";
-          font-size: 1.4rem;
-          color: #000;
-        }
-      }
-      .name-input {
-        width: 190px;
-      }
-      .email-input {
-        width: 500px;
-      }
+    .name-input {
+      width: 190px;
     }
-    .message-box {
-      margin-top: 60px;
-      .message-label {
+    .email-input {
+      width: 500px;
+    }
+    .message-input {
+      display: block;
+      width: 100%;
+      margin-top: 65px;
+    }
+
+    .error-info {
+      // background-color: #ffc0c0;
+      position: absolute;
+      bottom: 0;
+      right: 113px;
+      padding-right: 20px;
+      p {
+        color: #ff0000;
         font-family: "Lato";
         font-size: 1.4rem;
-        display: block;
-        margin-bottom: 10px;
+        display: none;
       }
-      .message-input {
-        border: none;
-        border-bottom: 1px solid #d1d1d1;
-        width: 100%;
-        &:focus {
-          outline: none;
-        }
+      h2 {
+        display: none;
+        font-family: "Lato";
+        font-size: 1.6rem;
       }
     }
     .submit-button {
-      margin-left: calc(100% - 113px);
-      margin-top: 50px;
+      align-self: flex-end;
+      margin-top: auto;
       background-color: #000;
       color: #fff;
       width: 113px;

@@ -1,0 +1,25 @@
+@mixin product-container {
+  width: 255px;
+  height: 210px;
+}
+@mixin product-code {
+  border-left: none;
+  width: 95px;
+  line-height: 34px;
+  text-align: center;
+  display: block;
+  font-family: "Lato";
+  font-size: 1rem;
+}
+@mixin product-title {
+  display: block;
+  font-size: 1rem;
+  font-weight: 900;
+  font-family: "Lato";
+}
+@mixin product-ingridients {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Lato";
+}
