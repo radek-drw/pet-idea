@@ -5,10 +5,10 @@ const categories = {
     dry: document.querySelectorAll(".cat-dry div"),
   },
   dog: {
-    wet: document.querySelectorAll(".dog-wet img"),
-    dry: document.querySelectorAll(".dog-dry img"),
+    wet: document.querySelectorAll(".dog-wet div"),
+    dry: document.querySelectorAll(".dog-dry div"),
   },
-  toys: document.querySelectorAll(".toys img"),
+  toys: document.querySelectorAll(".toys div"),
 };
 let currentCategory = "cat";
 let currentSubcategory = "wet";

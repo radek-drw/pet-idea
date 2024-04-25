@@ -379,6 +379,9 @@ button {
       align-content: space-between;
   padding-right: 100px;
 }
+.food-products .products-gallery .cat-wet:last-child {
+  background-color: red;
+}
 .food-products .products-gallery .cat-wet .cat-wet-container {
   position: relative;
   width: 255px;
@@ -397,7 +400,10 @@ button {
   font-size: 1rem;
 }
 .food-products .products-gallery .cat-wet .cat-wet-container img {
-  margin-left: 10px;
+  position: absolute;
+  left: 6%;
+  bottom: 15%;
+  z-index: -1;
 }
 .food-products .products-gallery .cat-wet .cat-wet-container .description {
   position: absolute;
@@ -417,28 +423,28 @@ button {
   font-weight: 400;
   font-family: "Lato";
 }
-.food-products .products-gallery .cat-wet .cat-wet-katido-container {
+.food-products .products-gallery .cat-wet .cat-katido-container {
   position: relative;
   width: 255px;
   height: 210px;
   border-left: 2px solid #4fb6b1;
 }
-.food-products .products-gallery .cat-wet .cat-wet-katido-container img {
+.food-products .products-gallery .cat-wet .cat-katido-container img {
   margin-left: 10px;
 }
-.food-products .products-gallery .cat-wet .cat-wet-katido-container .description {
+.food-products .products-gallery .cat-wet .cat-katido-container .description {
   position: absolute;
   bottom: 0;
   left: 0;
   padding-left: 20px;
 }
-.food-products .products-gallery .cat-wet .cat-wet-katido-container .description .title {
+.food-products .products-gallery .cat-wet .cat-katido-container .description .title {
   display: block;
   font-size: 1rem;
   font-weight: 900;
   font-family: "Lato";
 }
-.food-products .products-gallery .cat-wet .cat-wet-katido-container .description .ingridients {
+.food-products .products-gallery .cat-wet .cat-katido-container .description .ingridients {
   display: block;
   font-size: 1rem;
   font-weight: 400;
@@ -523,6 +529,119 @@ button {
   font-family: "Lato";
 }
 .food-products .products-gallery .cat-wet .cat-dry-treats-container .description .ingridients {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Lato";
+}
+.food-products .products-gallery .cat-wet .toys-katido-container {
+  position: relative;
+  width: 255px;
+  height: 210px;
+  border-left: 2px solid #4fb6b1;
+}
+.food-products .products-gallery .cat-wet .toys-katido-container img {
+  position: absolute;
+  left: 42%;
+  bottom: 0;
+}
+.food-products .products-gallery .cat-wet .toys-katido-container .description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-left: 20px;
+  width: 110px;
+}
+.food-products .products-gallery .cat-wet .toys-katido-container .description .title {
+  display: block;
+  font-size: 1rem;
+  font-weight: 900;
+  font-family: "Lato";
+}
+.food-products .products-gallery .cat-wet .toys-katido-container .description .ingridients {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Lato";
+}
+.food-products .products-gallery .cat-wet .dog-wet-container {
+  position: relative;
+  width: 255px;
+  height: 210px;
+  border-left: 2px solid #ac517c;
+}
+.food-products .products-gallery .cat-wet .dog-wet-container .product-code {
+  border: 2px solid #ac517c;
+  color: #ac517c;
+  border-left: none;
+  width: 95px;
+  line-height: 34px;
+  text-align: center;
+  display: block;
+  font-family: "Lato";
+  font-size: 1rem;
+}
+.food-products .products-gallery .cat-wet .dog-wet-container img {
+  margin-left: 10px;
+}
+.food-products .products-gallery .cat-wet .dog-wet-container .description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-left: 20px;
+}
+.food-products .products-gallery .cat-wet .dog-wet-container .description .title {
+  display: block;
+  font-size: 1rem;
+  font-weight: 900;
+  font-family: "Lato";
+}
+.food-products .products-gallery .cat-wet .dog-wet-container .description .ingridients {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Lato";
+}
+.food-products .products-gallery .cat-wet .dog-dry-container {
+  position: relative;
+  width: 255px;
+  height: 210px;
+  border-left: 2px solid #cc037d;
+}
+.food-products .products-gallery .cat-wet .dog-dry-container .product-code {
+  border: 2px solid #cc037d;
+  color: #cc037d;
+  border-left: none;
+  width: 95px;
+  line-height: 34px;
+  text-align: center;
+  display: block;
+  font-family: "Lato";
+  font-size: 1rem;
+}
+.food-products .products-gallery .cat-wet .dog-dry-container .product-code:nth-child(2) {
+  border-top: none;
+  border-bottom: none;
+}
+.food-products .products-gallery .cat-wet .dog-dry-container img {
+  position: absolute;
+  left: 40%;
+  bottom: 15%;
+  z-index: -1;
+}
+.food-products .products-gallery .cat-wet .dog-dry-container .description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-left: 20px;
+}
+.food-products .products-gallery .cat-wet .dog-dry-container .description .title {
+  display: block;
+  font-size: 1rem;
+  font-weight: 900;
+  font-family: "Lato";
+}
+.food-products .products-gallery .cat-wet .dog-dry-container .description .ingridients {
   display: block;
   font-size: 1rem;
   font-weight: 400;
