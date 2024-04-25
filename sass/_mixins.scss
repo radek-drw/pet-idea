@@ -2,8 +2,10 @@
   position: relative;
   width: 255px;
   height: 210px;
+  border-left: 1px solid transparent;
 }
 @mixin product-code {
+  border: 1px solid transparent;
   border-left: none;
   width: 95px;
   line-height: 34px;
@@ -11,6 +13,15 @@
   display: block;
   font-family: "Lato";
   font-size: 1rem;
+  background-color: #fff;
+  &:nth-child(2) {
+    border-top: none;
+    border-bottom: none;
+  }
+}
+@mixin product-img {
+  position: absolute;
+  z-index: -1;
 }
 @mixin description {
   position: absolute;
@@ -29,4 +40,27 @@
   font-size: 1rem;
   font-weight: 400;
   font-family: "Lato";
+}
+//================
+
+@mixin product($color) {
+  @include product-container;
+  border-color: $color;
+  .product-code {
+    @include product-code;
+    border-color: $color;
+    color: $color;
+  }
+  img {
+    @include product-img;
+  }
+  .description {
+    @include description;
+    .title {
+      @include product-title;
+    }
+    .ingridients {
+      @include product-ingridients;
+    }
+  }
 }

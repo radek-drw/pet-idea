@@ -1,0 +1,83 @@
+// GALLERY
+$cat-wet-color: #dfaa40;
+$cat-dry-color: #cc6330;
+$katido-color: #4fb6b1;
+$cat-dry-treats-color: #71517b;
+$dog-wet-color: #ac517c;
+$dog-dry-color: #cc037d;
+
+.products-gallery {
+  // background-color: lightblue;
+  flex-basis: 68%;
+  .cat-wet {
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-between;
+    padding-right: 100px;
+    .cat-wet-container {
+      @include product($cat-wet-color);
+      img {
+        left: 16%;
+        bottom: 14%;
+        &.cat-treat-fix-1 {
+          left: 25%;
+        }
+      }
+    }
+
+    .cat-katido-container {
+      @include product($katido-color);
+      img {
+        left: 20%;
+        bottom: 20%;
+      }
+    }
+
+    .cat-dry-container {
+      @include product($cat-dry-color);
+      img {
+        left: 33%;
+        top: 10%;
+      }
+      &.cat-dry-fix8 .cat-dry-fix8-code {
+        border-bottom: 1px solid $cat-dry-color;
+      }
+    }
+
+    .cat-dry-treats-container {
+      @include product($cat-dry-treats-color);
+      img {
+        left: 14%;
+        top: 5%;
+      }
+    }
+
+    .toys-container {
+      @include product($katido-color);
+      img {
+        left: 42%;
+        bottom: 0;
+        &.toy-fix-1 {
+          bottom: -6%;
+        }
+      }
+      .description {
+        width: 110px;
+      }
+    }
+
+    .dog-wet-container {
+      @include product($dog-wet-color);
+    }
+
+    .dog-dry-container {
+      @include product($dog-dry-color);
+      img {
+        left: 40%;
+        bottom: 15%;
+      }
+    }
+  }
+}

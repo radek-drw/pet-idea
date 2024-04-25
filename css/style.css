@@ -361,11 +361,12 @@ button {
   margin-top: 40px;
   width: 43%;
 }
-.food-products .products-gallery {
+
+.products-gallery {
   -ms-flex-preferred-size: 68%;
       flex-basis: 68%;
 }
-.food-products .products-gallery .cat-wet {
+.products-gallery .cat-wet {
   height: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -379,130 +380,68 @@ button {
       align-content: space-between;
   padding-right: 100px;
 }
-.food-products .products-gallery .cat-wet:last-child {
-  background-color: red;
-}
-.food-products .products-gallery .cat-wet .cat-wet-container {
+.products-gallery .cat-wet .cat-wet-container {
   position: relative;
   width: 255px;
   height: 210px;
-  border-left: 2px solid #dfaa40;
+  border-left: 1px solid transparent;
+  border-color: #dfaa40;
 }
-.food-products .products-gallery .cat-wet .cat-wet-container .product-code {
-  border: 2px solid #dfaa40;
+.products-gallery .cat-wet .cat-wet-container .product-code {
+  border: 1px solid transparent;
+  border-left: none;
+  width: 95px;
+  line-height: 34px;
+  text-align: center;
+  display: block;
+  font-family: "Lato";
+  font-size: 1rem;
+  background-color: #fff;
+  border-color: #dfaa40;
   color: #dfaa40;
-  border-left: none;
-  width: 95px;
-  line-height: 34px;
-  text-align: center;
-  display: block;
-  font-family: "Lato";
-  font-size: 1rem;
 }
-.food-products .products-gallery .cat-wet .cat-wet-container img {
-  position: absolute;
-  left: 6%;
-  bottom: 15%;
-  z-index: -1;
-}
-.food-products .products-gallery .cat-wet .cat-wet-container .description {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding-left: 20px;
-}
-.food-products .products-gallery .cat-wet .cat-wet-container .description .title {
-  display: block;
-  font-size: 1rem;
-  font-weight: 900;
-  font-family: "Lato";
-}
-.food-products .products-gallery .cat-wet .cat-wet-container .description .ingridients {
-  display: block;
-  font-size: 1rem;
-  font-weight: 400;
-  font-family: "Lato";
-}
-.food-products .products-gallery .cat-wet .cat-katido-container {
-  position: relative;
-  width: 255px;
-  height: 210px;
-  border-left: 2px solid #4fb6b1;
-}
-.food-products .products-gallery .cat-wet .cat-katido-container img {
-  margin-left: 10px;
-}
-.food-products .products-gallery .cat-wet .cat-katido-container .description {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding-left: 20px;
-}
-.food-products .products-gallery .cat-wet .cat-katido-container .description .title {
-  display: block;
-  font-size: 1rem;
-  font-weight: 900;
-  font-family: "Lato";
-}
-.food-products .products-gallery .cat-wet .cat-katido-container .description .ingridients {
-  display: block;
-  font-size: 1rem;
-  font-weight: 400;
-  font-family: "Lato";
-}
-.food-products .products-gallery .cat-wet .cat-dry-container {
-  position: relative;
-  width: 255px;
-  height: 210px;
-  border-left: 2px solid #cc6330;
-}
-.food-products .products-gallery .cat-wet .cat-dry-container .product-code {
-  border: 2px solid #cc6330;
-  color: #cc6330;
-  border-left: none;
-  width: 95px;
-  line-height: 34px;
-  text-align: center;
-  display: block;
-  font-family: "Lato";
-  font-size: 1rem;
-}
-.food-products .products-gallery .cat-wet .cat-dry-container .product-code:nth-child(2) {
+.products-gallery .cat-wet .cat-wet-container .product-code:nth-child(2) {
   border-top: none;
   border-bottom: none;
 }
-.food-products .products-gallery .cat-wet .cat-dry-container img {
+.products-gallery .cat-wet .cat-wet-container img {
   position: absolute;
-  left: 49%;
-  top: 5%;
+  z-index: -1;
 }
-.food-products .products-gallery .cat-wet .cat-dry-container .description {
+.products-gallery .cat-wet .cat-wet-container .description {
   position: absolute;
   bottom: 0;
   left: 0;
   padding-left: 20px;
 }
-.food-products .products-gallery .cat-wet .cat-dry-container .description .title {
+.products-gallery .cat-wet .cat-wet-container .description .title {
   display: block;
   font-size: 1rem;
   font-weight: 900;
   font-family: "Lato";
 }
-.food-products .products-gallery .cat-wet .cat-dry-container .description .ingridients {
+.products-gallery .cat-wet .cat-wet-container .description .ingridients {
   display: block;
   font-size: 1rem;
   font-weight: 400;
   font-family: "Lato";
 }
-.food-products .products-gallery .cat-wet .cat-dry-treats-container {
+.products-gallery .cat-wet .cat-wet-container img {
+  left: 16%;
+  bottom: 14%;
+}
+.products-gallery .cat-wet .cat-wet-container img.cat-treat-fix-1 {
+  left: 25%;
+}
+.products-gallery .cat-wet .cat-katido-container {
   position: relative;
   width: 255px;
   height: 210px;
-  border-left: 2px solid #71517b;
+  border-left: 1px solid transparent;
+  border-color: #4fb6b1;
 }
-.food-products .products-gallery .cat-wet .cat-dry-treats-container .product-code {
-  border: 2px solid #71517b;
-  color: #71517b;
+.products-gallery .cat-wet .cat-katido-container .product-code {
+  border: 1px solid transparent;
   border-left: none;
   width: 95px;
   line-height: 34px;
@@ -510,142 +449,294 @@ button {
   display: block;
   font-family: "Lato";
   font-size: 1rem;
+  background-color: #fff;
+  border-color: #4fb6b1;
+  color: #4fb6b1;
 }
-.food-products .products-gallery .cat-wet .cat-dry-treats-container img {
+.products-gallery .cat-wet .cat-katido-container .product-code:nth-child(2) {
+  border-top: none;
+  border-bottom: none;
+}
+.products-gallery .cat-wet .cat-katido-container img {
   position: absolute;
-  left: 49%;
-  top: 5%;
+  z-index: -1;
 }
-.food-products .products-gallery .cat-wet .cat-dry-treats-container .description {
+.products-gallery .cat-wet .cat-katido-container .description {
   position: absolute;
   bottom: 0;
   left: 0;
   padding-left: 20px;
 }
-.food-products .products-gallery .cat-wet .cat-dry-treats-container .description .title {
+.products-gallery .cat-wet .cat-katido-container .description .title {
   display: block;
   font-size: 1rem;
   font-weight: 900;
   font-family: "Lato";
 }
-.food-products .products-gallery .cat-wet .cat-dry-treats-container .description .ingridients {
+.products-gallery .cat-wet .cat-katido-container .description .ingridients {
   display: block;
   font-size: 1rem;
   font-weight: 400;
   font-family: "Lato";
 }
-.food-products .products-gallery .cat-wet .toys-katido-container {
+.products-gallery .cat-wet .cat-katido-container img {
+  left: 20%;
+  bottom: 20%;
+}
+.products-gallery .cat-wet .cat-dry-container {
   position: relative;
   width: 255px;
   height: 210px;
-  border-left: 2px solid #4fb6b1;
+  border-left: 1px solid transparent;
+  border-color: #cc6330;
 }
-.food-products .products-gallery .cat-wet .toys-katido-container img {
+.products-gallery .cat-wet .cat-dry-container .product-code {
+  border: 1px solid transparent;
+  border-left: none;
+  width: 95px;
+  line-height: 34px;
+  text-align: center;
+  display: block;
+  font-family: "Lato";
+  font-size: 1rem;
+  background-color: #fff;
+  border-color: #cc6330;
+  color: #cc6330;
+}
+.products-gallery .cat-wet .cat-dry-container .product-code:nth-child(2) {
+  border-top: none;
+  border-bottom: none;
+}
+.products-gallery .cat-wet .cat-dry-container img {
   position: absolute;
+  z-index: -1;
+}
+.products-gallery .cat-wet .cat-dry-container .description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-left: 20px;
+}
+.products-gallery .cat-wet .cat-dry-container .description .title {
+  display: block;
+  font-size: 1rem;
+  font-weight: 900;
+  font-family: "Lato";
+}
+.products-gallery .cat-wet .cat-dry-container .description .ingridients {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Lato";
+}
+.products-gallery .cat-wet .cat-dry-container img {
+  left: 33%;
+  top: 10%;
+}
+.products-gallery .cat-wet .cat-dry-container.cat-dry-fix8 .cat-dry-fix8-code {
+  border-bottom: 1px solid #cc6330;
+}
+.products-gallery .cat-wet .cat-dry-treats-container {
+  position: relative;
+  width: 255px;
+  height: 210px;
+  border-left: 1px solid transparent;
+  border-color: #71517b;
+}
+.products-gallery .cat-wet .cat-dry-treats-container .product-code {
+  border: 1px solid transparent;
+  border-left: none;
+  width: 95px;
+  line-height: 34px;
+  text-align: center;
+  display: block;
+  font-family: "Lato";
+  font-size: 1rem;
+  background-color: #fff;
+  border-color: #71517b;
+  color: #71517b;
+}
+.products-gallery .cat-wet .cat-dry-treats-container .product-code:nth-child(2) {
+  border-top: none;
+  border-bottom: none;
+}
+.products-gallery .cat-wet .cat-dry-treats-container img {
+  position: absolute;
+  z-index: -1;
+}
+.products-gallery .cat-wet .cat-dry-treats-container .description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-left: 20px;
+}
+.products-gallery .cat-wet .cat-dry-treats-container .description .title {
+  display: block;
+  font-size: 1rem;
+  font-weight: 900;
+  font-family: "Lato";
+}
+.products-gallery .cat-wet .cat-dry-treats-container .description .ingridients {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Lato";
+}
+.products-gallery .cat-wet .cat-dry-treats-container img {
+  left: 14%;
+  top: 5%;
+}
+.products-gallery .cat-wet .toys-container {
+  position: relative;
+  width: 255px;
+  height: 210px;
+  border-left: 1px solid transparent;
+  border-color: #4fb6b1;
+}
+.products-gallery .cat-wet .toys-container .product-code {
+  border: 1px solid transparent;
+  border-left: none;
+  width: 95px;
+  line-height: 34px;
+  text-align: center;
+  display: block;
+  font-family: "Lato";
+  font-size: 1rem;
+  background-color: #fff;
+  border-color: #4fb6b1;
+  color: #4fb6b1;
+}
+.products-gallery .cat-wet .toys-container .product-code:nth-child(2) {
+  border-top: none;
+  border-bottom: none;
+}
+.products-gallery .cat-wet .toys-container img {
+  position: absolute;
+  z-index: -1;
+}
+.products-gallery .cat-wet .toys-container .description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-left: 20px;
+}
+.products-gallery .cat-wet .toys-container .description .title {
+  display: block;
+  font-size: 1rem;
+  font-weight: 900;
+  font-family: "Lato";
+}
+.products-gallery .cat-wet .toys-container .description .ingridients {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Lato";
+}
+.products-gallery .cat-wet .toys-container img {
   left: 42%;
   bottom: 0;
 }
-.food-products .products-gallery .cat-wet .toys-katido-container .description {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding-left: 20px;
+.products-gallery .cat-wet .toys-container img.toy-fix-1 {
+  bottom: -6%;
+}
+.products-gallery .cat-wet .toys-container .description {
   width: 110px;
 }
-.food-products .products-gallery .cat-wet .toys-katido-container .description .title {
-  display: block;
-  font-size: 1rem;
-  font-weight: 900;
-  font-family: "Lato";
-}
-.food-products .products-gallery .cat-wet .toys-katido-container .description .ingridients {
-  display: block;
-  font-size: 1rem;
-  font-weight: 400;
-  font-family: "Lato";
-}
-.food-products .products-gallery .cat-wet .dog-wet-container {
+.products-gallery .cat-wet .dog-wet-container {
   position: relative;
   width: 255px;
   height: 210px;
-  border-left: 2px solid #ac517c;
+  border-left: 1px solid transparent;
+  border-color: #ac517c;
 }
-.food-products .products-gallery .cat-wet .dog-wet-container .product-code {
-  border: 2px solid #ac517c;
+.products-gallery .cat-wet .dog-wet-container .product-code {
+  border: 1px solid transparent;
+  border-left: none;
+  width: 95px;
+  line-height: 34px;
+  text-align: center;
+  display: block;
+  font-family: "Lato";
+  font-size: 1rem;
+  background-color: #fff;
+  border-color: #ac517c;
   color: #ac517c;
-  border-left: none;
-  width: 95px;
-  line-height: 34px;
-  text-align: center;
-  display: block;
-  font-family: "Lato";
-  font-size: 1rem;
 }
-.food-products .products-gallery .cat-wet .dog-wet-container img {
-  margin-left: 10px;
-}
-.food-products .products-gallery .cat-wet .dog-wet-container .description {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding-left: 20px;
-}
-.food-products .products-gallery .cat-wet .dog-wet-container .description .title {
-  display: block;
-  font-size: 1rem;
-  font-weight: 900;
-  font-family: "Lato";
-}
-.food-products .products-gallery .cat-wet .dog-wet-container .description .ingridients {
-  display: block;
-  font-size: 1rem;
-  font-weight: 400;
-  font-family: "Lato";
-}
-.food-products .products-gallery .cat-wet .dog-dry-container {
-  position: relative;
-  width: 255px;
-  height: 210px;
-  border-left: 2px solid #cc037d;
-}
-.food-products .products-gallery .cat-wet .dog-dry-container .product-code {
-  border: 2px solid #cc037d;
-  color: #cc037d;
-  border-left: none;
-  width: 95px;
-  line-height: 34px;
-  text-align: center;
-  display: block;
-  font-family: "Lato";
-  font-size: 1rem;
-}
-.food-products .products-gallery .cat-wet .dog-dry-container .product-code:nth-child(2) {
+.products-gallery .cat-wet .dog-wet-container .product-code:nth-child(2) {
   border-top: none;
   border-bottom: none;
 }
-.food-products .products-gallery .cat-wet .dog-dry-container img {
+.products-gallery .cat-wet .dog-wet-container img {
   position: absolute;
-  left: 40%;
-  bottom: 15%;
   z-index: -1;
 }
-.food-products .products-gallery .cat-wet .dog-dry-container .description {
+.products-gallery .cat-wet .dog-wet-container .description {
   position: absolute;
   bottom: 0;
   left: 0;
   padding-left: 20px;
 }
-.food-products .products-gallery .cat-wet .dog-dry-container .description .title {
+.products-gallery .cat-wet .dog-wet-container .description .title {
   display: block;
   font-size: 1rem;
   font-weight: 900;
   font-family: "Lato";
 }
-.food-products .products-gallery .cat-wet .dog-dry-container .description .ingridients {
+.products-gallery .cat-wet .dog-wet-container .description .ingridients {
   display: block;
   font-size: 1rem;
   font-weight: 400;
   font-family: "Lato";
+}
+.products-gallery .cat-wet .dog-dry-container {
+  position: relative;
+  width: 255px;
+  height: 210px;
+  border-left: 1px solid transparent;
+  border-color: #cc037d;
+}
+.products-gallery .cat-wet .dog-dry-container .product-code {
+  border: 1px solid transparent;
+  border-left: none;
+  width: 95px;
+  line-height: 34px;
+  text-align: center;
+  display: block;
+  font-family: "Lato";
+  font-size: 1rem;
+  background-color: #fff;
+  border-color: #cc037d;
+  color: #cc037d;
+}
+.products-gallery .cat-wet .dog-dry-container .product-code:nth-child(2) {
+  border-top: none;
+  border-bottom: none;
+}
+.products-gallery .cat-wet .dog-dry-container img {
+  position: absolute;
+  z-index: -1;
+}
+.products-gallery .cat-wet .dog-dry-container .description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-left: 20px;
+}
+.products-gallery .cat-wet .dog-dry-container .description .title {
+  display: block;
+  font-size: 1rem;
+  font-weight: 900;
+  font-family: "Lato";
+}
+.products-gallery .cat-wet .dog-dry-container .description .ingridients {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Lato";
+}
+.products-gallery .cat-wet .dog-dry-container img {
+  left: 40%;
+  bottom: 15%;
 }
 
 section.about {
