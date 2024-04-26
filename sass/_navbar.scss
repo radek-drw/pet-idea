@@ -42,7 +42,6 @@
     background-color: #fff;
     z-index: 20;
     height: 83px;
-    // background-color: lightblue;
     img {
       transform-origin: top center;
       transform: scale(1.2);
@@ -64,10 +63,6 @@
       a {
         display: flex;
         align-items: center;
-        // transition: 0.25s;
-        // &:hover {
-        //   transform: scale(1.15);
-        // }
       }
     }
     li.facebook,
@@ -75,16 +70,53 @@
       a {
         padding-left: 15px;
         padding-right: 15px;
-        // transition: all 0.25s;
-        // &:hover {
-        //   transform: scale(1.2);
-        // }
       }
     }
   }
 }
-// Navbar active option
-.active-navbar-option {
-  border-bottom: 3px solid black;
-  font-weight: 900;
+
+// LINK ANIMATION
+.left a,
+.contact a {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.left a::after,
+.contact a::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  transition: left 0.25s ease-in-out;
+}
+
+.left a:hover::after,
+.contact a:hover::after,
+.left a.active-navbar-option::after,
+.contact a.active-navbar-option::after {
+  left: 0;
+}
+
+.left a::before,
+.contact a::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  right: 100%;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  transition: right 0.25s ease-in-out;
+}
+
+.left a:hover::before,
+.contact a:hover::before,
+.left a.active-navbar-option::before,
+.contact a.active-navbar-option::before {
+  right: 0; /* Slide in to the link */
 }

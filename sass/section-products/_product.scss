@@ -7,12 +7,10 @@ $dog-wet-color: #ac517c;
 $dog-dry-color: #cc037d;
 
 .products-gallery {
-  // background-color: lightblue;
-  flex-basis: 68%;
+  flex-basis: 69%;
   .cat-wet {
     height: 500px;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     align-content: space-between;
     padding-right: 100px;
@@ -38,8 +36,11 @@ $dog-dry-color: #cc037d;
     .cat-dry-container {
       @include product($cat-dry-color);
       img {
-        left: 33%;
-        top: 10%;
+        left: 38%;
+        bottom: 16%;
+        &.cat-dry-fix-1 {
+          left: 48%;
+        }
       }
       &.cat-dry-fix8 .cat-dry-fix8-code {
         border-bottom: 1px solid $cat-dry-color;
@@ -70,6 +71,13 @@ $dog-dry-color: #cc037d;
 
     .dog-wet-container {
       @include product($dog-wet-color);
+      img {
+        left: 12%;
+        bottom: 17%;
+        &.dog-wet-fix-sachets {
+          bottom: 11%;
+        }
+      }
     }
 
     .dog-dry-container {
