@@ -59,6 +59,25 @@ function displayImages() {
     }
   }
 
+  // Slider animation effect
+  for (let i = index; i < index + 6; i++) {
+    if (i < images.length) {
+      images[i].style.display = "block";
+      images[i].style.opacity = 0;
+      images[i].style.transform = "translateX(-100px) scale(0.8)";
+      images[i].style.transition =
+        "opacity 0.5s ease-in-out, transform 0.5s ease-in-out";
+      images[i].style.transitionDelay = `${(i - index) * 0.1}s`;
+      displayDiv.appendChild(images[i]);
+
+      // use setTimeout to change opacity, position, and scale after the element is in the DOM
+      setTimeout(() => {
+        images[i].style.opacity = 1;
+        images[i].style.transform = "translateX(0) scale(1)";
+      }, 0);
+    }
+  }
+
   prevButton.disabled = index === 0;
   nextButton.disabled = index + 6 >= images.length;
   if (prevButton.disabled) {
