@@ -1,12 +1,36 @@
+// Food Products Section
 .food-products {
   display: flex;
   justify-content: space-between;
+  @include mobile {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  // Food Choice
   .food-choice {
     flex-basis: 20%;
+    @include mobile {
+      flex-basis: 382px;
+      // background-color: lightblue;
+      display: flex;
+      // justify-content: space-between;
+      margin: 40px auto 0 auto;
+      // padding: 0 20px;
+    }
+
+    // Food Option
     .food-option {
       width: 60%;
       display: flex;
       justify-content: space-between;
+      @include mobile {
+        // background-color: lightcoral;
+        order: 2;
+        flex-basis: 50%;
+      }
+
+      // Wet and Dry Options
       .wet,
       .dry {
         flex-basis: 47%;
@@ -17,38 +41,64 @@
         padding: 14px 0;
         background-color: transparent;
         transition: 0.25s;
+        @include mobile {
+        }
+
         &:not(.active-food-option):hover {
           border-color: #000;
         }
       }
+
+      // Active Food Option
       .active-food-option {
         background-color: #000;
         color: #fff;
       }
     }
+
+    // Gallery Arrows
     .gallery-arrows {
       width: 100px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-top: 20px;
+      @include mobile {
+        display: none;
+      }
+
       button {
         background-color: transparent;
         width: 44px;
         height: 44px;
         border: 1px solid #d1d1d1;
         transition: 0.25s;
+
         &:hover {
           border-color: #000;
         }
+
         &:disabled {
           border: 1px solid #d1d1d1;
         }
       }
     }
-    .section-applaws-logo img {
-      margin-top: 40px;
-      width: 43%;
+    .section-applaws-logo {
+      @include mobile {
+        flex-basis: 50%;
+        // background-color: lightgoldenrodyellow;
+      }
+      img {
+        margin-top: 40px;
+        width: 43%;
+        @include mobile {
+          width: 50%;
+          // position: relative;
+          margin-top: 0;
+        }
+      }
     }
+
+    // Section Applaws Logo
   }
 }

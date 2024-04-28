@@ -8,12 +8,23 @@ $dog-dry-color: #cc037d;
 
 .products-gallery {
   flex-basis: 69%;
+  @include mobile {
+    flex-basis: 100%;
+  }
   .cat-wet {
     height: 500px;
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
     padding-right: 100px;
+    @include mobile {
+      height: 330px;
+      // flex-wrap: nowrap;
+      justify-content: center;
+      // justify-items: flex-end;
+      align-content: center;
+      padding-right: 0;
+    }
     .cat-wet-container {
       @include product($cat-wet-color);
       img {

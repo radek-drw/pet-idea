@@ -1,7 +1,15 @@
+// Products Section
 .products-section {
   position: relative;
   padding: 100px 0 180px 0;
-  // background-color: lightblue;
+  @include mobile {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 30px;
+  }
+
+  // Options
   .options {
     position: absolute;
     left: 50%;
@@ -10,14 +18,19 @@
     display: flex;
     justify-content: space-between;
     width: 540px;
-    // background-color: lightblue;
-    // padding-top: 100px;
-    .dog-option img {
-      margin-right: 14px;
+
+    @include mobile {
+      top: 0;
+      left: 0;
+      width: 382px;
+      transform: translate(0);
+      position: static;
+      margin: 0 auto;
+      // background-color: lightblue;
     }
-    .dog-option,
-    .cat-option,
-    .toys-option {
+
+    // Individual Options
+    .option {
       width: 160px;
       height: 140px;
       border: 1px solid #d1d1d1;
@@ -27,31 +40,50 @@
       flex-direction: column;
       transition: 0.25s;
       cursor: pointer;
+      @include mobile {
+        width: 113px;
+        height: 99px;
+      }
+
+      &.dog-option img {
+        margin-right: 14px;
+        @include mobile {
+          margin-right: 8px;
+        }
+      }
+
       &:not(.active):hover {
         border-color: #000;
       }
+
       img {
         width: 35%;
       }
+
       span {
         font-size: 1.6rem;
         font-family: "Literata";
         font-weight: 800;
         margin-top: 10px;
+        @include mobile {
+          font-size: 1.2rem;
+        }
       }
     }
   }
 }
 
-//  Active option
+// Active Option
 .active {
   background-color: #000;
   color: #fff;
   position: relative;
   border: none !important;
+
   img {
     filter: invert(100%);
   }
+
   &::after {
     content: "";
     position: absolute;

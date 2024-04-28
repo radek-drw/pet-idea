@@ -6,6 +6,9 @@
   position: fixed;
   top: 0;
   left: 0;
+  @include mobile {
+    display: none;
+  }
 }
 .navbar-content {
   position: sticky;

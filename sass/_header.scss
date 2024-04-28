@@ -2,14 +2,21 @@
   display: flex;
   justify-content: space-between;
   padding: 150px 0 100px 0;
-  // background-color: lightblue;
-  // background-color: lightgoldenrodyellow;
+  @include mobile {
+    padding: 0;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #d1d1d1;
+  }
   .left-dog {
     position: relative;
-    // background-color: #d1d1d1;
     padding-top: 70px;
     left: 40px;
-    // align-self: flex-end;
+    @include mobile {
+      padding: 0;
+      order: 2;
+      left: -55px;
+      bottom: 0;
+    }
     &::after {
       content: "";
       position: absolute;
@@ -18,21 +25,42 @@
       width: 50vw;
       height: 1px;
       background-color: #d1d1d1;
+      @include mobile {
+        display: none;
+      }
     }
     img {
       width: 300px;
       height: 306px;
+      @include mobile {
+        width: 167px;
+        height: 171px;
+        position: relative;
+        bottom: -4px;
+        // z-index: 100;
+      }
     }
   }
   .main-txt {
     // background-color: lightblue;
     text-align: center;
+    @include mobile {
+      order: 1;
+      flex-basis: 100%;
+      position: relative;
+    }
     h1.txt1 {
       font-family: "Literata";
       font-weight: 800;
       font-size: 4rem;
       text-align: center;
-      // width: 647px;
+      @include mobile {
+        font-size: 2.8rem;
+        padding-top: 22px;
+        br {
+          display: none;
+        }
+      }
     }
     p.txt2 {
       font-family: "Lato";
@@ -41,12 +69,28 @@
       margin-top: 50px;
       font-weight: 500;
       margin: 38px auto 0 auto;
+      @include mobile {
+        margin: 0;
+        font-size: 1.2rem;
+        position: absolute;
+        top: 160%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 48%;
+        z-index: 10;
+        line-height: 1.7;
+      }
     }
   }
   .right-cat {
     padding-top: 90px;
     position: relative;
     right: 60px;
+    @include mobile {
+      padding: 0;
+      order: 3;
+      right: -60px;
+    }
     &::after {
       content: "";
       position: absolute;
@@ -55,10 +99,19 @@
       width: 50vw;
       height: 1px;
       background-color: #d1d1d1;
+      @include mobile {
+        display: none;
+      }
     }
     img {
       width: 288px;
       height: 286px;
+      @include mobile {
+        width: 175px;
+        height: 174px;
+        position: relative;
+        bottom: -1px;
+      }
     }
   }
 }
