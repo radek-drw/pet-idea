@@ -16,6 +16,7 @@
       order: 2;
       left: -55px;
       bottom: 0;
+      z-index: -1;
     }
     &::after {
       content: "";
@@ -77,7 +78,7 @@
         left: 50%;
         transform: translateX(-50%);
         width: 48%;
-        z-index: 10;
+        // z-index: 10;
         line-height: 1.7;
       }
     }
@@ -90,6 +91,7 @@
       padding: 0;
       order: 3;
       right: -60px;
+      z-index: -1;
     }
     &::after {
       content: "";
