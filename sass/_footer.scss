@@ -2,21 +2,36 @@
   padding: 60px 0;
   display: flex;
   justify-content: flex-end;
+  @include mobile {
+    justify-content: flex-start;
+    padding: 0 20px;
+  }
   .content {
     display: flex;
     align-items: center;
     // background-color: lightblue;
+    @include mobile {
+      width: 100%;
+      justify-content: space-between;
+      // background-color: lightblue;
+    }
     a.facebook-footer,
     a.instagram-footer {
       padding: 10px;
     }
     a.instagram-footer {
       margin: 0 20px;
+      @include mobile {
+        margin-left: -160px;
+      }
     }
     p {
       font-family: "Lato";
       font-size: 1.4rem;
       margin-left: 60px;
+      @include mobile {
+        font-size: 1rem;
+      }
     }
   }
 }

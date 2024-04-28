@@ -16,6 +16,73 @@
   display: flex;
   justify-content: space-between;
   z-index: 10;
+  @include mobile {
+    justify-content: center;
+    align-items: center;
+    height: 110px;
+    border-bottom: 1px solid #d1d1d1;
+  }
+  .sidebar-nav {
+    display: none;
+    @include mobile {
+      display: block;
+      position: absolute;
+      top: 0;
+      z-index: 1000;
+      width: 50%;
+      left: 100%;
+      transition: 0.2s ease;
+      // transform: translateX(-100%);
+      background-color: #fff;
+      border: 1px solid #d1d1d1;
+      // border-bottom: none;
+      box-shadow: 0 0 13px #d1d1d1;
+      border-radius: 15px 0 0 15px;
+      .sidebar-icon {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        top: 20px;
+        left: -80px;
+        border: 1px solid black;
+        transition: 0.5s;
+        span {
+          position: absolute;
+          background-color: #000;
+          top: 20%;
+          left: 10%;
+          right: 10%;
+          height: 4px;
+          &:nth-of-type(2) {
+            top: 50%;
+            transform: translateY(-50%);
+          }
+          &:nth-of-type(3) {
+            top: 80%;
+            transform: translateY(-100%);
+          }
+        }
+      }
+      li {
+        border-bottom: 1px solid #d1d1d1;
+        // text-align: cente;
+        &:last-of-type {
+          border-bottom: none;
+        }
+        a {
+          width: 100%;
+          padding: 30px;
+          text-transform: capitalize;
+          font-size: 1.4rem;
+        }
+        img.contact-img,
+        img.facebook-img,
+        img.instagram-img {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
   &::after {
     content: "";
     position: absolute;
@@ -25,15 +92,27 @@
     background-color: #d1d1d1;
     height: 1px;
     z-index: -1;
+    @include mobile {
+      display: none;
+    }
   }
   ul.left {
     display: flex;
     justify-content: space-between;
     flex-grow: 1;
+    @include mobile {
+      display: none;
+    }
     .applaws-logo {
       flex-basis: 60%;
       text-align: end;
       align-self: center;
+    }
+  }
+  .applaws-logo-side-bar {
+    display: none;
+    @include mobile {
+      display: block;
     }
   }
   div.middle-logo {
@@ -45,16 +124,31 @@
     background-color: #fff;
     z-index: 20;
     height: 83px;
+    @include mobile {
+      position: static;
+      width: 25%;
+      // background-color: lightblue;
+      height: auto;
+      // top: 0;
+    }
     img {
       transform-origin: top center;
       transform: scale(1.2);
       transition: ease-out 0.35s;
+      @include mobile {
+        transform-origin: 50% 50% 0;
+        transform: scale(1);
+        height: 55px;
+      }
     }
   }
   ul.right {
     flex-basis: 44.5%;
     display: flex;
     justify-content: space-between;
+    @include mobile {
+      display: none;
+    }
     .katide-logo {
       flex-basis: 60%;
       align-self: center;
@@ -74,6 +168,12 @@
         padding-left: 15px;
         padding-right: 15px;
       }
+    }
+  }
+  .katide-logo-side-bar {
+    display: none;
+    @include mobile {
+      display: block;
     }
   }
 }

@@ -2,25 +2,49 @@
   display: flex;
   padding: 100px 0 0 0;
   justify-content: space-between;
-  // background-color: lightcoral;
   align-items: center;
+  @include mobile {
+    padding: 30px 20px 20px 20px;
+    flex-wrap: wrap;
+  }
   .contact-info {
     flex-basis: 290px;
     // background-color: lightcoral;
+    @include mobile {
+      flex-basis: 100%;
+      text-align: center;
+    }
     h2 {
       font-family: "Literata";
       font-weight: 800;
       font-size: 4rem;
+      @include mobile {
+        font-size: 2.8rem;
+        br {
+          display: none;
+        }
+      }
     }
     p.description {
       font-family: "Lato";
       font-size: 1.4rem;
       padding: 40px 0;
       line-height: 1.5;
+      @include mobile {
+        font-size: 1.2rem;
+        padding: 14px 0 40px 0;
+        br {
+          display: none;
+        }
+      }
     }
     .contact-details {
       display: flex;
       justify-content: space-between;
+      @include mobile {
+        justify-content: space-around;
+        padding-bottom: 20px;
+      }
       a {
         padding: 0;
         text-transform: 0;
@@ -53,6 +77,9 @@
     align-self: stretch;
     position: relative;
     padding-top: 35px;
+    @include mobile {
+      flex-basis: 100%;
+    }
     .name-and-email {
       display: flex;
       justify-content: space-between;
@@ -74,18 +101,30 @@
         font-family: "Lato";
         font-size: 1.4rem;
         color: #000;
+        @include mobile {
+          font-size: 1.2rem;
+        }
       }
     }
     .name-input {
       width: 190px;
+      @include mobile {
+        width: 30%;
+      }
     }
     .email-input {
       width: 500px;
+      @include mobile {
+        width: 60%;
+      }
     }
     .message-input {
       display: block;
       width: 100%;
       margin-top: 65px;
+      @include mobile {
+        margin-top: 20px;
+      }
     }
 
     .error-info {
@@ -116,6 +155,9 @@
       border: none;
       font-family: "Lato";
       font-size: 1.2rem;
+      @include mobile {
+        margin-top: 30px;
+      }
       img {
         margin-left: 10px;
       }

@@ -2,8 +2,12 @@ section.about {
   max-width: 1000px;
   margin: 0 auto;
   padding: 110px 0 100px 0;
-  // background-color: lightblue;
   position: relative;
+  @include mobile {
+    border-top: 1px solid #d1d1d1;
+    border-bottom: 1px solid #d1d1d1;
+    padding: 0 20px 30px 20px;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -12,6 +16,9 @@ section.about {
     width: 150vw;
     height: 1px;
     background-color: #d1d1d1;
+    @include mobile {
+      display: none;
+    }
   }
   &::after {
     content: "";
@@ -21,26 +28,51 @@ section.about {
     width: 150vw;
     height: 1px;
     background-color: #d1d1d1;
+    @include mobile {
+      display: none;
+    }
   }
   .middle-column {
     max-width: 55%;
     margin: 0 auto;
     text-align: center;
     margin-bottom: 80px;
+    @include mobile {
+      max-width: 100%;
+      margin-bottom: 50px;
+    }
     h1 {
       font-family: "Literata";
       font-size: 4rem;
       font-weight: 800;
       margin-bottom: 25px;
+      @include mobile {
+        font-size: 2.8rem;
+        margin-bottom: 12px;
+      }
     }
     p {
       font-family: "Lato";
       font-size: 1.4rem;
+      @include mobile {
+        font-size: 1.2rem;
+        // background-color: lightblue;
+        padding: 0 25px;
+        line-height: 1.5;
+
+        br {
+          display: none;
+        }
+      }
     }
   }
   .columns {
     display: flex;
     justify-content: space-around;
+    // background-color: lightblue;
+    @include mobile {
+      position: relative;
+    }
     .left-column,
     .right-column {
       flex-basis: 50%;
@@ -50,9 +82,17 @@ section.about {
         font-family: "Lato";
         font-size: 1.1rem;
         line-height: 2;
+        @include mobile {
+          padding: 0;
+          font-size: 1rem;
+          width: 50%;
+        }
       }
       p.upper-txt {
         margin-bottom: 25px;
+        @include mobile {
+          margin-bottom: 12px;
+        }
       }
       .animal-img,
       .fish-img {
@@ -61,9 +101,34 @@ section.about {
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
+        @include mobile {
+          // position: absolute;
+          // position: static;
+          transform: translateX(0);
+          left: -55%;
+          top: 30px;
+          // top: 0;
+        }
       }
       .fish-img {
         margin-bottom: 60px;
+        left: -63%;
+        top: 55px;
+        z-index: -1;
+      }
+    }
+    .right-column {
+      @include mobile {
+        p.upper-txt,
+        p.lower-txt {
+          margin-left: -220px;
+          margin-top: 100px;
+          // background-color: lightblue;
+          width: 55%;
+        }
+        p.lower-txt {
+          margin-top: 10px;
+        }
       }
     }
   }
