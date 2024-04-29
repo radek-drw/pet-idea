@@ -24,6 +24,9 @@
   }
   .sidebar-nav {
     display: none;
+    &.active-sidebar {
+      transform: translateX(-100%);
+    }
     @include mobile {
       display: block;
       position: absolute;
@@ -31,35 +34,58 @@
       z-index: 1000;
       width: 50%;
       left: 100%;
-      transition: 0.2s ease;
+      transition: 0.5s ease;
       // transform: translateX(-100%);
       background-color: #fff;
       border: 1px solid #d1d1d1;
       // border-bottom: none;
       box-shadow: 0 0 13px #d1d1d1;
       border-radius: 15px 0 0 15px;
-      .sidebar-icon {
-        width: 60px;
-        height: 60px;
+      .menu {
         position: absolute;
-        top: 20px;
-        left: -80px;
-        border: 1px solid black;
+        left: -65px;
+        top: 40px;
+        width: 45px;
+        height: 30px;
         transition: 0.5s;
-        span {
+        background-color: #fff;
+        // border: 1px solid #d1d1d1;
+        // border-right: none;
+        // border-radius: 4px 0 0 4px;
+        &.active-menu {
+          left: -45px;
+        }
+        .menu-global {
           position: absolute;
-          background-color: #000;
-          top: 20%;
-          left: 10%;
-          right: 10%;
-          height: 4px;
-          &:nth-of-type(2) {
-            top: 50%;
-            transform: translateY(-50%);
+          left: 0;
+          width: 100%;
+          border-top: 4px solid black;
+          backface-visibility: hidden;
+          transition: 0.5s;
+        }
+        .menu-top {
+          top: 0;
+          &.menu-top-click {
+            top: 12px;
+            transform: rotate(50deg);
+            transition: 0.5s 0.3s;
+            backface-visibility: hidden;
           }
-          &:nth-of-type(3) {
-            top: 80%;
-            transform: translateY(-100%);
+        }
+
+        .menu-middle {
+          top: 15px;
+          &.menu-middle-click {
+            opacity: 0;
+          }
+        }
+        .menu-bottom {
+          top: 30px;
+          &.menu-bottom-click {
+            top: 12px;
+            transform: rotate(-410deg);
+            backface-visibility: hidden;
+            transition: 0.5s 0.3s;
           }
         }
       }

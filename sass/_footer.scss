@@ -9,11 +9,9 @@
   .content {
     display: flex;
     align-items: center;
-    // background-color: lightblue;
     @include mobile {
       width: 100%;
       justify-content: space-between;
-      // background-color: lightblue;
     }
     a.facebook-footer,
     a.instagram-footer {

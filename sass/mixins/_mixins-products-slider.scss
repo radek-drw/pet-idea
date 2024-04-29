@@ -50,6 +50,7 @@
 @mixin product($color) {
   @include product-container;
   border-color: $color;
+  display: none;
   .product-code {
     @include product-code;
     border-color: $color;

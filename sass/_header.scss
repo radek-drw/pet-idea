@@ -38,12 +38,10 @@
         height: 171px;
         position: relative;
         bottom: -4px;
-        // z-index: 100;
       }
     }
   }
   .main-txt {
-    // background-color: lightblue;
     text-align: center;
     @include mobile {
       order: 1;

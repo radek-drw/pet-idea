@@ -56,7 +56,6 @@ section.about {
       font-size: 1.4rem;
       @include mobile {
         font-size: 1.2rem;
-        // background-color: lightblue;
         padding: 0 25px;
         line-height: 1.5;
 
@@ -69,7 +68,6 @@ section.about {
   .columns {
     display: flex;
     justify-content: space-around;
-    // background-color: lightblue;
     @include mobile {
       position: relative;
     }
@@ -96,25 +94,24 @@ section.about {
       }
       .animal-img,
       .fish-img {
-        // border: 1px solid black;
         position: relative;
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
         @include mobile {
-          // position: absolute;
-          // position: static;
           transform: translateX(0);
           left: -55%;
           top: 30px;
-          // top: 0;
         }
       }
       .fish-img {
         margin-bottom: 60px;
-        left: -63%;
-        top: 55px;
+        top: 15px;
         z-index: -1;
+        @include mobile {
+          top: 40px;
+          left: -62%;
+        }
       }
     }
     .right-column {
@@ -123,7 +120,6 @@ section.about {
         p.lower-txt {
           margin-left: -220px;
           margin-top: 100px;
-          // background-color: lightblue;
           width: 55%;
         }
         p.lower-txt {

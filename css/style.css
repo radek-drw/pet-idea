@@ -85,6 +85,10 @@ button {
 .navbar-content .sidebar-nav {
   display: none;
 }
+.navbar-content .sidebar-nav.active-sidebar {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
 @media (max-width: 480px) {
   .navbar-content .sidebar-nav {
     display: block;
@@ -93,41 +97,66 @@ button {
     z-index: 1000;
     width: 50%;
     left: 100%;
-    -webkit-transition: 0.2s ease;
-    transition: 0.2s ease;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
     background-color: #fff;
     border: 1px solid #d1d1d1;
     -webkit-box-shadow: 0 0 13px #d1d1d1;
             box-shadow: 0 0 13px #d1d1d1;
     border-radius: 15px 0 0 15px;
   }
-  .navbar-content .sidebar-nav .sidebar-icon {
-    width: 60px;
-    height: 60px;
+  .navbar-content .sidebar-nav .menu {
     position: absolute;
-    top: 20px;
-    left: -80px;
-    border: 1px solid black;
+    left: -65px;
+    top: 40px;
+    width: 45px;
+    height: 30px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    background-color: #fff;
+  }
+  .navbar-content .sidebar-nav .menu.active-menu {
+    left: -45px;
+  }
+  .navbar-content .sidebar-nav .menu .menu-global {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    border-top: 4px solid black;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
     -webkit-transition: 0.5s;
     transition: 0.5s;
   }
-  .navbar-content .sidebar-nav .sidebar-icon span {
-    position: absolute;
-    background-color: #000;
-    top: 20%;
-    left: 10%;
-    right: 10%;
-    height: 4px;
+  .navbar-content .sidebar-nav .menu .menu-top {
+    top: 0;
   }
-  .navbar-content .sidebar-nav .sidebar-icon span:nth-of-type(2) {
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+  .navbar-content .sidebar-nav .menu .menu-top.menu-top-click {
+    top: 12px;
+    -webkit-transform: rotate(50deg);
+            transform: rotate(50deg);
+    -webkit-transition: 0.5s 0.3s;
+    transition: 0.5s 0.3s;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
   }
-  .navbar-content .sidebar-nav .sidebar-icon span:nth-of-type(3) {
-    top: 80%;
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+  .navbar-content .sidebar-nav .menu .menu-middle {
+    top: 15px;
+  }
+  .navbar-content .sidebar-nav .menu .menu-middle.menu-middle-click {
+    opacity: 0;
+  }
+  .navbar-content .sidebar-nav .menu .menu-bottom {
+    top: 30px;
+  }
+  .navbar-content .sidebar-nav .menu .menu-bottom.menu-bottom-click {
+    top: 12px;
+    -webkit-transform: rotate(-410deg);
+            transform: rotate(-410deg);
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-transition: 0.5s 0.3s;
+    transition: 0.5s 0.3s;
   }
   .navbar-content .sidebar-nav li {
     border-bottom: 1px solid #d1d1d1;
@@ -739,6 +768,7 @@ button {
   border-left: 1px solid transparent;
   margin-right: 40px;
   border-color: #dfaa40;
+  display: none;
 }
 @media (max-width: 480px) {
   .products-gallery .cat-wet .cat-wet-container {
@@ -798,6 +828,7 @@ button {
   border-left: 1px solid transparent;
   margin-right: 40px;
   border-color: #4fb6b1;
+  display: none;
 }
 @media (max-width: 480px) {
   .products-gallery .cat-wet .cat-katido-container {
@@ -854,6 +885,7 @@ button {
   border-left: 1px solid transparent;
   margin-right: 40px;
   border-color: #cc6330;
+  display: none;
 }
 @media (max-width: 480px) {
   .products-gallery .cat-wet .cat-dry-container {
@@ -916,6 +948,7 @@ button {
   border-left: 1px solid transparent;
   margin-right: 40px;
   border-color: #71517b;
+  display: none;
 }
 @media (max-width: 480px) {
   .products-gallery .cat-wet .cat-dry-treats-container {
@@ -972,6 +1005,7 @@ button {
   border-left: 1px solid transparent;
   margin-right: 40px;
   border-color: #4fb6b1;
+  display: none;
 }
 @media (max-width: 480px) {
   .products-gallery .cat-wet .toys-container {
@@ -1034,6 +1068,7 @@ button {
   border-left: 1px solid transparent;
   margin-right: 40px;
   border-color: #ac517c;
+  display: none;
 }
 @media (max-width: 480px) {
   .products-gallery .cat-wet .dog-wet-container {
@@ -1093,6 +1128,7 @@ button {
   border-left: 1px solid transparent;
   margin-right: 40px;
   border-color: #cc037d;
+  display: none;
 }
 @media (max-width: 480px) {
   .products-gallery .cat-wet .dog-dry-container {
@@ -1292,9 +1328,15 @@ section.about .columns .right-column .fish-img {
 section.about .columns .left-column .fish-img,
 section.about .columns .right-column .fish-img {
   margin-bottom: 60px;
-  left: -63%;
-  top: 55px;
+  top: 15px;
   z-index: -1;
+}
+@media (max-width: 480px) {
+  section.about .columns .left-column .fish-img,
+  section.about .columns .right-column .fish-img {
+    top: 40px;
+    left: -62%;
+  }
 }
 @media (max-width: 480px) {
   section.about .columns .right-column p.upper-txt,
@@ -1527,6 +1569,11 @@ section.about .columns .right-column .fish-img {
   font-family: "Lato";
   font-size: 1.4rem;
   display: none;
+}
+@media (max-width: 480px) {
+  .contact-section .contact-form .error-info p {
+    font-size: 1.2rem;
+  }
 }
 .contact-section .contact-form .error-info h2 {
   display: none;

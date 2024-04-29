@@ -12,11 +12,8 @@
     flex-basis: 20%;
     @include mobile {
       flex-basis: 382px;
-      // background-color: lightblue;
       display: flex;
-      // justify-content: space-between;
       margin: 40px auto 0 auto;
-      // padding: 0 20px;
     }
 
     // Food Option
@@ -25,7 +22,6 @@
       display: flex;
       justify-content: space-between;
       @include mobile {
-        // background-color: lightcoral;
         order: 2;
         flex-basis: 50%;
       }
@@ -86,19 +82,15 @@
     .section-applaws-logo {
       @include mobile {
         flex-basis: 50%;
-        // background-color: lightgoldenrodyellow;
       }
       img {
         margin-top: 40px;
         width: 43%;
         @include mobile {
           width: 50%;
-          // position: relative;
           margin-top: 0;
         }
       }
     }
-
-    // Section Applaws Logo
   }
 }

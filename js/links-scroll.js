@@ -1,4 +1,4 @@
-// LINK ANIMATION WHEN SCROLLING
+// LINKS UNDERLINE ANIMATION WHEN SCROLLING
 const sections = document.querySelectorAll("#products, #about, #contact");
 const navLinks = document.querySelectorAll(".products, .about, .contact-btn");
 
@@ -19,7 +19,7 @@ window.addEventListener("scroll", () => {
     }
   });
 });
-// END LINK ANIMATION WHEN SCROLLING
+// END LINK ANIMATION
 
 // ===================================================
 
@@ -27,7 +27,7 @@ window.addEventListener("scroll", () => {
 const links = document.querySelectorAll(".left a, .contact a");
 
 links.forEach((link) => {
-  link.addEventListener("click", function (event) {
+  link.addEventListener("click", () => {
     links.forEach((link) => {
       link.classList.remove("active-navbar-option");
     });
