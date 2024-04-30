@@ -2,7 +2,7 @@
 .products-section {
   position: relative;
   padding: 100px 0 180px 0;
-  @include mobile {
+  @include mobile-styles {
     padding: 0;
     display: flex;
     flex-wrap: wrap;
@@ -19,14 +19,14 @@
     justify-content: space-between;
     width: 540px;
 
-    @include mobile {
-      top: 0;
-      left: 0;
+    @include mobile-styles {
       width: 382px;
       transform: translate(0);
       position: static;
       margin: 0 auto;
-      // background-color: lightblue;
+      @include mobile-small {
+        width: 300px;
+      }
     }
 
     // Individual Options
@@ -40,14 +40,18 @@
       flex-direction: column;
       transition: 0.25s;
       cursor: pointer;
-      @include mobile {
+      @include mobile-styles {
         width: 113px;
         height: 99px;
+        @include mobile-small {
+          width: 90px;
+          height: 80px;
+        }
       }
 
       &.dog-option img {
         margin-right: 14px;
-        @include mobile {
+        @include mobile-styles {
           margin-right: 8px;
         }
       }
@@ -65,8 +69,11 @@
         font-family: "Literata";
         font-weight: 800;
         margin-top: 10px;
-        @include mobile {
+        @include mobile-small {
           font-size: 1.2rem;
+          // @include tablet {
+          //   font-size: 1.4rem;
+          // }
         }
       }
     }

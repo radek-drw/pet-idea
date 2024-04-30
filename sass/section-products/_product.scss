@@ -9,7 +9,7 @@ $colors: (
 
 .products-gallery {
   flex-basis: 69%;
-  @include mobile {
+  @include mobile-styles {
     flex-basis: 100%;
   }
   .cat-wet {
@@ -18,7 +18,7 @@ $colors: (
     flex-wrap: wrap;
     align-content: space-between;
     padding-right: 100px;
-    @include mobile {
+    @include mobile-styles {
       height: 330px;
       justify-content: center;
       align-content: center;

@@ -4,9 +4,9 @@
   height: 210px;
   border-left: 1px solid transparent;
   margin-right: 40px;
-  @include mobile {
-    margin-right: 0;
-  }
+  // @include mobileAndTablet {
+  //   margin-right: 0;
+  // }
 }
 @mixin product-code {
   border: 1px solid transparent;

@@ -32,7 +32,7 @@ button {
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  @include mobile {
+  @include mobile-styles {
     overflow: hidden;
   }
 }

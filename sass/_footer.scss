@@ -2,14 +2,14 @@
   padding: 60px 0;
   display: flex;
   justify-content: flex-end;
-  @include mobile {
+  @include mobile-styles {
     justify-content: flex-start;
     padding: 0 20px;
   }
   .content {
     display: flex;
     align-items: center;
-    @include mobile {
+    @include mobile-styles {
       width: 100%;
       justify-content: space-between;
     }
@@ -19,16 +19,19 @@
     }
     a.instagram-footer {
       margin: 0 20px;
-      @include mobile {
-        margin-left: -160px;
+      @include mobile-styles {
+        margin-left: -90px;
       }
     }
     p {
       font-family: "Lato";
       font-size: 1.4rem;
       margin-left: 60px;
-      @include mobile {
+      @include mobile-small {
         font-size: 1rem;
+      }
+      @include tablet {
+        font-size: 1.4rem;
       }
     }
   }

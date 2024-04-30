@@ -3,13 +3,13 @@
   padding: 100px 0 0 0;
   justify-content: space-between;
   align-items: center;
-  @include mobile {
+  @include mobile-styles {
     padding: 30px 20px 20px 20px;
     flex-wrap: wrap;
   }
   .contact-info {
     flex-basis: 290px;
-    @include mobile {
+    @include mobile-styles {
       flex-basis: 100%;
       text-align: center;
     }
@@ -17,11 +17,14 @@
       font-family: "Literata";
       font-weight: 800;
       font-size: 4rem;
-      @include mobile {
+      @include mobile-styles {
         font-size: 2.8rem;
         br {
           display: none;
         }
+      }
+      @include tablet {
+        font-size: 3.2rem;
       }
     }
     p.description {
@@ -29,18 +32,21 @@
       font-size: 1.4rem;
       padding: 40px 0;
       line-height: 1.5;
-      @include mobile {
+      @include mobile-styles {
         font-size: 1.2rem;
         padding: 14px 0 40px 0;
         br {
           display: none;
         }
       }
+      @include tablet {
+        font-size: 1.4rem;
+      }
     }
     .contact-details {
       display: flex;
       justify-content: space-between;
-      @include mobile {
+      @include mobile-styles {
         justify-content: space-around;
         padding-bottom: 20px;
       }
@@ -72,7 +78,7 @@
     align-self: stretch;
     position: relative;
     padding-top: 35px;
-    @include mobile {
+    @include mobile-styles {
       flex-basis: 100%;
     }
     .name-and-email {
@@ -94,20 +100,23 @@
         font-family: "Lato";
         font-size: 1.4rem;
         color: #000;
-        @include mobile {
+        @include mobile-small {
           font-size: 1.2rem;
+        }
+        @include tablet {
+          font-size: 1.4rem;
         }
       }
     }
     .name-input {
       width: 190px;
-      @include mobile {
+      @include mobile-styles {
         width: 30%;
       }
     }
     .email-input {
       width: 500px;
-      @include mobile {
+      @include mobile-styles {
         width: 60%;
       }
     }
@@ -115,11 +124,11 @@
       display: block;
       width: 100%;
       margin-top: 65px;
-      @include mobile {
+      @include mobile-styles {
         margin-top: 20px;
       }
     }
-
+    // ERROR INFO
     .error-info {
       position: absolute;
       bottom: 0;
@@ -130,8 +139,11 @@
         font-family: "Lato";
         font-size: 1.4rem;
         display: none;
-        @include mobile {
+        @include mobile-styles {
           font-size: 1.2rem;
+          @include mobile-small {
+            font-size: 1.1rem;
+          }
         }
       }
       h2 {
@@ -150,7 +162,7 @@
       border: none;
       font-family: "Lato";
       font-size: 1.2rem;
-      @include mobile {
+      @include mobile-styles {
         margin-top: 30px;
       }
       img {

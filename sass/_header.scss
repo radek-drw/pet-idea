@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   padding: 150px 0 100px 0;
-  @include mobile {
+  @include mobile-styles {
     padding: 0;
     flex-wrap: wrap;
     border-bottom: 1px solid #d1d1d1;
@@ -11,13 +11,14 @@
     position: relative;
     padding-top: 70px;
     left: 40px;
-    @include mobile {
+    @include mobile-styles {
       padding: 0;
       order: 2;
       left: -55px;
       bottom: 0;
       z-index: -1;
     }
+
     &::after {
       content: "";
       position: absolute;
@@ -26,16 +27,24 @@
       width: 50vw;
       height: 1px;
       background-color: #d1d1d1;
-      @include mobile {
+      @include mobile-styles {
         display: none;
       }
     }
     img {
       width: 300px;
       height: 306px;
-      @include mobile {
+      @include mobile-styles {
         width: 167px;
         height: 171px;
+        position: relative;
+        bottom: -4px;
+        @include tablet {
+          width: 230px;
+          height: 234px;
+        }
+      }
+      @include tablet {
         position: relative;
         bottom: -4px;
       }
@@ -43,19 +52,27 @@
   }
   .main-txt {
     text-align: center;
-    @include mobile {
+    @include mobile-styles {
       order: 1;
       flex-basis: 100%;
       position: relative;
     }
+
     h1.txt1 {
       font-family: "Literata";
       font-weight: 800;
       font-size: 4rem;
       text-align: center;
-      @include mobile {
-        font-size: 2.8rem;
+      @include mobile-small {
+        font-size: 2rem;
         padding-top: 22px;
+        padding: 22px 15px 0 15px;
+        br {
+          display: none;
+        }
+      }
+      @include mobile-large {
+        font-size: 1rem;
         br {
           display: none;
         }
@@ -68,7 +85,7 @@
       margin-top: 50px;
       font-weight: 500;
       margin: 38px auto 0 auto;
-      @include mobile {
+      @include mobile-styles {
         margin: 0;
         font-size: 1.2rem;
         position: absolute;
@@ -76,8 +93,12 @@
         left: 50%;
         transform: translateX(-50%);
         width: 48%;
-        // z-index: 10;
         line-height: 1.7;
+        @include mobile-small {
+          font-size: 1rem;
+          line-height: 1.5;
+          padding: 0 10px;
+        }
       }
     }
   }
@@ -85,12 +106,13 @@
     padding-top: 90px;
     position: relative;
     right: 60px;
-    @include mobile {
+    @include mobile-styles {
       padding: 0;
       order: 3;
       right: -60px;
       z-index: -1;
     }
+
     &::after {
       content: "";
       position: absolute;
@@ -99,18 +121,23 @@
       width: 50vw;
       height: 1px;
       background-color: #d1d1d1;
-      @include mobile {
+      @include mobile-styles {
         display: none;
       }
     }
     img {
       width: 288px;
       height: 286px;
-      @include mobile {
+      @include mobile-styles {
         width: 175px;
         height: 174px;
         position: relative;
         bottom: -1px;
+        @include tablet {
+          width: 230px;
+          height: 229px;
+          bottom: -7px;
+        }
       }
     }
   }

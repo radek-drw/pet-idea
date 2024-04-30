@@ -6,7 +6,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  @include mobile {
+  @include mobile-styles {
     display: none;
   }
 }
@@ -16,7 +16,7 @@
   display: flex;
   justify-content: space-between;
   z-index: 10;
-  @include mobile {
+  @include mobile-styles {
     justify-content: center;
     align-items: center;
     height: 110px;
@@ -27,7 +27,7 @@
     &.active-sidebar {
       transform: translateX(-100%);
     }
-    @include mobile {
+    @include mobile-styles {
       display: block;
       position: absolute;
       top: 0;
@@ -43,15 +43,12 @@
       border-radius: 15px 0 0 15px;
       .menu {
         position: absolute;
-        left: -65px;
+        left: -52px;
         top: 40px;
-        width: 45px;
-        height: 30px;
+        width: 37px;
+        height: 25px;
         transition: 0.5s;
         background-color: #fff;
-        // border: 1px solid #d1d1d1;
-        // border-right: none;
-        // border-radius: 4px 0 0 4px;
         &.active-menu {
           left: -45px;
         }
@@ -59,14 +56,15 @@
           position: absolute;
           left: 0;
           width: 100%;
-          border-top: 4px solid black;
+          border-top: 4px solid #333;
           backface-visibility: hidden;
           transition: 0.5s;
+          border-radius: 2px;
         }
         .menu-top {
           top: 0;
           &.menu-top-click {
-            top: 12px;
+            top: 11px;
             transform: rotate(50deg);
             transition: 0.5s 0.3s;
             backface-visibility: hidden;
@@ -74,15 +72,15 @@
         }
 
         .menu-middle {
-          top: 15px;
+          top: 10px;
           &.menu-middle-click {
             opacity: 0;
           }
         }
         .menu-bottom {
-          top: 30px;
+          top: 20px;
           &.menu-bottom-click {
-            top: 12px;
+            top: 11px;
             transform: rotate(-410deg);
             backface-visibility: hidden;
             transition: 0.5s 0.3s;
@@ -118,7 +116,7 @@
     background-color: #d1d1d1;
     height: 1px;
     z-index: -1;
-    @include mobile {
+    @include mobile-styles {
       display: none;
     }
   }
@@ -126,7 +124,7 @@
     display: flex;
     justify-content: space-between;
     flex-grow: 1;
-    @include mobile {
+    @include mobile-styles {
       display: none;
     }
     .applaws-logo {
@@ -137,7 +135,7 @@
   }
   .applaws-logo-side-bar {
     display: none;
-    @include mobile {
+    @include mobile-styles {
       display: block;
     }
   }
@@ -150,7 +148,7 @@
     background-color: #fff;
     z-index: 20;
     height: 83px;
-    @include mobile {
+    @include mobile-styles {
       position: static;
       width: 25%;
       // background-color: lightblue;
@@ -161,7 +159,7 @@
       transform-origin: top center;
       transform: scale(1.2);
       transition: ease-out 0.35s;
-      @include mobile {
+      @include mobile-styles {
         transform-origin: 50% 50% 0;
         transform: scale(1);
         height: 55px;
@@ -172,7 +170,7 @@
     flex-basis: 44.5%;
     display: flex;
     justify-content: space-between;
-    @include mobile {
+    @include mobile-styles {
       display: none;
     }
     .katide-logo {
@@ -198,7 +196,7 @@
   }
   .katide-logo-side-bar {
     display: none;
-    @include mobile {
+    @include mobile-styles {
       display: block;
     }
   }

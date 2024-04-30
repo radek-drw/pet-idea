@@ -2,7 +2,7 @@
 .food-products {
   display: flex;
   justify-content: space-between;
-  @include mobile {
+  @include mobile-styles {
     width: 100%;
     flex-wrap: wrap;
   }
@@ -10,10 +10,13 @@
   // Food Choice
   .food-choice {
     flex-basis: 20%;
-    @include mobile {
+    @include mobile-styles {
       flex-basis: 382px;
       display: flex;
       margin: 40px auto 0 auto;
+      @include mobile-small {
+        flex-basis: 300px;
+      }
     }
 
     // Food Option
@@ -21,7 +24,7 @@
       width: 60%;
       display: flex;
       justify-content: space-between;
-      @include mobile {
+      @include mobile-styles {
         order: 2;
         flex-basis: 50%;
       }
@@ -37,8 +40,6 @@
         padding: 14px 0;
         background-color: transparent;
         transition: 0.25s;
-        @include mobile {
-        }
 
         &:not(.active-food-option):hover {
           border-color: #000;
@@ -59,7 +60,7 @@
       justify-content: space-between;
       align-items: center;
       margin-top: 20px;
-      @include mobile {
+      @include mobile-styles {
         display: none;
       }
 
@@ -80,13 +81,13 @@
       }
     }
     .section-applaws-logo {
-      @include mobile {
+      @include mobile-styles {
         flex-basis: 50%;
       }
       img {
         margin-top: 40px;
         width: 43%;
-        @include mobile {
+        @include mobile-styles {
           width: 50%;
           margin-top: 0;
         }

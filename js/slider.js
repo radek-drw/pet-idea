@@ -364,8 +364,8 @@ toysButton.addEventListener("click", function () {
 });
 
 // Use matchMedia to check the device's viewport width
-if (window.matchMedia("(min-width: 480px)").matches) {
-  // If viewport width is at least 480px, run the desktop version script
+if (window.matchMedia("(min-width: 769px)").matches) {
+  // If viewport width is at least 769px, run the desktop version script
   desktopScript();
 } else {
   // Otherwise, run the mobile version script
