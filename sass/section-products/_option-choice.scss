@@ -2,7 +2,10 @@
 .products-section {
   position: relative;
   padding: 100px 0 180px 0;
-  @include mobile-styles {
+  @include tablet {
+    padding: 80px 0 100px 0;
+  }
+  @include mobile-large {
     padding: 0;
     display: flex;
     flex-wrap: wrap;
@@ -19,7 +22,13 @@
     justify-content: space-between;
     width: 540px;
 
-    @include mobile-styles {
+    @include tablet {
+      // width: 400px;
+      width: 100%;
+      justify-content: center;
+    }
+
+    @include mobile-large {
       width: 382px;
       transform: translate(0);
       position: static;
@@ -40,7 +49,14 @@
       flex-direction: column;
       transition: 0.25s;
       cursor: pointer;
-      @include mobile-styles {
+      &.dog-option {
+        margin: 0 10px;
+      }
+      @include tablet {
+        width: 130px;
+        height: 110px;
+      }
+      @include mobile-large {
         width: 113px;
         height: 99px;
         @include mobile-small {
@@ -51,7 +67,7 @@
 
       &.dog-option img {
         margin-right: 14px;
-        @include mobile-styles {
+        @include mobile-large {
           margin-right: 8px;
         }
       }

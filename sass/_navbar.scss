@@ -6,7 +6,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  @include mobile-styles {
+  @include mobile-large {
     display: none;
   }
 }
@@ -16,7 +16,11 @@
   display: flex;
   justify-content: space-between;
   z-index: 10;
-  @include mobile-styles {
+  @include tablet {
+    padding: 0 15px;
+    // position: fixed;
+  }
+  @include mobile-large {
     justify-content: center;
     align-items: center;
     height: 110px;
@@ -27,7 +31,7 @@
     &.active-sidebar {
       transform: translateX(-100%);
     }
-    @include mobile-styles {
+    @include mobile-large {
       display: block;
       position: absolute;
       top: 0;
@@ -116,7 +120,7 @@
     background-color: #d1d1d1;
     height: 1px;
     z-index: -1;
-    @include mobile-styles {
+    @include mobile-large {
       display: none;
     }
   }
@@ -124,7 +128,7 @@
     display: flex;
     justify-content: space-between;
     flex-grow: 1;
-    @include mobile-styles {
+    @include mobile-large {
       display: none;
     }
     .applaws-logo {
@@ -135,7 +139,7 @@
   }
   .applaws-logo-side-bar {
     display: none;
-    @include mobile-styles {
+    @include mobile-large {
       display: block;
     }
   }
@@ -148,7 +152,10 @@
     background-color: #fff;
     z-index: 20;
     height: 83px;
-    @include mobile-styles {
+    @include tablet {
+      // width: 16%;
+    }
+    @include mobile-large {
       position: static;
       width: 25%;
       // background-color: lightblue;
@@ -159,7 +166,7 @@
       transform-origin: top center;
       transform: scale(1.2);
       transition: ease-out 0.35s;
-      @include mobile-styles {
+      @include mobile-large {
         transform-origin: 50% 50% 0;
         transform: scale(1);
         height: 55px;
@@ -170,7 +177,7 @@
     flex-basis: 44.5%;
     display: flex;
     justify-content: space-between;
-    @include mobile-styles {
+    @include mobile-large {
       display: none;
     }
     .katide-logo {
@@ -196,7 +203,7 @@
   }
   .katide-logo-side-bar {
     display: none;
-    @include mobile-styles {
+    @include mobile-large {
       display: block;
     }
   }

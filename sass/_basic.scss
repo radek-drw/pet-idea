@@ -32,7 +32,10 @@ button {
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  @include mobile-styles {
+  @include laptop {
+    padding: 0 50px;
+  }
+  @include mobile-large {
     overflow: hidden;
   }
 }

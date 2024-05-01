@@ -2,14 +2,17 @@
   padding: 60px 0;
   display: flex;
   justify-content: flex-end;
-  @include mobile-styles {
+  @include tablet {
+    padding: 40px 15px;
+  }
+  @include mobile-large {
     justify-content: flex-start;
     padding: 0 20px;
   }
   .content {
     display: flex;
     align-items: center;
-    @include mobile-styles {
+    @include mobile-large {
       width: 100%;
       justify-content: space-between;
     }
@@ -19,7 +22,7 @@
     }
     a.instagram-footer {
       margin: 0 20px;
-      @include mobile-styles {
+      @include mobile-large {
         margin-left: -90px;
       }
     }

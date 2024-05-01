@@ -2,7 +2,10 @@
 .food-products {
   display: flex;
   justify-content: space-between;
-  @include mobile-styles {
+  @include tablet {
+    padding: 0 15px;
+  }
+  @include mobile-large {
     width: 100%;
     flex-wrap: wrap;
   }
@@ -10,7 +13,10 @@
   // Food Choice
   .food-choice {
     flex-basis: 20%;
-    @include mobile-styles {
+    @include tablet {
+      // background-color: lightblue;
+    }
+    @include mobile-large {
       flex-basis: 382px;
       display: flex;
       margin: 40px auto 0 auto;
@@ -24,7 +30,7 @@
       width: 60%;
       display: flex;
       justify-content: space-between;
-      @include mobile-styles {
+      @include mobile-large {
         order: 2;
         flex-basis: 50%;
       }
@@ -60,7 +66,7 @@
       justify-content: space-between;
       align-items: center;
       margin-top: 20px;
-      @include mobile-styles {
+      @include mobile-large {
         display: none;
       }
 
@@ -81,13 +87,13 @@
       }
     }
     .section-applaws-logo {
-      @include mobile-styles {
+      @include mobile-large {
         flex-basis: 50%;
       }
       img {
         margin-top: 40px;
         width: 43%;
-        @include mobile-styles {
+        @include mobile-large {
           width: 50%;
           margin-top: 0;
         }

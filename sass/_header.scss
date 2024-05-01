@@ -2,7 +2,15 @@
   display: flex;
   justify-content: space-between;
   padding: 150px 0 100px 0;
-  @include mobile-styles {
+  @include laptop {
+    padding-top: 100px;
+  }
+  @include tablet {
+    padding-top: 80px;
+    align-items: flex-end;
+    position: relative;
+  }
+  @include mobile-large {
     padding: 0;
     flex-wrap: wrap;
     border-bottom: 1px solid #d1d1d1;
@@ -11,7 +19,13 @@
     position: relative;
     padding-top: 70px;
     left: 40px;
-    @include mobile-styles {
+    @include laptop {
+      left: -70px;
+    }
+    @include tablet {
+      left: -100px;
+    }
+    @include mobile-large {
       padding: 0;
       order: 2;
       left: -55px;
@@ -27,32 +41,42 @@
       width: 50vw;
       height: 1px;
       background-color: #d1d1d1;
-      @include mobile-styles {
+      @include tablet {
+        right: -70px;
+      }
+      @include mobile-large {
         display: none;
       }
     }
     img {
       width: 300px;
       height: 306px;
-      @include mobile-styles {
+      @include mobile-large {
         width: 167px;
         height: 171px;
         position: relative;
         bottom: -4px;
-        @include tablet {
-          width: 230px;
-          height: 234px;
-        }
       }
-      @include tablet {
-        position: relative;
-        bottom: -4px;
-      }
+      // @include tablet {
+      //   position: relative;
+      //   bottom: -4px;
+      // }
     }
   }
   .main-txt {
     text-align: center;
-    @include mobile-styles {
+    @include tablet {
+      align-self: self-start;
+      // background-color: orange;
+      position: absolute;
+      top: 17%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 500px;
+
+      // flex-basis: 500px;
+    }
+    @include mobile-large {
       order: 1;
       flex-basis: 100%;
       position: relative;
@@ -63,19 +87,20 @@
       font-weight: 800;
       font-size: 4rem;
       text-align: center;
-      @include mobile-small {
-        font-size: 2rem;
-        padding-top: 22px;
+      @include tablet {
+        font-size: 3rem;
+
+        // border: 1px solid black;
+      }
+      @include mobile-large {
+        font-size: 2.4rem;
         padding: 22px 15px 0 15px;
         br {
           display: none;
         }
       }
-      @include mobile-large {
-        font-size: 1rem;
-        br {
-          display: none;
-        }
+      @include mobile-small {
+        font-size: 2rem;
       }
     }
     p.txt2 {
@@ -85,7 +110,10 @@
       margin-top: 50px;
       font-weight: 500;
       margin: 38px auto 0 auto;
-      @include mobile-styles {
+      @include tablet {
+        padding: 0 50px;
+      }
+      @include mobile-large {
         margin: 0;
         font-size: 1.2rem;
         position: absolute;
@@ -106,7 +134,13 @@
     padding-top: 90px;
     position: relative;
     right: 60px;
-    @include mobile-styles {
+    @include laptop {
+      right: -50px;
+    }
+    @include tablet {
+      right: -80px;
+    }
+    @include mobile-large {
       padding: 0;
       order: 3;
       right: -60px;
@@ -121,14 +155,17 @@
       width: 50vw;
       height: 1px;
       background-color: #d1d1d1;
-      @include mobile-styles {
+      @include tablet {
+        left: 20px;
+      }
+      @include mobile-large {
         display: none;
       }
     }
     img {
       width: 288px;
       height: 286px;
-      @include mobile-styles {
+      @include mobile-large {
         width: 175px;
         height: 174px;
         position: relative;

@@ -10,7 +10,7 @@ $breakpoint-laptop: 1280px;
 }
 
 @mixin mobile-large {
-  @media (min-width: #{$breakpoint-mobile-small + 1px}) and (max-width: $breakpoint-mobile-large) {
+  @media (max-width: $breakpoint-mobile-large) {
     @content;
   }
 }
@@ -23,15 +23,6 @@ $breakpoint-laptop: 1280px;
 
 @mixin laptop {
   @media (min-width: #{$breakpoint-tablet + 1px}) and (max-width: $breakpoint-laptop) {
-    @content;
-  }
-}
-
-@mixin mobile-styles {
-  @include mobile-small {
-    @content;
-  }
-  @include mobile-large {
     @content;
   }
 }
