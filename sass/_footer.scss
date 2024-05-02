@@ -1,6 +1,6 @@
 .footer {
-  padding: 60px 0;
   display: flex;
+  padding: 60px 0;
   justify-content: flex-end;
   @include tablet {
     padding: 40px 15px;
@@ -27,9 +27,9 @@
       }
     }
     p {
-      font-family: "Lato";
-      font-size: 1.4rem;
       margin-left: 60px;
+      font-family: $font-primary;
+      font-size: 1.4rem;
       @include mobile-small {
         font-size: 1rem;
       }

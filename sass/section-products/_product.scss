@@ -1,11 +1,10 @@
-$colors: (
-  cat-wet: #dfaa40,
-  cat-dry: #cc6330,
-  katido: #4fb6b1,
-  cat-dry-treats: #71517b,
-  dog-wet: #ac517c,
-  dog-dry: #cc037d,
-);
+// Product container colors
+$cat-wet: #dfaa40;
+$cat-dry: #cc6330;
+$katido: #4fb6b1;
+$cat-dry-treats: #71517b;
+$dog-wet: #ac517c;
+$dog-dry: #cc037d;
 
 .products-gallery {
   flex-basis: 69%;
@@ -19,18 +18,18 @@ $colors: (
     flex-basis: 100%;
   }
   .cat-wet {
-    height: 500px;
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
+    height: 500px;
     padding-right: 100px;
     @include laptop {
-      padding: 0;
       height: auto;
+      padding: 0;
     }
     @include tablet {
-      padding: 0;
       height: auto;
+      padding: 0;
     }
     @include mobile-large {
       height: 330px;
@@ -39,7 +38,7 @@ $colors: (
       padding-right: 0;
     }
     .cat-wet-container {
-      @include product(map-get($colors, "cat-wet"));
+      @include product($cat-wet);
       img {
         left: 16%;
         bottom: 14%;
@@ -50,7 +49,7 @@ $colors: (
     }
 
     .cat-katido-container {
-      @include product(map-get($colors, "katido"));
+      @include product($katido);
       img {
         left: 20%;
         bottom: 20%;
@@ -58,7 +57,7 @@ $colors: (
     }
 
     .cat-dry-container {
-      @include product(map-get($colors, "cat-dry"));
+      @include product($cat-dry);
       img {
         left: 38%;
         bottom: 16%;
@@ -67,12 +66,12 @@ $colors: (
         }
       }
       &.cat-dry-fix8 .cat-dry-fix8-code {
-        border-bottom: 1px solid map-get($colors, "cat-dry");
+        border-bottom: 1px solid $cat-dry;
       }
     }
 
     .cat-dry-treats-container {
-      @include product(map-get($colors, "cat-dry-treats"));
+      @include product($cat-dry-treats);
       img {
         left: 14%;
         top: 5%;
@@ -80,7 +79,7 @@ $colors: (
     }
 
     .toys-container {
-      @include product(map-get($colors, "katido"));
+      @include product($katido);
       img {
         left: 42%;
         bottom: 0;
@@ -94,7 +93,7 @@ $colors: (
     }
 
     .dog-wet-container {
-      @include product(map-get($colors, "dog-wet"));
+      @include product($dog-wet);
       img {
         left: 12%;
         bottom: 17%;
@@ -105,7 +104,7 @@ $colors: (
     }
 
     .dog-dry-container {
-      @include product(map-get($colors, "dog-dry"));
+      @include product($dog-dry);
       img {
         left: 40%;
         bottom: 15%;

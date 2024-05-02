@@ -16,13 +16,13 @@ ul {
 }
 
 a {
+  display: block;
+  padding: 40px 0;
+  font-size: 1.2rem;
   color: #000;
   text-decoration: none;
   text-transform: uppercase;
-  font-family: "Lato";
-  font-size: 1.2rem;
-  padding: 40px 0;
-  display: block;
+  font-family: $font-primary;
 }
 
 button {

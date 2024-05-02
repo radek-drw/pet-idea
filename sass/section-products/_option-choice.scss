@@ -6,13 +6,13 @@
     padding: 80px 0 100px 0;
   }
   @include mobile-large {
-    padding: 0;
     display: flex;
     flex-wrap: wrap;
+    padding: 0;
     padding-top: 30px;
   }
 
-  // Options
+  // Options container
   .options {
     position: absolute;
     left: 50%;
@@ -23,7 +23,6 @@
     width: 540px;
 
     @include tablet {
-      // width: 400px;
       width: 100%;
       justify-content: center;
     }
@@ -38,15 +37,15 @@
       }
     }
 
-    // Individual Options
+    // Options buttons
     .option {
       width: 160px;
       height: 140px;
-      border: 1px solid #d1d1d1;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       flex-direction: column;
+      border: 1px solid #d1d1d1;
       transition: 0.25s;
       cursor: pointer;
       &.dog-option {
@@ -81,15 +80,12 @@
       }
 
       span {
-        font-size: 1.6rem;
-        font-family: "Literata";
-        font-weight: 800;
         margin-top: 10px;
+        font-size: 1.6rem;
+        font-family: $font-secondary;
+        font-weight: 800;
         @include mobile-small {
           font-size: 1.2rem;
-          // @include tablet {
-          //   font-size: 1.4rem;
-          // }
         }
       }
     }

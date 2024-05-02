@@ -21,13 +21,13 @@ ul {
 }
 
 a {
+  display: block;
+  padding: 40px 0;
+  font-size: 1.2rem;
   color: #000;
   text-decoration: none;
   text-transform: uppercase;
-  font-family: "Lato";
-  font-size: 1.2rem;
-  padding: 40px 0;
-  display: block;
+  font-family: "Lato", sans-serif;
 }
 
 button {
@@ -50,13 +50,13 @@ button {
 }
 
 .navbar {
-  height: 97px;
-  background-color: white;
-  z-index: 1;
-  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 97px;
+  background-color: white;
+  z-index: 1;
 }
 @media (max-width: 480px) {
   .navbar {
@@ -104,16 +104,16 @@ button {
     display: block;
     position: absolute;
     top: 0;
-    z-index: 1000;
-    width: 50%;
     left: 100%;
-    -webkit-transition: 0.5s ease;
-    transition: 0.5s ease;
+    width: 50%;
+    z-index: 1000;
     background-color: #fff;
     border: 1px solid #d1d1d1;
     -webkit-box-shadow: 0 0 13px #d1d1d1;
             box-shadow: 0 0 13px #d1d1d1;
     border-radius: 15px 0 0 15px;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
   }
   .navbar-content .sidebar-nav .menu {
     position: absolute;
@@ -121,9 +121,9 @@ button {
     top: 40px;
     width: 37px;
     height: 25px;
+    background-color: #fff;
     -webkit-transition: 0.5s;
     transition: 0.5s;
-    background-color: #fff;
   }
   .navbar-content .sidebar-nav .menu.active-menu {
     left: -45px;
@@ -135,9 +135,9 @@ button {
     border-top: 4px solid #333;
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
+    border-radius: 2px;
     -webkit-transition: 0.5s;
     transition: 0.5s;
-    border-radius: 2px;
   }
   .navbar-content .sidebar-nav .menu .menu-top {
     top: 0;
@@ -178,8 +178,8 @@ button {
   .navbar-content .sidebar-nav li a {
     width: 100%;
     padding: 30px;
-    text-transform: capitalize;
     font-size: 1.4rem;
+    text-transform: capitalize;
   }
   .navbar-content .sidebar-nav li img.contact-img,
   .navbar-content .sidebar-nav li img.facebook-img,
@@ -191,11 +191,11 @@ button {
   content: "";
   position: absolute;
   bottom: 1px;
-  margin-left: -50vw;
   width: 150vw;
-  background-color: #d1d1d1;
   height: 1px;
+  margin-left: -50vw;
   z-index: -1;
+  background-color: #d1d1d1;
 }
 @media (max-width: 480px) {
   .navbar-content::after {
@@ -237,12 +237,12 @@ button {
   position: relative;
   top: 35px;
   width: 10%;
+  height: 83px;
   text-align: center;
+  z-index: 20;
+  background-color: #fff;
   -webkit-transition: ease-out 0.35s;
   transition: ease-out 0.35s;
-  background-color: #fff;
-  z-index: 20;
-  height: 83px;
 }
 @media (max-width: 480px) {
   .navbar-content div.middle-logo {
@@ -325,8 +325,8 @@ button {
 .contact a::after {
   content: "";
   position: absolute;
-  bottom: 0px;
   left: -100%;
+  bottom: 0px;
   width: 100%;
   height: 2px;
   background-color: #000;
@@ -345,8 +345,8 @@ button {
 .contact a::before {
   content: "";
   position: absolute;
-  bottom: 0px;
   right: 100%;
+  bottom: 0px;
   width: 100%;
   height: 2px;
   background-color: #000;
@@ -394,8 +394,8 @@ button {
 }
 .header .left-dog {
   position: relative;
-  padding-top: 70px;
   left: 40px;
+  padding-top: 70px;
 }
 @media (min-width: 769px) and (max-width: 1280px) {
   .header .left-dog {
@@ -410,11 +410,11 @@ button {
 @media (max-width: 480px) {
   .header .left-dog {
     padding: 0;
+    left: -55px;
+    bottom: 0;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
-    left: -55px;
-    bottom: 0;
     z-index: -1;
   }
 }
@@ -475,9 +475,9 @@ button {
   }
 }
 .header .main-txt h1.txt1 {
-  font-family: "Literata";
-  font-weight: 800;
   font-size: 4rem;
+  font-weight: 800;
+  font-family: "Literata", sans-serif;
   text-align: center;
 }
 @media (min-width: 481px) and (max-width: 768px) {
@@ -487,8 +487,8 @@ button {
 }
 @media (max-width: 480px) {
   .header .main-txt h1.txt1 {
-    font-size: 2.4rem;
     padding: 22px 15px 0 15px;
+    font-size: 2.4rem;
   }
   .header .main-txt h1.txt1 br {
     display: none;
@@ -500,12 +500,11 @@ button {
   }
 }
 .header .main-txt p.txt2 {
-  font-family: "Lato";
-  font-size: 1.4rem;
-  text-align: center;
-  margin-top: 50px;
-  font-weight: 500;
   margin: 38px auto 0 auto;
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-family: "Lato", sans-serif;
+  text-align: center;
 }
 @media (min-width: 481px) and (max-width: 768px) {
   .header .main-txt p.txt2 {
@@ -514,28 +513,28 @@ button {
 }
 @media (max-width: 480px) {
   .header .main-txt p.txt2 {
-    margin: 0;
-    font-size: 1.2rem;
     position: absolute;
     top: 160%;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
     width: 48%;
+    margin: 0;
+    font-size: 1.2rem;
     line-height: 1.7;
   }
 }
 @media (max-width: 480px) and (max-width: 350px) {
   .header .main-txt p.txt2 {
+    padding: 0 10px;
     font-size: 1rem;
     line-height: 1.5;
-    padding: 0 10px;
   }
 }
 .header .right-cat {
-  padding-top: 90px;
   position: relative;
   right: 60px;
+  padding-top: 90px;
 }
 @media (min-width: 769px) and (max-width: 1280px) {
   .header .right-cat {
@@ -550,18 +549,18 @@ button {
 @media (max-width: 480px) {
   .header .right-cat {
     padding: 0;
+    right: -60px;
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
-    right: -60px;
     z-index: -1;
   }
 }
 .header .right-cat::after {
   content: "";
   position: absolute;
-  bottom: 2px;
   left: -40px;
+  bottom: 2px;
   width: 50vw;
   height: 1px;
   background-color: #d1d1d1;
@@ -607,12 +606,12 @@ button {
 }
 @media (max-width: 480px) {
   .products-section {
-    padding: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    padding: 0;
     padding-top: 30px;
   }
 }
@@ -655,20 +654,20 @@ button {
 .products-section .options .option {
   width: 160px;
   height: 140px;
-  border: 1px solid #d1d1d1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  border: 1px solid #d1d1d1;
   -webkit-transition: 0.25s;
   transition: 0.25s;
   cursor: pointer;
@@ -709,10 +708,10 @@ button {
   width: 35%;
 }
 .products-section .options .option span {
-  font-size: 1.6rem;
-  font-family: "Literata";
-  font-weight: 800;
   margin-top: 10px;
+  font-size: 1.6rem;
+  font-family: "Literata", sans-serif;
+  font-weight: 800;
 }
 @media (max-width: 350px) {
   .products-section .options .option span {
@@ -801,11 +800,11 @@ button {
 .food-products .food-choice .food-option .dry {
   -ms-flex-preferred-size: 47%;
       flex-basis: 47%;
-  font-family: "Lato";
+  padding: 14px 0;
   font-size: 1.2rem;
+  font-family: "Lato", sans-serif;
   text-transform: uppercase;
   border: 1px solid #d1d1d1;
-  padding: 14px 0;
   background-color: transparent;
   -webkit-transition: 0.25s;
   transition: 0.25s;
@@ -820,6 +819,7 @@ button {
 }
 .food-products .food-choice .gallery-arrows {
   width: 100px;
+  margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -829,7 +829,6 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 20px;
 }
 @media (max-width: 480px) {
   .food-products .food-choice .gallery-arrows {
@@ -837,10 +836,10 @@ button {
   }
 }
 .food-products .food-choice .gallery-arrows button {
-  background-color: transparent;
   width: 44px;
   height: 44px;
   border: 1px solid #d1d1d1;
+  background-color: transparent;
   -webkit-transition: 0.25s;
   transition: 0.25s;
 }
@@ -890,7 +889,6 @@ button {
   }
 }
 .products-gallery .cat-wet {
-  height: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -898,18 +896,19 @@ button {
       flex-wrap: wrap;
   -ms-flex-line-pack: justify;
       align-content: space-between;
+  height: 500px;
   padding-right: 100px;
 }
 @media (min-width: 769px) and (max-width: 1280px) {
   .products-gallery .cat-wet {
-    padding: 0;
     height: auto;
+    padding: 0;
   }
 }
 @media (min-width: 481px) and (max-width: 768px) {
   .products-gallery .cat-wet {
-    padding: 0;
     height: auto;
+    padding: 0;
   }
 }
 @media (max-width: 480px) {
@@ -927,10 +926,10 @@ button {
   position: relative;
   width: 255px;
   height: 210px;
-  border-left: 1px solid transparent;
   margin-right: 40px;
-  border-color: #dfaa40;
+  border-left: 1px solid transparent;
   display: none;
+  border-color: #dfaa40;
 }
 @media (min-width: 769px) and (max-width: 1280px) {
   .products-gallery .cat-wet .cat-wet-container {
@@ -945,14 +944,14 @@ button {
   }
 }
 .products-gallery .cat-wet .cat-wet-container .product-code {
+  display: block;
+  width: 95px;
+  font-size: 1rem;
+  line-height: 34px;
   border: 1px solid transparent;
   border-left: none;
-  width: 95px;
-  line-height: 34px;
   text-align: center;
-  display: block;
-  font-family: "Lato";
-  font-size: 1rem;
+  font-family: "Lato", sans-serif;
   background-color: #fff;
   border-color: #dfaa40;
   color: #dfaa40;
@@ -967,21 +966,21 @@ button {
 }
 .products-gallery .cat-wet .cat-wet-container .description {
   position: absolute;
-  bottom: 0;
   left: 0;
+  bottom: 0;
   padding-left: 20px;
 }
 .products-gallery .cat-wet .cat-wet-container .description .title {
   display: block;
   font-size: 1rem;
   font-weight: 900;
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
 }
 .products-gallery .cat-wet .cat-wet-container .description .ingridients {
   display: block;
   font-size: 1rem;
   font-weight: 400;
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
 }
 .products-gallery .cat-wet .cat-wet-container img {
   left: 16%;
@@ -994,10 +993,10 @@ button {
   position: relative;
   width: 255px;
   height: 210px;
-  border-left: 1px solid transparent;
   margin-right: 40px;
-  border-color: #4fb6b1;
+  border-left: 1px solid transparent;
   display: none;
+  border-color: #4fb6b1;
 }
 @media (min-width: 769px) and (max-width: 1280px) {
   .products-gallery .cat-wet .cat-katido-container {
@@ -1012,14 +1011,14 @@ button {
   }
 }
 .products-gallery .cat-wet .cat-katido-container .product-code {
+  display: block;
+  width: 95px;
+  font-size: 1rem;
+  line-height: 34px;
   border: 1px solid transparent;
   border-left: none;
-  width: 95px;
-  line-height: 34px;
   text-align: center;
-  display: block;
-  font-family: "Lato";
-  font-size: 1rem;
+  font-family: "Lato", sans-serif;
   background-color: #fff;
   border-color: #4fb6b1;
   color: #4fb6b1;
@@ -1034,21 +1033,21 @@ button {
 }
 .products-gallery .cat-wet .cat-katido-container .description {
   position: absolute;
-  bottom: 0;
   left: 0;
+  bottom: 0;
   padding-left: 20px;
 }
 .products-gallery .cat-wet .cat-katido-container .description .title {
   display: block;
   font-size: 1rem;
   font-weight: 900;
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
 }
 .products-gallery .cat-wet .cat-katido-container .description .ingridients {
   display: block;
   font-size: 1rem;
   font-weight: 400;
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
 }
 .products-gallery .cat-wet .cat-katido-container img {
   left: 20%;
@@ -1058,10 +1057,10 @@ button {
   position: relative;
   width: 255px;
   height: 210px;
-  border-left: 1px solid transparent;
   margin-right: 40px;
-  border-color: #cc6330;
+  border-left: 1px solid transparent;
   display: none;
+  border-color: #cc6330;
 }
 @media (min-width: 769px) and (max-width: 1280px) {
   .products-gallery .cat-wet .cat-dry-container {
@@ -1076,14 +1075,14 @@ button {
   }
 }
 .products-gallery .cat-wet .cat-dry-container .product-code {
+  display: block;
+  width: 95px;
+  font-size: 1rem;
+  line-height: 34px;
   border: 1px solid transparent;
   border-left: none;
-  width: 95px;
-  line-height: 34px;
   text-align: center;
-  display: block;
-  font-family: "Lato";
-  font-size: 1rem;
+  font-family: "Lato", sans-serif;
   background-color: #fff;
   border-color: #cc6330;
   color: #cc6330;
@@ -1098,21 +1097,21 @@ button {
 }
 .products-gallery .cat-wet .cat-dry-container .description {
   position: absolute;
-  bottom: 0;
   left: 0;
+  bottom: 0;
   padding-left: 20px;
 }
 .products-gallery .cat-wet .cat-dry-container .description .title {
   display: block;
   font-size: 1rem;
   font-weight: 900;
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
 }
 .products-gallery .cat-wet .cat-dry-container .description .ingridients {
   display: block;
   font-size: 1rem;
   font-weight: 400;
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
 }
 .products-gallery .cat-wet .cat-dry-container img {
   left: 38%;
@@ -1128,10 +1127,10 @@ button {
   position: relative;
   width: 255px;
   height: 210px;
-  border-left: 1px solid transparent;
   margin-right: 40px;
-  border-color: #71517b;
+  border-left: 1px solid transparent;
   display: none;
+  border-color: #71517b;
 }
 @media (min-width: 769px) and (max-width: 1280px) {
   .products-gallery .cat-wet .cat-dry-treats-container {
@@ -1146,14 +1145,14 @@ button {
   }
 }
 .products-gallery .cat-wet .cat-dry-treats-container .product-code {
+  display: block;
+  width: 95px;
+  font-size: 1rem;
+  line-height: 34px;
   border: 1px solid transparent;
   border-left: none;
-  width: 95px;
-  line-height: 34px;
   text-align: center;
-  display: block;
-  font-family: "Lato";
-  font-size: 1rem;
+  font-family: "Lato", sans-serif;
   background-color: #fff;
   border-color: #71517b;
   color: #71517b;
@@ -1168,21 +1167,21 @@ button {
 }
 .products-gallery .cat-wet .cat-dry-treats-container .description {
   position: absolute;
-  bottom: 0;
   left: 0;
+  bottom: 0;
   padding-left: 20px;
 }
 .products-gallery .cat-wet .cat-dry-treats-container .description .title {
   display: block;
   font-size: 1rem;
   font-weight: 900;
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
 }
 .products-gallery .cat-wet .cat-dry-treats-container .description .ingridients {
   display: block;
   font-size: 1rem;
   font-weight: 400;
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
 }
 .products-gallery .cat-wet .cat-dry-treats-container img {
   left: 14%;
@@ -1192,10 +1191,10 @@ button {
   position: relative;
   width: 255px;
   height: 210px;
-  border-left: 1px solid transparent;
   margin-right: 40px;
-  border-color: #4fb6b1;
+  border-left: 1px solid transparent;
   display: none;
+  border-color: #4fb6b1;
 }
 @media (min-width: 769px) and (max-width: 1280px) {
   .products-gallery .cat-wet .toys-container {
@@ -1210,14 +1209,14 @@ button {
   }
 }
 .products-gallery .cat-wet .toys-container .product-code {
+  display: block;
+  width: 95px;
+  font-size: 1rem;
+  line-height: 34px;
   border: 1px solid transparent;
   border-left: none;
-  width: 95px;
-  line-height: 34px;
   text-align: center;
-  display: block;
-  font-family: "Lato";
-  font-size: 1rem;
+  font-family: "Lato", sans-serif;
   background-color: #fff;
   border-color: #4fb6b1;
   color: #4fb6b1;
@@ -1232,21 +1231,21 @@ button {
 }
 .products-gallery .cat-wet .toys-container .description {
   position: absolute;
-  bottom: 0;
   left: 0;
+  bottom: 0;
   padding-left: 20px;
 }
 .products-gallery .cat-wet .toys-container .description .title {
   display: block;
   font-size: 1rem;
   font-weight: 900;
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
 }
 .products-gallery .cat-wet .toys-container .description .ingridients {
   display: block;
   font-size: 1rem;
   font-weight: 400;
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
 }
 .products-gallery .cat-wet .toys-container img {
   left: 42%;
@@ -1262,10 +1261,10 @@ button {
   position: relative;
   width: 255px;
   height: 210px;
-  border-left: 1px solid transparent;
   margin-right: 40px;
-  border-color: #ac517c;
+  border-left: 1px solid transparent;
   display: none;
+  border-color: #ac517c;
 }
 @media (min-width: 769px) and (max-width: 1280px) {
   .products-gallery .cat-wet .dog-wet-container {
@@ -1280,14 +1279,14 @@ button {
   }
 }
 .products-gallery .cat-wet .dog-wet-container .product-code {
+  display: block;
+  width: 95px;
+  font-size: 1rem;
+  line-height: 34px;
   border: 1px solid transparent;
   border-left: none;
-  width: 95px;
-  line-height: 34px;
   text-align: center;
-  display: block;
-  font-family: "Lato";
-  font-size: 1rem;
+  font-family: "Lato", sans-serif;
   background-color: #fff;
   border-color: #ac517c;
   color: #ac517c;
@@ -1302,21 +1301,21 @@ button {
 }
 .products-gallery .cat-wet .dog-wet-container .description {
   position: absolute;
-  bottom: 0;
   left: 0;
+  bottom: 0;
   padding-left: 20px;
 }
 .products-gallery .cat-wet .dog-wet-container .description .title {
   display: block;
   font-size: 1rem;
   font-weight: 900;
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
 }
 .products-gallery .cat-wet .dog-wet-container .description .ingridients {
   display: block;
   font-size: 1rem;
   font-weight: 400;
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
 }
 .products-gallery .cat-wet .dog-wet-container img {
   left: 12%;
@@ -1329,10 +1328,10 @@ button {
   position: relative;
   width: 255px;
   height: 210px;
-  border-left: 1px solid transparent;
   margin-right: 40px;
-  border-color: #cc037d;
+  border-left: 1px solid transparent;
   display: none;
+  border-color: #cc037d;
 }
 @media (min-width: 769px) and (max-width: 1280px) {
   .products-gallery .cat-wet .dog-dry-container {
@@ -1347,14 +1346,14 @@ button {
   }
 }
 .products-gallery .cat-wet .dog-dry-container .product-code {
+  display: block;
+  width: 95px;
+  font-size: 1rem;
+  line-height: 34px;
   border: 1px solid transparent;
   border-left: none;
-  width: 95px;
-  line-height: 34px;
   text-align: center;
-  display: block;
-  font-family: "Lato";
-  font-size: 1rem;
+  font-family: "Lato", sans-serif;
   background-color: #fff;
   border-color: #cc037d;
   color: #cc037d;
@@ -1369,21 +1368,21 @@ button {
 }
 .products-gallery .cat-wet .dog-dry-container .description {
   position: absolute;
-  bottom: 0;
   left: 0;
+  bottom: 0;
   padding-left: 20px;
 }
 .products-gallery .cat-wet .dog-dry-container .description .title {
   display: block;
   font-size: 1rem;
   font-weight: 900;
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
 }
 .products-gallery .cat-wet .dog-dry-container .description .ingridients {
   display: block;
   font-size: 1rem;
   font-weight: 400;
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
 }
 .products-gallery .cat-wet .dog-dry-container img {
   left: 40%;
@@ -1398,9 +1397,9 @@ section.about {
 }
 @media (max-width: 480px) {
   section.about {
+    padding: 40px 15px 30px 15px;
     border-top: 1px solid #d1d1d1;
     border-bottom: 1px solid #d1d1d1;
-    padding: 40px 15px 30px 15px;
   }
 }
 section.about::before {
@@ -1444,26 +1443,26 @@ section.about .middle-column {
   }
 }
 section.about .middle-column h1 {
-  font-family: "Literata";
+  margin-bottom: 25px;
+  font-family: "Literata", sans-serif;
   font-size: 4rem;
   font-weight: 800;
-  margin-bottom: 25px;
 }
 @media (max-width: 480px) {
   section.about .middle-column h1 {
-    font-size: 2.8rem;
     margin-bottom: 12px;
+    font-size: 2.8rem;
   }
 }
 section.about .middle-column p {
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
   font-size: 1.4rem;
 }
 @media (max-width: 480px) {
   section.about .middle-column p {
-    font-size: 1.2rem;
     padding: 0 25px;
     line-height: 1.5;
+    font-size: 1.2rem;
   }
   section.about .middle-column p br {
     display: none;
@@ -1499,18 +1498,18 @@ section.about .columns .left-column p.lower-txt,
 section.about .columns .right-column p.upper-txt,
 section.about .columns .right-column p.lower-txt {
   padding: 0 50px 0 75px;
-  font-family: "Lato";
-  font-size: 1.1rem;
   line-height: 2;
+  font-family: "Lato", sans-serif;
+  font-size: 1.1rem;
 }
 @media (max-width: 480px) {
   section.about .columns .left-column p.upper-txt,
   section.about .columns .left-column p.lower-txt,
   section.about .columns .right-column p.upper-txt,
   section.about .columns .right-column p.lower-txt {
+    width: 50%;
     padding: 0;
     font-size: 1rem;
-    width: 50%;
   }
 }
 section.about .columns .left-column p.upper-txt,
@@ -1555,8 +1554,8 @@ section.about .columns .right-column .fish-img {
 }
 section.about .columns .left-column .fish-img,
 section.about .columns .right-column .fish-img {
-  margin-bottom: 60px;
   top: 15px;
+  margin-bottom: 60px;
   z-index: -1;
 }
 @media (max-width: 480px) {
@@ -1575,9 +1574,9 @@ section.about .columns .right-column .fish-img {
 @media (max-width: 480px) {
   section.about .columns .right-column p.upper-txt,
   section.about .columns .right-column p.lower-txt {
+    width: 50%;
     margin-left: -280px;
     margin-top: 100px;
-    width: 50%;
   }
 }
 @media (max-width: 480px) and (max-width: 480px) {
@@ -1601,13 +1600,13 @@ section.about .columns .right-column .fish-img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 100px 0 0 0;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 100px 0 0 0;
 }
 @media (min-width: 481px) and (max-width: 768px) {
   .contact-section {
@@ -1633,7 +1632,7 @@ section.about .columns .right-column .fish-img {
   }
 }
 .contact-section .contact-info h2 {
-  font-family: "Literata";
+  font-family: "Literata", sans-serif;
   font-weight: 800;
   font-size: 4rem;
 }
@@ -1651,15 +1650,15 @@ section.about .columns .right-column .fish-img {
   }
 }
 .contact-section .contact-info p.description {
-  font-family: "Lato";
-  font-size: 1.4rem;
   padding: 40px 0;
   line-height: 1.5;
+  font-family: "Lato", sans-serif;
+  font-size: 1.4rem;
 }
 @media (max-width: 480px) {
   .contact-section .contact-info p.description {
-    font-size: 1.2rem;
     padding: 14px 0 40px 0;
+    font-size: 1.2rem;
   }
   .contact-section .contact-info p.description br {
     display: none;
@@ -1688,7 +1687,7 @@ section.about .columns .right-column .fish-img {
 .contact-section .contact-info .contact-details a {
   padding: 0;
   text-transform: 0;
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
   font-size: 1.4rem;
   text-transform: lowercase;
 }
@@ -1700,7 +1699,7 @@ section.about .columns .right-column .fish-img {
   display: -ms-flexbox;
   display: flex;
   font-size: 1.4rem;
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
 }
 .contact-section .contact-info .contact-details p.phone img {
   margin-right: 10px;
@@ -1742,11 +1741,11 @@ section.about .columns .right-column .fish-img {
 .contact-section .contact-form .name-input,
 .contact-section .contact-form .email-input,
 .contact-section .contact-form .message-input {
+  height: 40px;
   border: none;
   border-bottom: 1px solid #d1d1d1;
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
   font-size: 1.4rem;
-  height: 40px;
 }
 .contact-section .contact-form .name-input:focus,
 .contact-section .contact-form .email-input:focus,
@@ -1754,30 +1753,30 @@ section.about .columns .right-column .fish-img {
   outline: none;
 }
 .contact-section .contact-form .name-input::-webkit-input-placeholder, .contact-section .contact-form .email-input::-webkit-input-placeholder, .contact-section .contact-form .message-input::-webkit-input-placeholder {
-  font-family: "Lato";
   font-size: 1.4rem;
+  font-family: "Lato", sans-serif;
   color: #000;
 }
 .contact-section .contact-form .name-input::-moz-placeholder, .contact-section .contact-form .email-input::-moz-placeholder, .contact-section .contact-form .message-input::-moz-placeholder {
-  font-family: "Lato";
   font-size: 1.4rem;
+  font-family: "Lato", sans-serif;
   color: #000;
 }
 .contact-section .contact-form .name-input:-ms-input-placeholder, .contact-section .contact-form .email-input:-ms-input-placeholder, .contact-section .contact-form .message-input:-ms-input-placeholder {
-  font-family: "Lato";
   font-size: 1.4rem;
+  font-family: "Lato", sans-serif;
   color: #000;
 }
 .contact-section .contact-form .name-input::-ms-input-placeholder, .contact-section .contact-form .email-input::-ms-input-placeholder, .contact-section .contact-form .message-input::-ms-input-placeholder {
-  font-family: "Lato";
   font-size: 1.4rem;
+  font-family: "Lato", sans-serif;
   color: #000;
 }
 .contact-section .contact-form .name-input::placeholder,
 .contact-section .contact-form .email-input::placeholder,
 .contact-section .contact-form .message-input::placeholder {
-  font-family: "Lato";
   font-size: 1.4rem;
+  font-family: "Lato", sans-serif;
   color: #000;
 }
 @media (max-width: 350px) {
@@ -1856,15 +1855,15 @@ section.about .columns .right-column .fish-img {
 }
 .contact-section .contact-form .error-info {
   position: absolute;
-  bottom: 0;
   right: 113px;
+  bottom: 0;
   padding-right: 20px;
 }
 .contact-section .contact-form .error-info p {
-  color: #ff0000;
-  font-family: "Lato";
-  font-size: 1.4rem;
   display: none;
+  font-size: 1.4rem;
+  color: #ff0000;
+  font-family: "Lato", sans-serif;
 }
 @media (max-width: 480px) {
   .contact-section .contact-form .error-info p {
@@ -1878,19 +1877,19 @@ section.about .columns .right-column .fish-img {
 }
 .contact-section .contact-form .error-info h2 {
   display: none;
-  font-family: "Lato";
   font-size: 1.6rem;
+  font-family: "Lato", sans-serif;
 }
 .contact-section .contact-form .submit-button {
+  width: 113px;
+  height: 44px;
   -ms-flex-item-align: end;
       align-self: flex-end;
   margin-top: auto;
   background-color: #000;
-  color: #fff;
-  width: 113px;
-  height: 44px;
   border: none;
-  font-family: "Lato";
+  color: #fff;
+  font-family: "Lato", sans-serif;
   font-size: 1.2rem;
 }
 @media (max-width: 480px) {
@@ -1903,10 +1902,10 @@ section.about .columns .right-column .fish-img {
 }
 
 .footer {
-  padding: 60px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 60px 0;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -1953,9 +1952,9 @@ section.about .columns .right-column .fish-img {
   }
 }
 .footer .content p {
-  font-family: "Lato";
-  font-size: 1.4rem;
   margin-left: 60px;
+  font-family: "Lato", sans-serif;
+  font-size: 1.4rem;
 }
 @media (max-width: 350px) {
   .footer .content p {

@@ -1,8 +1,8 @@
 .contact-section {
   display: flex;
-  padding: 100px 0 0 0;
   justify-content: space-between;
   align-items: center;
+  padding: 100px 0 0 0;
   @include tablet {
     padding: 80px 15px 0;
   }
@@ -17,7 +17,7 @@
       text-align: center;
     }
     h2 {
-      font-family: "Literata";
+      font-family: $font-secondary;
       font-weight: 800;
       font-size: 4rem;
       @include mobile-large {
@@ -31,13 +31,13 @@
       }
     }
     p.description {
-      font-family: "Lato";
-      font-size: 1.4rem;
       padding: 40px 0;
       line-height: 1.5;
+      font-family: $font-primary;
+      font-size: 1.4rem;
       @include mobile-large {
-        font-size: 1.2rem;
         padding: 14px 0 40px 0;
+        font-size: 1.2rem;
         br {
           display: none;
         }
@@ -56,7 +56,7 @@
       a {
         padding: 0;
         text-transform: 0;
-        font-family: "Lato";
+        font-family: $font-primary;
         font-size: 1.4rem;
         text-transform: lowercase;
         img {
@@ -66,7 +66,7 @@
       p.phone {
         display: flex;
         font-size: 1.4rem;
-        font-family: "Lato";
+        font-family: $font-primary;
         img {
           margin-right: 10px;
         }
@@ -94,17 +94,17 @@
     .name-input,
     .email-input,
     .message-input {
+      height: 40px;
       border: none;
       border-bottom: 1px solid #d1d1d1;
-      font-family: "Lato";
+      font-family: $font-primary;
       font-size: 1.4rem;
-      height: 40px;
       &:focus {
         outline: none;
       }
       &::placeholder {
-        font-family: "Lato";
         font-size: 1.4rem;
+        font-family: $font-primary;
         color: #000;
         @include mobile-small {
           font-size: 1.2rem;
@@ -143,14 +143,14 @@
     // ERROR INFO
     .error-info {
       position: absolute;
-      bottom: 0;
       right: 113px;
+      bottom: 0;
       padding-right: 20px;
       p {
-        color: #ff0000;
-        font-family: "Lato";
-        font-size: 1.4rem;
         display: none;
+        font-size: 1.4rem;
+        color: #ff0000;
+        font-family: $font-primary;
         @include mobile-large {
           font-size: 1.2rem;
           @include mobile-small {
@@ -160,19 +160,19 @@
       }
       h2 {
         display: none;
-        font-family: "Lato";
         font-size: 1.6rem;
+        font-family: $font-primary;
       }
     }
     .submit-button {
+      width: 113px;
+      height: 44px;
       align-self: flex-end;
       margin-top: auto;
       background-color: #000;
-      color: #fff;
-      width: 113px;
-      height: 44px;
       border: none;
-      font-family: "Lato";
+      color: #fff;
+      font-family: $font-primary;
       font-size: 1.2rem;
       @include mobile-large {
         margin-top: 30px;

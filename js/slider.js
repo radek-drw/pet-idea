@@ -240,7 +240,7 @@ function displayImages() {
     images = categories[currentCategory][currentSubcategory];
   }
 
-  // Zmieniamy tutaj ilość wyświetlanych obrazków na 1
+  // Change display images to show 1 only
   for (let i = index; i < index + 1; i++) {
     if (i < images.length) {
       images[i].style.display = "block";
@@ -251,7 +251,6 @@ function displayImages() {
 
 displayImages();
 
-// Dodajemy obsługę przesuwania
 let touchstartX = 0;
 let touchendX = 0;
 
@@ -365,7 +364,7 @@ toysButton.addEventListener("click", function () {
 
 // Use matchMedia to check the device's viewport width
 if (window.matchMedia("(min-width: 480px)").matches) {
-  // If viewport width is at least 769px, run the desktop version script
+  // If viewport width is at least 480px, run the desktop version script
   desktopScript();
 } else {
   // Otherwise, run the mobile version script
