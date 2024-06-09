@@ -11,6 +11,14 @@
 </head>
 
 <body>
+  <!-- Toast element for sending form errors (server side) -->
+  <div id="toast" class="toast"></div>
+
+  <!-- Loader animation element while waiting for server response  -->
+  <div id="loader" class="loader"></div>
+
+  <!-- Container to darken background while waiting for server response -->
+  <div id="loading-overlay" class="loading-overlay"></div>
 
   <div class="navbar"></div> <!-- This is used only to hide overflow lines from sections -->
   <div class="container">
@@ -1230,7 +1238,7 @@
           <p class="phone"><img src="./assets/images/svg's/phone.svg" alt="Telefon">507 185 138</p>
         </div>
       </div>
-      <form class="contact-form" id="myForm" action="#" method="post" novalidate>
+      <form class="contact-form" id="myForm" action="/send_email" method="post" novalidate>
 
         <div class="name-and-email">
           <input type="text" id="name" name="name" class="name-input" placeholder="Jak masz na imię?">
