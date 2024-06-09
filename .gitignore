@@ -1,0 +1,15 @@
+node_modules/
+dist/
+build/
+coverage/
+.DS_Store
+*.log
+.env
+*.class
+*.pyc
+.vscode/
+.idea/
+*.tmp
+*.swp
+vendor
+config.php
