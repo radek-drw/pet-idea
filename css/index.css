@@ -1,23 +1,62 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap");
-* {
-  margin: 0;
-  padding: 0;
+html {
+  font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
-html {
-  font-size: 10px;
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+dl,
+dd,
+ol,
+ul,
+figure,
+hr,
+fieldset,
+legend {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  overflow-x: hidden;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
 }
 
-ul {
+ul[class],
+ol[class] {
   list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
 }
 
 a {
@@ -30,21 +69,52 @@ a {
   font-family: "Lato", sans-serif;
 }
 
-button {
-  cursor: pointer;
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.active {
+  background-color: #000;
+  color: #fff;
+  position: relative;
+  border: none !important;
+}
+.active img {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  border: solid 20px transparent;
+  border-left-color: #000;
 }
 
-.container {
+body {
+  overflow-x: hidden;
+}
+body .container {
   max-width: 1440px;
   margin: 0 auto;
 }
 @media (min-width: 769px) and (max-width: 1280px) {
-  .container {
+  body .container {
     padding: 0 50px;
   }
 }
 @media (max-width: 480px) {
-  .container {
+  body .container {
     overflow: hidden;
   }
 }
@@ -475,9 +545,9 @@ button {
   }
 }
 .header .main-txt h1.txt1 {
+  font-family: "Literata", sans-serif;
   font-size: 4rem;
   font-weight: 800;
-  font-family: "Literata", sans-serif;
   text-align: center;
 }
 @media (min-width: 481px) and (max-width: 768px) {
@@ -501,9 +571,9 @@ button {
 }
 .header .main-txt p.txt2 {
   margin: 38px auto 0 auto;
+  font-family: "Lato", sans-serif;
   font-size: 1.4rem;
   font-weight: 500;
-  font-family: "Lato", sans-serif;
   text-align: center;
 }
 @media (min-width: 481px) and (max-width: 768px) {
@@ -717,25 +787,6 @@ button {
   .products-section .options .option span {
     font-size: 1.2rem;
   }
-}
-
-.active {
-  background-color: #000;
-  color: #fff;
-  position: relative;
-  border: none !important;
-}
-.active img {
-  -webkit-filter: invert(100%);
-          filter: invert(100%);
-}
-.active::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -20px;
-  border: solid 20px transparent;
-  border-left-color: #000;
 }
 
 .food-products {
@@ -1965,4 +2016,4 @@ section.about .columns .right-column .fish-img {
   .footer .content p {
     font-size: 1.4rem;
   }
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=index.css.map */

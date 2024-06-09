@@ -1,0 +1,20 @@
+// Active option choice -  cat, dog, toys
+.active {
+  background-color: #000;
+  color: #fff;
+  position: relative;
+  border: none !important;
+
+  img {
+    filter: invert(100%);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    border: solid 20px transparent;
+    border-left-color: #000;
+  }
+}

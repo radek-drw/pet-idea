@@ -45,7 +45,7 @@ section.about {
       margin-bottom: 25px;
       font-family: $font-secondary;
       font-size: 4rem;
-      font-weight: 800;
+      font-weight: $font-secondary-primary-weight-bold;
       @include mobile-large {
         margin-bottom: 12px;
         font-size: 2.8rem;
