@@ -148,7 +148,7 @@ function desktopScript() {
   const toysButton = document.querySelector(".toys-option");
 
   catButton.addEventListener("click", function () {
-    logoLeftColumn.src = "./src/applaws-logo.svg";
+    logoLeftColumn.src = "./assets/images/svg's/applaws-logo.svg";
     logoLeftColumn.alt = "Applaws";
     currentCategory = "cat";
     index = 0;
@@ -161,7 +161,7 @@ function desktopScript() {
   });
 
   dogButton.addEventListener("click", function () {
-    logoLeftColumn.src = "./src/applaws-logo.svg";
+    logoLeftColumn.src = "./assets/images/svg's/applaws-logo.svg";
     logoLeftColumn.alt = "applaws";
     currentCategory = "dog";
     index = 0;
@@ -174,7 +174,7 @@ function desktopScript() {
   });
 
   toysButton.addEventListener("click", function () {
-    logoLeftColumn.src = "./src/katido-logo.svg";
+    logoLeftColumn.src = "./assets/images/svg's/katido-logo.svg";
     logoLeftColumn.alt = "Katido";
     currentCategory = "toys";
     index = 0;
@@ -324,7 +324,7 @@ const dogButton = document.querySelector(".dog-option");
 const toysButton = document.querySelector(".toys-option");
 
 catButton.addEventListener("click", function () {
-  logoLeftColumn.src = "./src/applaws-logo.svg";
+  logoLeftColumn.src = "./assets/images/svg's/applaws-logo.svg";
   logoLeftColumn.alt = "Applaws";
   currentCategory = "cat";
   index = 0;
@@ -337,7 +337,7 @@ catButton.addEventListener("click", function () {
 });
 
 dogButton.addEventListener("click", function () {
-  logoLeftColumn.src = "./src/applaws-logo.svg";
+  logoLeftColumn.src = "./assets/images/svg's/applaws-logo.svg";
   logoLeftColumn.alt = "applaws";
   currentCategory = "dog";
   index = 0;
@@ -350,7 +350,7 @@ dogButton.addEventListener("click", function () {
 });
 
 toysButton.addEventListener("click", function () {
-  logoLeftColumn.src = "./src/katido-logo.svg";
+  logoLeftColumn.src = "./assets/images/svg's/katido-logo.svg";
   logoLeftColumn.alt = "Katido";
   currentCategory = "toys";
   index = 0;
