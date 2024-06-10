@@ -9,7 +9,7 @@ This project is an e-commerce website designed for pet owners, developed in coll
   - [Navigation](#navigation)
   - [Food Gallery](#food-gallery)
   - [About Section](#about-section)
-  - [Contact Form](#contact-form)
+  - [Contact Section](#contact-section)
 - [Technology Stack](#technology-stack)
 - [Learning Outcomes](#learning-outcomes)
 - [Installation](#installation)
