@@ -74,14 +74,14 @@ This project was a significant learning experience, allowing me to develop and r
 1. **Clone the Repository**:
 
    ```bash
-   - git clone https://github.com/radek-drw/pet-idea.git
-   - cd pet-idea-shop
+   git clone https://github.com/radek-drw/pet-idea.git
+   cd pet-idea-shop
    ```
 
 2. **Install dependencies**:
 
    ```bash
-   - npm install
+   npm install
    ```
 
 3. **Configure the `.env` file with the necessary SMTP credentials.**
@@ -89,7 +89,7 @@ This project was a significant learning experience, allowing me to develop and r
 4. **Start the Development Server**:
 
    ```bash
-   - npm start
+   npm start
    ```
 
    This will start the development server and open the website in your default browser.
@@ -97,12 +97,10 @@ This project was a significant learning experience, allowing me to develop and r
 5. **Build for Production**:
 
    ```bash
-   - npm run build
+   npm run build
    ```
 
-```
-
- This will create an optimized production build in the dist folder.
+This will create an optimized production build in the dist folder.
 
 ## License
 
@@ -111,4 +109,7 @@ This project is open source and available under the MIT License.
 ## Contact
 
 If you have any questions or feedback, feel free to contact me at [rdrweski@gmail.com].
+
+```
+
 ```
