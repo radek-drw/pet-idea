@@ -55,7 +55,6 @@ The PetShop website offers a selection of food products and toys for dogs and ca
 ### General
 
 - **Responsive Design**: The website is fully responsive and works on all devices.
-- **SEO and Social Media Meta Tags**: The website includes SEO enhancements and meta tags for better visibility on search engines and social media platforms.
 - **Webpack Configuration**: The project uses Webpack for bundling.
 
 ## Technology Stack
@@ -115,7 +114,3 @@ This project is open source and available under the MIT License.
 ## Contact
 
 If you have any questions or feedback, feel free to contact me at [rdrweski@gmail.com].
-
-```
-
-```
