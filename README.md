@@ -16,6 +16,7 @@ This project is an e-commerce website designed for pet owners, developed in coll
 
 ## Project Overview
 
+![PetShop Website Screenshot](page_screenshot.png)
 The PetShop website offers a selection of food products and toys for dogs and cats. The purchasing method is unique, requiring customers to send the product code via a contact form or direct email, ensuring accuracy in order placement.
 
 ## Features
