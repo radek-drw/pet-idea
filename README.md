@@ -37,7 +37,7 @@ The PetShop website offers a selection of food products and toys for dogs and ca
 
 - **Company Description**: An informative section providing details about the company.
 
-### Contact Form
+### Contact Section
 
 #### Form Validation
 
@@ -51,6 +51,12 @@ The PetShop website offers a selection of food products and toys for dogs and ca
 - **Server-Side Validation**: The form undergoes server-side validation to ensure all fields are correctly filled, mirroring client-side validation.
 - **Error Handling**: Users receive toast messages for server errors or internet connection issues.
 - **Submission Animation**: An animation is displayed during form submission, disappearing upon receiving a response.
+
+### General
+
+- **Responsive Design**: The website is fully responsive and works on all devices.
+- **SEO and Social Media Meta Tags**: The website includes SEO enhancements and meta tags for better visibility on search engines and social media platforms.
+- **Webpack Configuration**: The project uses Webpack for bundling.
 
 ## Technology Stack
 
