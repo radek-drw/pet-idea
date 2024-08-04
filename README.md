@@ -79,22 +79,31 @@ This project was a significant learning experience, allowing me to develop and r
 
 1. **Clone the Repository**:
 
-   ```bash
+   ```shell
    git clone https://github.com/radek-drw/pet-idea.git
    cd pet-idea-shop
    ```
 
 2. **Install dependencies**:
 
-   ```bash
+   ```shell
    npm install
    ```
 
-3. **Configure the `.env` file with the necessary SMTP credentials.**
+3. **Set Up Environment Variables**:
+
+   Create a [`.env`] file in the root directory and add your API keys:
+
+   ```env
+   SMTP_HOST=your_smtp_host
+   SMTP_PORT=your_smtp_port
+   SMTP_USER=your_user_name
+   SMTP_PASS=your_password
+   ```
 
 4. **Start the Development Server**:
 
-   ```bash
+   ```shell
    npm start
    ```
 
@@ -102,7 +111,7 @@ This project was a significant learning experience, allowing me to develop and r
 
 5. **Build for Production**:
 
-   ```bash
+   ```shell
    npm run build
    ```
 
