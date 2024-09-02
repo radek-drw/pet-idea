@@ -70,17 +70,15 @@ The PetShop website offers a selection of food products and toys for dogs and ca
 
 This project was a significant learning experience, allowing me to develop and refine skills in web development, responsive design, form validation, and server-side processing. Despite the client's unexpected resignation, the project stands as a testament to my dedication and capability in delivering professional-grade web solutions.
 
-## Installation
-
 ## Collaboration
 
 This project was developed in close collaboration with Piotr Marchewka, a professional graphic designer with extensive experience in web design. The visual aspects of the PetShop e-commerce website were crafted in Figma, ensuring a modern and user-friendly interface. Piotr Marchewka specializes in creating aesthetically pleasing and functional designs tailored to specific client needs.
 
-You can connect with Piotr Marchewka on LinkedIn.
+You can connect with Piotr Marchewka on [LinkedIn](https://www.linkedin.com/in/piotr-marchewka-9a9a69173/).
 
 Working together on this project allowed us to combine technical expertise with creative design, resulting in a high-quality web solution.
 
-[LinkedIn](https://www.linkedin.com/in/piotr-marchewka-9a9a69173/)
+## Installation
 
 ### Prerequisites
 
