@@ -61,7 +61,7 @@ The PetShop website offers a selection of food products and toys for dogs and ca
 
 ## Technology Stack
 
-- **Frontend**: HTML, , JavaScript
+- **Frontend**: HTML, SASS, JavaScript
 - **Backend**: Node.js, Express, Nodemailer
 - **Build Tool**: Webpack
 - **Environment Variables**: Dotenv
