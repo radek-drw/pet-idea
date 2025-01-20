@@ -1,6 +1,6 @@
 # PetShop E-Commerce Website
 
-This project is an e-commerce website designed for pet owners, developed in collaboration with a professional graphic designer [Piotr Marchewka](https://www.linkedin.com/in/piotr-marchewka-9a9a69173/) in Figma for a real customer in Poland. Although the customer resigned from the project just before its production launch, I have retained this project as a portfolio piece to showcase my work and the skills I've gained throughout its development.
+This project is an e-commerce website designed for pet owners, developed in collaboration with a professional graphic designer [Piotr Marchewka](https://www.linkedin.com/in/piotr-marchewka-9a9a69173/) in Figma for a client in the pet industry.
 
 ## Table of Contents
 
